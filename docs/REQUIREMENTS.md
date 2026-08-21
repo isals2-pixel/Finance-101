@@ -1,0 +1,106 @@
+# Requirements Traceability
+
+Status of every numbered section of the specification (v1.0 numbering, carried by SPEC_V2.md). Statuses: **Done** (built and tested), **Planned** (in scope, target phase shown), **Deferred** (in scope only if Tier 2 or the tutor budget materialises), **Removed** (deleted by the v2.0 revision). Updated at the end of every phase. Current as of Phase 1.
+
+| § | Title | Status | Notes |
+|---|---|---|---|
+| 0 | Hard constraints C1-C4 | Done | Governs everything below |
+| 1 | Purpose | Done (v2) | Single-owner objective |
+| 2 | Core product principle | Done (v2) | |
+| 3 | Target user | Done (v2) | |
+| 4.1 | Retrieval practice | Done P1 (partial) | Lesson flow forces recall; formats broaden P2-P3 |
+| 4.2 | Spaced practice | Done P1 | FSRS via ts-fsrs |
+| 4.3 | Interleaving | Planned P2 | Needs multiple lessons to interleave |
+| 5 | Generative learning | Done P1 (partial) | Prediction, free recall, explanation live; comparison, error-id P3 |
+| 6 | Cognitive load design | Done P1 | Minimal interface by construction |
+| 7 | Auditory-first design | Done P1 | NotebookLM pipeline per C2 |
+| 8 | Lesson length | Done P1 | Word-count calibration in CONTENT_PIPELINE.md |
+| 9 | Lesson structure (split media) | Done P1 | Audio then prediction-visual-retrieval flow; complete only at step 8 |
+| 10 | Source packs and audio production | Done P1 | Template, lesson 1, export command, standing instruction |
+| 11 | Audio player | Done P1 (partial) | Play/pause/speeds/rewind/resume/completion/transcript; bookmark and "review this concept" P2; podcast feed generated |
+| 12 | Audio-only mode | Planned P2 | Lesson flow is already minimal |
+| 13 | ADHD-optimised design | Done P1 (partial) | Clear next action, resumption, short sessions; variety grows with content |
+| 14 | No infinite feed | Done P1 | Home answers the four questions only |
+| 15 | Daily session | Planned P2 | Requires review pool from multiple lessons |
+| 16 | Variable session length | Planned P2 | |
+| 17 | Minimum viable day | Planned P2 | |
+| 18 | Visual design | Done P1 | Visual step after audio; required/reinforcement flag per lesson |
+| 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
+| 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
+| 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
+| 22 | Transfer exercises (30%) | Planned P2-P4 | Question pools tagged by cognition |
+| 23 | Error analysis + self-scoring | Done P1 | Locked-answer self-assessment; error classes on both paths |
+| 24 | Misconception database | Planned P2 | Schema exists in concept JSON; lesson 1 misconceptions authored |
+| 25 | Knowledge graph | Done P1 | Level 1 seeded; DAG validated in CI; grows with content |
+| 26 | Mastery model | Done P1 | Explicit weights in lib/mastery.ts, documented in LEARNING_SCIENCE.md |
+| 27 | Confidence calibration | Done P1 | Five bands, captured before reveal |
+| 28 | Spaced repetition engine | Done P1 | FSRS; grade mapping in LEARNING_SCIENCE.md |
+| 29 | Interleaved review | Planned P2 | |
+| 30 | Portfolio laboratory | Planned P3 | Tier 1 |
+| 31 | Market simulator | Deferred | Tier 2 (P6) |
+| 32 | Behavioural finance simulator | Planned P5 | Tier 1 |
+| 33 | Investment decision laboratory | Planned P5 | Tier 1 |
+| 34 | Financial statement laboratory | Deferred | Tier 2 (P6) |
+| 35 | Corporate finance laboratory | Deferred | Tier 2 (P6) |
+| 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |
+| 37 | Personal finance laboratory | Planned P5 | Tier 1 |
+| 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
+| 39 | Curriculum structure | Done (v2) | Two tiers; Tier 1 ≈109 concepts |
+| 40 | Final competency level | Planned P4-P5 | Thresholds are configuration |
+| 41 | Final exam | Planned P5 | Held-out hand-authored pool |
+| 42 | Personal progress measurement | Done P1 (partial) | Attempt data captured with the needed flags; dashboard P2; baseline assessment P2 |
+| 43-46 | v1 KPI catalogue | Removed | Subsumed into §42; KPI 6 anchors survive as the self-score scale |
+| 47 | Audio effectiveness experiment | Removed | n=1 |
+| 48 | Visual effectiveness experiment | Removed | n=1 |
+| 49 | Exercise effectiveness experiment | Removed | n=1 |
+| 50 | User retention metrics | Removed | No population |
+| 51 | Activation KPI | Removed | No population |
+| 52 | Course completion KPI | Removed | No population |
+| 53 | Real-world financial competence | Removed | Subsumed: labs capture what the learner chooses to enter |
+| 54 | Longitudinal outcome | Removed | Subsumed into §42 items 2-6 |
+| 55 | Unseen assessment items | Kept | Folded into §41 |
+| 56 | ROI framework | Removed | No budget, no population |
+| 57 | Composite competency score | Kept | Weights live inside §42 |
+| 58 | Learning dashboard | Kept | Folded into §42; built P2 |
+| 59 | ADHD product metrics | Removed | Except the single abandonment number in §42 |
+| 60 | Attention friction metric | Removed | Survives as the §42 usability number |
+| 61 | Product health matrix | Removed | |
+| 62 | Onboarding | Planned P2 | |
+| 63 | Baseline assessment | Planned P2 | |
+| 64 | Personalized curriculum | Done P1 | Prerequisite gating in curriculum engine |
+| 65 | Adaptive difficulty | Planned P4 | Difficulty tiers in concept schema |
+| 66 | Crystallisation loop | Done P1 (partial) | Exposure-encoding-retrieval-application-spacing live; interleave/transfer/teach-back P2+ |
+| 67 | Teach-back mode | Planned P2 | Self-scored |
+| 68 | Financial argument analysis | Planned P4 | |
+| 69 | Source system | Done P1 | Sources with dates in lesson frontmatter, validated in CI |
+| 70 | Data policy | Done P1 | Static datasets only; abstraction in lib/market-data (P3) |
+| 71 | AI tutor | Deferred | Interface behind an off feature flag; no calls, per C1 |
+| 72 | Technology stack | Done P1 | Static export, Pages, IndexedDB, Gist; Recharts/shadcn arrive P2-P3 |
+| 73 | Application structure | Done P1 | |
+| 74 | Data structures | Done P1 | Content files + IndexedDB schema in lib/db.ts |
+| 75 | Recorded events | Done P1 | Attempts and lesson state only; no funnel analytics |
+| 76 | Accessibility | Planned P2 | Keyboard/contrast baseline in P1; full pass with design system |
+| 77 | Design language | Planned P2 | P1 is deliberately minimal per revision §13 |
+| 78 | Gamification limits | Done P1 | Nothing beyond progress and mastery exists |
+| 79 | MVP scope | Planned P2-P3 | P1 is the vertical slice |
+| 80 | First 20 lessons | Done P1 (1 of 20) | Lesson 1 complete as the format sample; 2-20 in P2 |
+| 81 | Build sequence | Done (v2) | Revised phases |
+| 82 | Testing requirements | Done P1 (partial) | Unit tests green; integration/e2e grow P2 |
+| 83 | Calculation accuracy | Done P1 | Reference values for mastery/FSRS math; finance calc suites arrive with P3 simulators |
+| 84 | Content quality control | Done P1 | Mechanical checks in CI; correctness is the owner's sign-off |
+| 85 | Product success test | Removed | Learner thresholds remain in §40/§42 |
+| 86 | Final product principle | Done (v2) | |
+| 87 | Execution instruction | Done (v2) | |
+
+## Residual conflicts and interpretations
+
+Conflicts the revision does not fully resolve, with the interpretation applied. Flag disagreement on the PR and the interpretation will be changed.
+
+1. **Level 6 tier membership.** The Tier 1 level list omits Level 6, but the Tier 1 reductions define a reduced Level 6 and Tier 2 claims only its valuation ratios. Interpretation: the reduced Level 6 set (stocks, equity ownership, market capitalization, earnings, dividends, growth vs value) is Tier 1; the ratios are Tier 2.
+2. **Level 13 remainder.** Tier 2 names only leverage, options, futures, and short selling from Level 13; the other items (factor investing, REITs, commodities, inflation-linked bonds, international diversification, currency risk) appear in neither tier. Interpretation: all of Level 13 is Tier 2, with the four named instruments last. REITs and commodities still appear as portfolio-lab asset classes in Tier 1 without dedicated lessons.
+3. **"Private" podcast feed.** A feed served by GitHub Pages from a public repository is unlisted, not private: anyone with the URL can subscribe, and the audio files are public regardless. Interpretation: acceptable, because the feed contains only course audio and no learner data. If actual access control is required, the feed must be deferred (C1 leaves no free way to serve authenticated audio to podcast apps).
+4. **Final exam pool secrecy in a public repository.** The held-out pool is a JSON file the learner can open on github.com. Enforcement is interface-level only (never displayed in the app before the exam) plus self-discipline. Accepted at n=1 per revision §7.
+5. **Gist encryption key.** Q10 requires encryption at rest; the revision's backup section does not name a key. Interpretation: a learner-chosen passphrase, PBKDF2-derived AES-GCM key, passphrase stored on-device only. A forgotten passphrase makes the Gist copy unrecoverable; the unencrypted manual file export is the fallback and its custody is the learner's.
+6. **Abandonment metric.** Revision §4 deletes v1 §60 and §5 re-adds the same measurement as a single usability number. Interpretation: keep it, as one number, computed from lesson state, never displayed as a streak or judgment.
+7. **Public repository requirement.** Free GitHub Pages requires a public repository. The current repository is public: consistent. Course content and audio are therefore public; learner data never enters the repository.
+8. **iOS lock-screen playback in the web app.** Still not guaranteed by any spec change; the podcast feed is the reliable path, the PWA path is best-effort and verified on the owner's device during Phase 1 evaluation.

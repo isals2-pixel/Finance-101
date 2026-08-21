@@ -1,3 +1,5 @@
+> **Partially superseded (2026-08-21).** R1 (content production), R2 (tax accuracy), R5 (scheduling correctness), R6 (background audio), R7 (scope), R8 (audio quality, now NotebookLM instead of TTS) remain live under v2.0. R3 (LLM grading) is resolved by self-scoring; R4 (single-learner statistics) by deleting the experiments; R9 narrows to the static datasets.
+
 # Risks
 
 Status: Phase 0 analysis. Ordered by expected impact on the section 85 success criteria.

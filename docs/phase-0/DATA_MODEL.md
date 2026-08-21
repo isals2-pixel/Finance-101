@@ -1,3 +1,5 @@
+> **Superseded (2026-08-21).** The Prisma schema was removed by the v2.0 revision's C4 constraint. Current data structures: SPEC_V2.md section 74, lib/db.ts, and CONTENT_SCHEMA.md.
+
 # Proposed Data Model
 
 Status: Phase 0 proposal, awaiting approval. This is the proposed Prisma schema covering every entity in spec section 74. Field lists are complete for load-bearing models and abbreviated for simple ones. The schema will be committed as `prisma/schema.prisma` in Phase 1.

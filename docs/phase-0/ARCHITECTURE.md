@@ -1,3 +1,5 @@
+> **Superseded (2026-08-21).** Described a server stack (PostgreSQL, Prisma, Auth.js) removed by the v2.0 revision's C4 constraint. Current architecture: root ARCHITECTURE.md.
+
 # Proposed Architecture
 
 Status: Phase 0 proposal, awaiting approval.

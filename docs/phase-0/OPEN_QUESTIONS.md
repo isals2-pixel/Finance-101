@@ -1,3 +1,5 @@
+> **Superseded (2026-08-21).** All ten questions were resolved by the August 2026 revision, section 3 (docs/revisions/2026-08-spec-revision.md). Residual conflicts are tracked in docs/REQUIREMENTS.md.
+
 # Open Questions and Specification Conflicts
 
 Status: Phase 0 analysis. Spec section 87.3 requires conflicts and ambiguities to be identified explicitly. Each item states a default. If a question is not answered at Phase 0 approval, the default applies.

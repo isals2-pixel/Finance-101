@@ -1,3 +1,5 @@
+> **Superseded (2026-08-21).** These documents analyzed specification v1.0. The August 2026 revision (docs/revisions/2026-08-spec-revision.md) replaced the stack and resolved the open questions. Current documents: docs/SPEC_V2.md, docs/REQUIREMENTS.md, and the root ARCHITECTURE.md. Kept for provenance.
+
 # Phase 0 - Specification Analysis
 
 This directory contains the Phase 0 deliverables required by section 81 of the Finance Academy specification (v1.0). No application code has been written. Phase 1 begins only after this analysis is approved.

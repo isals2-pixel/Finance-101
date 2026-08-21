@@ -1,3 +1,5 @@
+> **Superseded (2026-08-21).** The v2.0 revision replaced the build sequence. Current plan: SPEC_V2.md section 81.
+
 # Implementation Plan
 
 Status: Phase 0 proposal, awaiting approval. Phases follow spec section 81. Each phase ends with its tests green and its living documents updated (CHANGELOG.md, ARCHITECTURE.md, LEARNING_SCIENCE.md, CONTENT_SCHEMA.md, METRICS.md, created in the phase that first needs them).
