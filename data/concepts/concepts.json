@@ -514,6 +514,121 @@
           "correction": "A stronger currency cheapens imports but burdens exporters; the effect depends on which side you are on."
         }
       ]
+    },
+    {
+      "id": "exchanges-brokers",
+      "title": "Exchanges and brokers",
+      "level": 5,
+      "tier": 1,
+      "prerequisites": [
+        "financial-markets"
+      ],
+      "related": [
+        "order-types",
+        "liquidity"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Your broker trades against you.",
+          "correction": "A plain broker routes your order to the exchange for a fee; it is an access ramp, not your counterparty (products where it IS the counterparty, like CFDs, are a different and riskier business)."
+        }
+      ]
+    },
+    {
+      "id": "liquidity",
+      "title": "Liquidity",
+      "level": 5,
+      "tier": 1,
+      "prerequisites": [
+        "financial-markets",
+        "supply-demand"
+      ],
+      "related": [
+        "bid-ask-spread",
+        "etf"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Liquidity only matters to big traders.",
+          "correction": "Every buy and sell crosses the spread, and spreads widen exactly when everyone wants out; liquidity is priced into every trade you make."
+        }
+      ]
+    },
+    {
+      "id": "bid-ask-spread",
+      "title": "Bid-ask spread",
+      "level": 5,
+      "tier": 1,
+      "prerequisites": [
+        "liquidity"
+      ],
+      "related": [
+        "fees",
+        "order-types"
+      ],
+      "misconceptions": [
+        {
+          "statement": "There is one price for a share.",
+          "correction": "There are always two - the bid you sell at and the ask you buy at; the gap is a real trading cost on top of any fee."
+        }
+      ]
+    },
+    {
+      "id": "order-types",
+      "title": "Market and limit orders",
+      "level": 5,
+      "tier": 1,
+      "prerequisites": [
+        "exchanges-brokers",
+        "bid-ask-spread"
+      ],
+      "related": [
+        "liquidity"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A market order executes at the price on your screen.",
+          "correction": "It executes at whatever the best available opposing price is when it arrives - in thin or fast markets that can be far from the last quote."
+        }
+      ]
+    },
+    {
+      "id": "earnings",
+      "title": "Earnings",
+      "level": 6,
+      "tier": 1,
+      "prerequisites": [
+        "stocks"
+      ],
+      "related": [
+        "growth-vs-value",
+        "gdp"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A share's price should equal its earnings.",
+          "correction": "Price is a multiple of expected future earnings; earnings are the annual engine, price the market's valuation of all years to come."
+        }
+      ]
+    },
+    {
+      "id": "growth-vs-value",
+      "title": "Growth vs value",
+      "level": 6,
+      "tier": 1,
+      "prerequisites": [
+        "earnings"
+      ],
+      "related": [
+        "diversification",
+        "index"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Growth stocks are simply the better companies.",
+          "correction": "Growth names expected expansion already priced richly; value names low prices on present earnings; each style has led for long stretches, which is why broad indexes hold both."
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 2: market mechanics and equities (lessons 27-31)
+
+- Five lessons completing the reduced Levels 5 and 6: exchanges and brokers, liquidity and the bid-ask spread, market and limit orders, earnings, growth vs value.
+- Six concepts added with misconceptions; five visuals (broker-exchange chain, order book, order-fill comparison, earnings waterfall, growth/value compare).
+- Exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 1: Level 2 economics (lessons 21-26)
 
 - Six lessons: supply and demand, GDP, monetary policy, fiscal policy, business cycles, exchange rates - the complete reduced Level 2 of SPEC_V2 §39 (inflation and interest were covered in Level 1).

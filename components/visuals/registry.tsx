@@ -27,6 +27,13 @@ import {
   TimeHorizon,
 } from './Batch3Visuals';
 import {
+  EarningsWaterfall,
+  ExchangeBrokerChain,
+  GrowthValueCompare,
+  OrderBookSpread,
+  OrderFill,
+} from './Batch5Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -62,6 +69,11 @@ const VISUALS: Record<string, ComponentType> = {
   'fiscal-flows': FiscalFlows,
   'cycle-wave': CycleWave,
   'fx-seesaw': FxSeesaw,
+  'exchange-broker-chain': ExchangeBrokerChain,
+  'order-book-spread': OrderBookSpread,
+  'order-fill': OrderFill,
+  'earnings-waterfall': EarningsWaterfall,
+  'growth-value-compare': GrowthValueCompare,
 };
 
 export function getVisual(id: string): ComponentType | undefined {
