@@ -100,6 +100,13 @@ describe('content validation', () => {
     expect(bySlug.get('portfolio-construction')!.exercise.answer).toBeCloseTo(5.4 - 2 * 13, 6);
   });
 
+  it('level 11 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('loss-aversion')!.exercise.answer).toBeCloseTo((40000 / 30000 - 1) * 100, 1);
+    expect(bySlug.get('overconfidence')!.exercise.answer).toBeCloseTo(50000 * (0.015 - 0.002), 6);
+    expect(bySlug.get('herding')!.exercise.answer).toBeCloseTo(15000 * 0.8 * 1.1, 6);
+  });
+
   it('batch 2 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);

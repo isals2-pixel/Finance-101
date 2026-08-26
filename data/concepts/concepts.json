@@ -884,6 +884,89 @@
           "correction": "Near-term money held in volatile assets risks forced selling in a dip - the one scenario that makes losses permanent. Liquidity needs are carved out first, in cash."
         }
       ]
+    },
+    {
+      "id": "loss-aversion",
+      "title": "Loss aversion",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "risk",
+        "long-term-investing"
+      ],
+      "related": [
+        "volatility",
+        "investment-decision"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Feeling losses strongly is a useful safety instinct for investing.",
+          "correction": "Loss aversion evolved for physical threats, not markets: it triggers selling after crashes and holding losers - the two moves that convert temporary declines into permanent losses."
+        },
+        {
+          "statement": "Panic selling at least stops the bleeding.",
+          "correction": "It locks the loss in and adds a second decision - re-entry - that panic sellers systematically make too late, after recovery."
+        },
+        {
+          "statement": "Refusing to sell a loser avoids taking the loss.",
+          "correction": "The loss already exists at market price; the disposition effect just keeps money in a holding chosen by pride rather than prospects."
+        }
+      ]
+    },
+    {
+      "id": "overconfidence",
+      "title": "Overconfidence and belief biases",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "investment-decision"
+      ],
+      "related": [
+        "fees",
+        "loss-aversion"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Confidence in one's market views is a sign of skill.",
+          "correction": "Measured calibration shows most investors are overconfident; in markets, confidence without calibration produces more trading, more cost, and worse returns."
+        },
+        {
+          "statement": "Researching a stock you like makes the decision more objective.",
+          "correction": "Unstructured research feeds confirmation bias - collecting supporting evidence feels like diligence. Objectivity requires actively seeking the case against."
+        },
+        {
+          "statement": "A good story about a company is good evidence about its stock.",
+          "correction": "Stories are cheap and already priced in; the narrative fallacy sells certainty. Prices move on surprises relative to the story, not on the story itself."
+        }
+      ]
+    },
+    {
+      "id": "herding",
+      "title": "Herding and performance chasing",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "financial-markets",
+        "long-term-investing"
+      ],
+      "related": [
+        "loss-aversion",
+        "overconfidence"
+      ],
+      "misconceptions": [
+        {
+          "statement": "If everyone is buying, they probably know something.",
+          "correction": "Herds mostly follow prices, not information; buying because others buy is how bubbles inflate, and the crowd's comfort peaks exactly at the top."
+        },
+        {
+          "statement": "Funds with the best recent returns are the best funds.",
+          "correction": "Past short-run performance barely persists; chasing it means systematically buying after rises - investor returns lag fund returns for exactly this reason."
+        },
+        {
+          "statement": "Missing a boom is as costly as riding a bust.",
+          "correction": "FOMO prices regret, not risk: a missed gain leaves the plan intact, while a late-entry loss compounds against you. The asymmetry favours the plan."
+        }
+      ]
     }
   ]
 }

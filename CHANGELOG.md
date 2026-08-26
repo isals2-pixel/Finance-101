@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 6: behavioural finance (lessons 44-46)
+
+- Level 11 completed, covering the eleven specified biases in three lessons: loss aversion / panic selling / disposition effect; overconfidence / confirmation bias / anchoring / narrative fallacy (with calibration as the counter-programme); herding / FOMO / recency bias / performance chasing (with the investor-return gap).
+- Three concepts with misconceptions, three visuals (loss asymmetry curve, activity-vs-returns bars, chase cycle), exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 5: asset allocation (lessons 41-43)
 
 - Level 10 completed: asset allocation (strategic vs tactical, risk tolerance vs capacity, horizon, the lowest-cap rule), rebalancing and sequence of returns (drift, bands, withdrawal-phase order risk), building the portfolio (liquidity-allocation-funds-rules construction order, the two-fund implementation).

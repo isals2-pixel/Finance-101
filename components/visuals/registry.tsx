@@ -52,6 +52,11 @@ import {
   RebalancingCycle,
 } from './Batch8Visuals';
 import {
+  ChaseCycle,
+  LossAsymmetry,
+  OverconfidenceCost,
+} from './Batch9Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -104,6 +109,9 @@ const VISUALS: Record<string, ComponentType> = {
   'allocation-dials': AllocationDials,
   'rebalancing-cycle': RebalancingCycle,
   'portfolio-blueprint': PortfolioBlueprint,
+  'loss-asymmetry': LossAsymmetry,
+  'overconfidence-cost': OverconfidenceCost,
+  'chase-cycle': ChaseCycle,
 };
 
 export function getVisual(id: string): ComponentType | undefined {
