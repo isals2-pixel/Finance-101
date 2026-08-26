@@ -1,0 +1,117 @@
+{
+  "version": "2026-08-21",
+  "concepts": [
+    {
+      "id": "money",
+      "title": "Money",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": [],
+      "related": ["inflation"],
+      "misconceptions": [
+        { "statement": "The euro is valuable because it is backed by gold.", "correction": "No major currency is redeemable in gold. Fiat money's value rests on shared acceptance, legal-tender status, and central-bank-managed scarcity." },
+        { "statement": "Money and wealth are the same thing.", "correction": "Wealth is everything owned that has value; money is one form of it, and its purchasing power erodes as prices rise." },
+        { "statement": "Keeping cash means taking no risk.", "correction": "Cash is certain in nominal terms only; it carries purchasing-power risk when prices rise." }
+      ]
+    },
+    {
+      "id": "income",
+      "title": "Income",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["expenses", "cash-flow"],
+      "misconceptions": []
+    },
+    {
+      "id": "expenses",
+      "title": "Expenses",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["income", "cash-flow"],
+      "misconceptions": []
+    },
+    {
+      "id": "assets",
+      "title": "Assets",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["liabilities", "net-worth"],
+      "misconceptions": []
+    },
+    {
+      "id": "liabilities",
+      "title": "Liabilities",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["assets", "net-worth"],
+      "misconceptions": []
+    },
+    {
+      "id": "net-worth",
+      "title": "Net worth",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["assets", "liabilities"],
+      "related": ["cash-flow"],
+      "misconceptions": []
+    },
+    {
+      "id": "cash-flow",
+      "title": "Cash flow",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["income", "expenses"],
+      "related": ["net-worth"],
+      "misconceptions": []
+    },
+    {
+      "id": "interest",
+      "title": "Interest",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["compounding"],
+      "misconceptions": []
+    },
+    {
+      "id": "compounding",
+      "title": "Compound interest",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["interest"],
+      "related": ["real-vs-nominal"],
+      "misconceptions": []
+    },
+    {
+      "id": "inflation",
+      "title": "Inflation",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["real-vs-nominal"],
+      "misconceptions": []
+    },
+    {
+      "id": "real-vs-nominal",
+      "title": "Real vs nominal returns",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["inflation", "interest"],
+      "related": ["compounding"],
+      "misconceptions": []
+    },
+    {
+      "id": "opportunity-cost",
+      "title": "Opportunity cost",
+      "level": 1,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": [],
+      "misconceptions": []
+    }
+  ]
+}
