@@ -1,0 +1,19 @@
+{
+  "version": "2026-08-26",
+  "pool": "baseline",
+  "note": "Standardized baseline (SPEC_V2 §42.1, §63). Auto-scored; answers are never revealed, so the same instrument can be repeated at 3, 6 and 12 months.",
+  "items": [
+    { "id": "b1", "domain": "personal-finance", "type": "numeric", "prompt": "Your monthly income is 2,500 euros and your monthly expenses are 2,100 euros. What is your savings rate, in percent of income?", "answer": 16, "tolerance": 0.5 },
+    { "id": "b2", "domain": "personal-finance", "type": "numeric", "prompt": "Assets: 15,000 euros savings and a 200,000 euro flat. Liabilities: a 150,000 euro mortgage. Net worth, in euros?", "answer": 65000, "tolerance": 0 },
+    { "id": "b3", "domain": "economics", "type": "multipleChoice", "prompt": "Inflation is best described as:", "options": ["one product becoming more expensive", "a broad rise in the general price level", "the central bank printing banknotes", "prices rising faster than wages"], "answer": "a broad rise in the general price level" },
+    { "id": "b4", "domain": "economics", "type": "numeric", "prompt": "Prices rise 2 percent per year for 2 years, compounding. A basket costing 100 euros now costs how many euros?", "answer": 104.04, "tolerance": 0.05 },
+    { "id": "b5", "domain": "calculation", "type": "numeric", "prompt": "1,000 euros at 10 percent annual compound interest: balance after 2 years, in euros?", "answer": 1210, "tolerance": 0 },
+    { "id": "b6", "domain": "calculation", "type": "numeric", "prompt": "An investment returns 5 percent while inflation is 2 percent. Approximate real return, in percent?", "answer": 3, "tolerance": 0.1 },
+    { "id": "b7", "domain": "markets", "type": "multipleChoice", "prompt": "You buy existing shares of a listed company through your broker. Who receives your money?", "options": ["the company", "the selling investor", "the stock exchange", "the state"], "answer": "the selling investor" },
+    { "id": "b8", "domain": "investing", "type": "multipleChoice", "prompt": "A bond you hold pays a fixed 3 percent coupon. Market interest rates rise to 5 percent. Your bond's market price:", "options": ["rises", "falls", "stays the same", "depends on the company's profit"], "answer": "falls" },
+    { "id": "b9", "domain": "etf", "type": "multipleChoice", "prompt": "An ETF is best described as:", "options": ["a share of one large company", "a fund holding a basket of securities, traded on an exchange", "a savings account with a higher rate", "a loan to a fund manager"], "answer": "a fund holding a basket of securities, traded on an exchange" },
+    { "id": "b10", "domain": "portfolio", "type": "multipleChoice", "prompt": "Diversification across many companies mainly protects against:", "options": ["market-wide crashes", "inflation", "the failure of any single company", "all losses"], "answer": "the failure of any single company" },
+    { "id": "b11", "domain": "fees", "type": "numeric", "prompt": "Two funds track the same index. Fund A charges 0.2 percent a year, fund B 1.4 percent. On 50,000 euros, how many euros of fees does A save in the first year?", "answer": 600, "tolerance": 0 },
+    { "id": "b12", "domain": "decision", "type": "multipleChoice", "prompt": "Which fact, on its own, is the WEAKEST reason to buy a fund?", "options": ["its fees are far lower than identical alternatives", "it matches your horizon and risk capacity", "it returned 40 percent last year", "it is broadly diversified"], "answer": "it returned 40 percent last year" }
+  ]
+}

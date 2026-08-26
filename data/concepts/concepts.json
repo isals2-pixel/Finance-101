@@ -137,6 +137,106 @@
         { "statement": "Companies receive money every time their shares trade.", "correction": "Only primary-market issuance funds the company; secondary-market trades move money between investors." },
         { "statement": "The stock market is a casino.", "correction": "Markets trade claims on real businesses and debts; long-run returns come from earnings, not chance." }
       ]
+    },
+    {
+      "id": "stocks",
+      "title": "Stocks",
+      "level": 6,
+      "tier": 1,
+      "prerequisites": ["financial-markets"],
+      "related": ["bonds", "risk"],
+      "misconceptions": [
+        { "statement": "A low share price means a cheap company.", "correction": "Price per share means nothing without the share count and the business behind it; value is the whole company against its earnings." }
+      ]
+    },
+    {
+      "id": "bonds",
+      "title": "Bonds",
+      "level": 7,
+      "tier": 1,
+      "prerequisites": ["financial-markets", "interest"],
+      "related": ["stocks", "risk"],
+      "misconceptions": [
+        { "statement": "Bonds are safe.", "correction": "Bonds carry credit risk, interest-rate risk, and inflation risk; 'safer than stocks on average' is not 'safe'." }
+      ]
+    },
+    {
+      "id": "index",
+      "title": "Market indexes",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": ["stocks"],
+      "related": ["etf", "diversification"],
+      "misconceptions": [
+        { "statement": "An index is something you can buy directly.", "correction": "An index is a calculation, a weighted average of prices; funds that replicate it are what you buy." }
+      ]
+    },
+    {
+      "id": "etf",
+      "title": "ETFs",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": ["stocks", "financial-markets"],
+      "related": ["index", "fees", "diversification"],
+      "misconceptions": [
+        { "statement": "Any ETF is diversified by definition.", "correction": "An ETF is a wrapper; its diversification is exactly that of the index it tracks, which can be one narrow sector or country." }
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Investment risk",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["diversification", "long-term-investing"],
+      "misconceptions": [
+        { "statement": "Cash is the no-risk option.", "correction": "Cash swaps price fluctuation for certain purchasing-power erosion; every option carries some risk, only its kind differs." },
+        { "statement": "Volatility and permanent loss are the same thing.", "correction": "Fluctuation reverses; losses become permanent through selling, concentration, or failing businesses." }
+      ]
+    },
+    {
+      "id": "diversification",
+      "title": "Diversification",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": ["stocks", "risk"],
+      "related": ["etf", "index"],
+      "misconceptions": [
+        { "statement": "Owning several funds means being diversified.", "correction": "Three funds tracking the same market overlap almost completely; diversification is about underlying exposures, not the number of lines." }
+      ]
+    },
+    {
+      "id": "fees",
+      "title": "Investment fees",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": ["compounding"],
+      "related": ["etf", "real-vs-nominal"],
+      "misconceptions": [
+        { "statement": "One or two percent in fees is negligible.", "correction": "Fees compound against the portfolio every year; over decades one point of annual fees consumes a large share of the final wealth." }
+      ]
+    },
+    {
+      "id": "long-term-investing",
+      "title": "Long-term investing",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": ["compounding", "risk"],
+      "related": ["diversification", "opportunity-cost"],
+      "misconceptions": [
+        { "statement": "Long-term investing means picking winners and waiting.", "correction": "It means staying broadly invested through cycles so compounding works; concentration plus patience is still concentration." }
+      ]
+    },
+    {
+      "id": "investment-decision",
+      "title": "Investment decision-making",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": ["opportunity-cost", "risk", "fees"],
+      "related": ["long-term-investing", "diversification"],
+      "misconceptions": [
+        { "statement": "A good investment is one that went up recently.", "correction": "Past returns are not evidence about future ones; the decision rests on goal, horizon, cost, risk, and the best alternative." }
+      ]
     }
   ]
 }

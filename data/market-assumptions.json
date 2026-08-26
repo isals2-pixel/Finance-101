@@ -1,0 +1,18 @@
+{
+  "source": "Owner-set illustrative long-run assumptions, informed by broad historical ranges. NOT forecasts, NOT market data.",
+  "asOf": "2026-08-26",
+  "currency": "EUR",
+  "methodology": "Round-number annual real expected returns and volatilities in the range of long-run historical experience for broad asset classes; correlations are stylized. Used only to illustrate portfolio mechanics in the lab.",
+  "assets": [
+    { "id": "global-equities", "label": "Global equities", "expectedReturn": 0.05, "volatility": 0.16 },
+    { "id": "government-bonds", "label": "Government bonds", "expectedReturn": 0.015, "volatility": 0.05 },
+    { "id": "corporate-bonds", "label": "Corporate bonds", "expectedReturn": 0.02, "volatility": 0.07 },
+    { "id": "cash", "label": "Cash", "expectedReturn": -0.005, "volatility": 0.005 }
+  ],
+  "correlations": [
+    [1.0, 0.1, 0.3, 0.0],
+    [0.1, 1.0, 0.6, 0.1],
+    [0.3, 0.6, 1.0, 0.1],
+    [0.0, 0.1, 0.1, 1.0]
+  ]
+}

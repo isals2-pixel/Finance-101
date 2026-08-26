@@ -15,6 +15,17 @@ import {
   PurchasingPower,
   ThreeLenses,
 } from './Batch2Visuals';
+import {
+  BondFlows,
+  DecisionChecklist,
+  DiversificationPaths,
+  EtfBasket,
+  FeeDrag,
+  IndexComposition,
+  RiskRange,
+  StockClaim,
+  TimeHorizon,
+} from './Batch3Visuals';
 
 const VISUALS: Record<string, ComponentType> = {
   'money-functions': MoneyFunctions,
@@ -28,6 +39,15 @@ const VISUALS: Record<string, ComponentType> = {
   'opportunity-fork': OpportunityFork,
   'three-lenses': ThreeLenses,
   'market-flows': MarketFlows,
+  'stock-claim': StockClaim,
+  'bond-flows': BondFlows,
+  'etf-basket': EtfBasket,
+  'index-composition': IndexComposition,
+  'diversification-paths': DiversificationPaths,
+  'risk-range': RiskRange,
+  'fee-drag': FeeDrag,
+  'time-horizon': TimeHorizon,
+  'decision-checklist': DecisionChecklist,
 };
 
 export function getVisual(id: string): ComponentType | undefined {

@@ -24,8 +24,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="text-lg font-semibold tracking-tight text-[var(--accent)]">
               Finance Academy
             </Link>
-            <nav className="flex gap-4 text-sm text-[var(--muted)]">
+            <nav className="flex flex-wrap gap-3 text-sm text-[var(--muted)]">
               <Link href="/review/">Review</Link>
+              <Link href="/labs/">Labs</Link>
+              <Link href="/progress/">Progress</Link>
+              <Link href="/glossary/">Glossary</Link>
               <Link href="/settings/">Settings</Link>
             </nav>
           </header>
