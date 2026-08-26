@@ -3,7 +3,7 @@
 // today, why, how long it takes, and what to review. Nothing else.
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { allLessonStates, allMastery, allSchedules } from '@/lib/db';
+import { allLessonStates, allMastery, allSchedules, getLearner } from '@/lib/db';
 
 interface LessonSummary {
   slug: string;
@@ -18,10 +18,13 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
   const [resume, setResume] = useState<LessonSummary | null>(null);
   const [dueCount, setDueCount] = useState(0);
   const [trackedConcepts, setTrackedConcepts] = useState(0);
+  const [needsBaseline, setNeedsBaseline] = useState(false);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     (async () => {
+      const learner = await getLearner();
+      setNeedsBaseline(learner.baselineScore === undefined);
       const states = await allLessonStates();
       const completed = new Set(states.filter((s) => s.completedAt).map((s) => s.slug));
       const started = new Set(states.filter((s) => s.startedAt && !s.completedAt).map((s) => s.slug));
@@ -41,6 +44,23 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
 
   return (
     <div className="space-y-6">
+      {needsBaseline && (
+        <section className="rounded-lg border border-[var(--accent)] bg-[var(--card)] p-5">
+          <h2 className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
+            Start here, once
+          </h2>
+          <p className="mt-2 text-sm">
+            Take the 10-minute baseline assessment before learning - it becomes the permanent
+            starting point your progress is measured against.
+          </p>
+          <Link
+            href="/assessment/"
+            className="mt-2 inline-block rounded-md border border-[var(--accent)] px-4 py-2 text-sm font-medium text-[var(--accent)]"
+          >
+            Take the baseline
+          </Link>
+        </section>
+      )}
       <section className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5">
         <h1 className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
           Today

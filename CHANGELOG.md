@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 2: market mechanics and equities (lessons 27-31)
+
+- Five lessons completing the reduced Levels 5 and 6: exchanges and brokers, liquidity and the bid-ask spread, market and limit orders, earnings, growth vs value.
+- Six concepts added with misconceptions; five visuals (broker-exchange chain, order book, order-fill comparison, earnings waterfall, growth/value compare).
+- Exercise arithmetic checked in CI.
+
+## 2026-08-26 - Phase 4, batch 1: Level 2 economics (lessons 21-26)
+
+- Six lessons: supply and demand, GDP, monetary policy, fiscal policy, business cycles, exchange rates - the complete reduced Level 2 of SPEC_V2 §39 (inflation and interest were covered in Level 1).
+- Six concepts added to the graph with misconceptions; six new visuals (supply-demand cross, GDP components, policy transmission chain, fiscal flows, cycle wave, FX seesaw).
+- Sources verified: INSEE (PIB), Banque de France (taux directeurs, ABC de l'économie), ECB.
+- Exercise arithmetic checked in CI.
+
+## 2026-08-26 - MVP complete: lessons 12-20, labs, dashboard, baseline
+
+- Lessons 12-20 (stocks, bonds, ETFs, indexes, diversification, risk, fees, long-term investing, the decision framework): the §80 first-20 curriculum is complete, each lesson with prediction, retrieval, exercise, visual, and sources.
+- Interleaved review: due concepts round-robin across curriculum levels (§29).
+- Progress dashboard (§42): composite competency score over available components, delayed retention, calculation accuracy, confidence calibration, self-reported share, per-concept mastery with weakest-area action, abandonment number.
+- Labs: compound interest, inflation, and fee simulators plus the basic portfolio laboratory (expected return, volatility with correlations, bad-year estimate) over reference-tested lib/finance.ts; static assumptions clearly labelled.
+- Baseline assessment: 12 auto-scored items, score stored permanently, answers never revealed; home prompts for it first.
+- Glossary generated from concepts and their teaching lessons. Navigation extended.
+- 51 tests green, including reference values for all financial calculations (§83) and metrics.
+
 ## 2026-08-26 - Phase 2, batch 2: lessons 7-11
 
 - Five new lessons: inflation, nominal vs real returns, opportunity cost, economics vs finance vs accounting, what is a financial market. Same structure and style as batch 1; sources verified (ECB, Banque de France, AMF).

@@ -10,7 +10,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 3 | Target user | Done (v2) | |
 | 4.1 | Retrieval practice | Done P1 (partial) | Lesson flow forces recall; formats broaden P2-P3 |
 | 4.2 | Spaced practice | Done P1 | FSRS via ts-fsrs |
-| 4.3 | Interleaving | Planned P2 | Needs multiple lessons to interleave |
+| 4.3 | Interleaving | Done P2 | Review sessions round-robin across curriculum levels |
 | 5 | Generative learning | Done P1 (partial) | Prediction, free recall, explanation live; comparison, error-id P3 |
 | 6 | Cognitive load design | Done P1 | Minimal interface by construction |
 | 7 | Reading-first design (was auditory-first) | Done (v2.1) | Audio removed entirely; lessons are read-only text in the app |
@@ -21,7 +21,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 12 | Audio-only mode | Removed (v2.1) | No audio |
 | 13 | ADHD-optimised design | Done P1 (partial) | Clear next action, resumption, short sessions; variety grows with content |
 | 14 | No infinite feed | Done P1 | Home answers the four questions only |
-| 15 | Daily session | Planned P2 | Requires review pool from multiple lessons |
+| 15 | Daily session | Done P2 | Home offers lesson + due reviews + optional apply |
 | 16 | Variable session length | Planned P2 | |
 | 17 | Minimum viable day | Planned P2 | |
 | 18 | Visual design | Done P1 | Visual step after the reading; required/reinforcement flag per lesson |
@@ -35,8 +35,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 26 | Mastery model | Done P1 | Explicit weights in lib/mastery.ts, documented in LEARNING_SCIENCE.md |
 | 27 | Confidence calibration | Done P1 | Five bands, captured before reveal |
 | 28 | Spaced repetition engine | Done P1 | FSRS; grade mapping in LEARNING_SCIENCE.md |
-| 29 | Interleaved review | Planned P2 | |
-| 30 | Portfolio laboratory | Planned P3 | Tier 1 |
+| 29 | Interleaved review | Done P2 | interleaveByLevel in lib/metrics.ts, tested |
+| 30 | Portfolio laboratory | Done P3 (basic) | Allocation, expected return, volatility with correlations, bad-year estimate; assumptions labelled |
 | 31 | Market simulator | Deferred | Tier 2 (P6) |
 | 32 | Behavioural finance simulator | Planned P5 | Tier 1 |
 | 33 | Investment decision laboratory | Planned P5 | Tier 1 |
@@ -45,10 +45,10 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |
 | 37 | Personal finance laboratory | Planned P5 | Tier 1 |
 | 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
-| 39 | Curriculum structure | Done (v2) | Two tiers; Tier 1 ≈109 concepts |
+| 39 | Curriculum structure | In progress P4 | First 20 + Level 2 economics done (26 lessons); Levels 5-12 remainder in coming tranches |
 | 40 | Final competency level | Planned P4-P5 | Thresholds are configuration |
 | 41 | Final exam | Planned P5 | Held-out hand-authored pool |
-| 42 | Personal progress measurement | Done P1 (partial) | Attempt data captured with the needed flags; dashboard P2; baseline assessment P2 |
+| 42 | Personal progress measurement | Done P2 | Baseline stored permanently; dashboard computes composite, retention, calculation accuracy, calibration, abandonment; transfer/decision pools pending |
 | 43-46 | v1 KPI catalogue | Removed | Subsumed into §42; KPI 6 anchors survive as the self-score scale |
 | 47 | Audio effectiveness experiment | Removed | n=1 |
 | 48 | Visual effectiveness experiment | Removed | n=1 |
@@ -65,8 +65,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 59 | ADHD product metrics | Removed | Except the single abandonment number in §42 |
 | 60 | Attention friction metric | Removed | Survives as the §42 usability number |
 | 61 | Product health matrix | Removed | |
-| 62 | Onboarding | Planned P2 | |
-| 63 | Baseline assessment | Planned P2 | |
+| 62 | Onboarding | Done P2 (minimal) | Baseline-first card on home; preference questions omitted (single learner) |
+| 63 | Baseline assessment | Done P2 | 12 auto-scored items across domains; answers never revealed |
 | 64 | Personalized curriculum | Done P1 | Prerequisite gating in curriculum engine |
 | 65 | Adaptive difficulty | Planned P4 | Difficulty tiers in concept schema |
 | 66 | Crystallisation loop | Done P1 (partial) | Exposure-encoding-retrieval-application-spacing live; interleave/transfer/teach-back P2+ |
@@ -82,8 +82,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 76 | Accessibility | Planned P2 | Keyboard/contrast baseline in P1; full pass with design system |
 | 77 | Design language | Planned P2 | P1 is deliberately minimal per revision §13 |
 | 78 | Gamification limits | Done P1 | Nothing beyond progress and mastery exists |
-| 79 | MVP scope | Planned P2-P3 | P1 is the vertical slice |
-| 80 | First 20 lessons | In progress P2 (11 of 20) | Lessons 1-11 complete in the condensed style; 12-20 in coming batches |
+| 79 | MVP scope | Done | All §79 items live; tutor is interface-only behind an off flag, as specified |
+| 80 | First 20 lessons | Done P2 (20 of 20) | Full first-20 curriculum live in the condensed style |
 | 81 | Build sequence | Done (v2) | Revised phases |
 | 82 | Testing requirements | Done P1 (partial) | Unit tests green; integration/e2e grow P2 |
 | 83 | Calculation accuracy | Done P1 | Reference values for mastery/FSRS math; finance calc suites arrive with P3 simulators |

@@ -141,4 +141,7 @@ export interface LearnerRecord {
   /** Never synced in plaintext; used to derive the backup encryption key. */
   backupPassphrase?: string;
   lastBackupAt?: number;
+  /** Baseline assessment (§42.1): percent correct, stored permanently. */
+  baselineScore?: number;
+  baselineAt?: number;
 }

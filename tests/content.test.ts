@@ -54,6 +54,25 @@ describe('content validation', () => {
     expect(bySlug.get('compound-interest')!.exercise.answer).toBe(1000 * 1.1 * 1.1);
   });
 
+  it('level 5-6 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('exchanges-and-brokers')!.exercise.answer).toBe(5000 * 0.001);
+    expect(bySlug.get('liquidity-and-the-spread')!.exercise.answer).toBeCloseTo(200 * (100.05 - 99.95), 6);
+    expect(bySlug.get('market-and-limit-orders')!.exercise.answer).toBe(4800 / 48);
+    expect(bySlug.get('earnings')!.exercise.answer).toBe(8000000 / 4000000);
+    expect(bySlug.get('growth-vs-value')!.exercise.answer).toBe((3 / 60) * 100);
+  });
+
+  it('level 2 economics exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('supply-and-demand')!.exercise.answer).toBe(90 / 3);
+    expect(bySlug.get('gdp')!.exercise.answer).toBe(1250 + 480 + 570 + (620 - 660));
+    expect(bySlug.get('monetary-policy')!.exercise.answer).toBe(2 + 1 + 1.5);
+    expect(bySlug.get('fiscal-policy')!.exercise.answer).toBe(1310 - 1180);
+    expect(bySlug.get('business-cycles')!.exercise.answer).toBe(2400 * 0.975);
+    expect(bySlug.get('exchange-rates')!.exercise.answer).toBeCloseTo(220 / 1.1, 10);
+  });
+
   it('batch 2 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);

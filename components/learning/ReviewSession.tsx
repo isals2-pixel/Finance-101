@@ -1,11 +1,12 @@
 'use client';
-// Review session: presents one question per due concept, applies FSRS and
-// mastery updates. Interleaving across levels arrives with Phase 2 content.
+// Review session: one question per due concept, interleaved across
+// curriculum levels (SPEC_V2 §29), applying FSRS and mastery updates.
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { RetrievalQuestion } from '@/lib/types';
 import { allSchedules } from '@/lib/db';
 import { applySessionResults, type SessionItemResult } from '@/lib/learning';
+import { interleaveByLevel } from '@/lib/metrics';
 import { RetrievalStage } from './RetrievalStage';
 import type { Lesson } from '@/lib/types';
 
@@ -16,8 +17,10 @@ interface ConceptQuestion {
 
 export function ReviewSession({
   questionsByConcept,
+  conceptLevels,
 }: {
   questionsByConcept: Record<string, ConceptQuestion[]>;
+  conceptLevels: Record<string, number>;
 }) {
   const [queue, setQueue] = useState<ConceptQuestion[] | null>(null);
   const [finished, setFinished] = useState(false);
@@ -26,14 +29,15 @@ export function ReviewSession({
     (async () => {
       const now = Date.now();
       const due = (await allSchedules()).filter((s) => s.due <= now);
+      const ordered = interleaveByLevel(due, (s) => conceptLevels[s.conceptId] ?? 0);
       const picked: ConceptQuestion[] = [];
-      due.forEach((s, i) => {
+      ordered.forEach((s, i) => {
         const pool = questionsByConcept[s.conceptId];
         if (pool?.length) picked.push(pool[i % pool.length]);
       });
       setQueue(picked);
     })();
-  }, [questionsByConcept]);
+  }, [questionsByConcept, conceptLevels]);
 
   if (queue === null) return <p className="text-sm text-[var(--muted)]">Checking your schedule…</p>;
 
