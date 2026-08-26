@@ -110,8 +110,33 @@
       "level": 1,
       "tier": 1,
       "prerequisites": ["money"],
-      "related": [],
-      "misconceptions": []
+      "related": ["compounding"],
+      "misconceptions": [
+        { "statement": "Keeping cash costs nothing.", "correction": "Idle cash forgoes the best alternative's return and loses purchasing power to inflation; zero fees is not zero cost." }
+      ]
+    },
+    {
+      "id": "economics-finance-accounting",
+      "title": "Economics vs finance vs accounting",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["opportunity-cost"],
+      "misconceptions": [
+        { "statement": "Finance is accounting with more mathematics.", "correction": "Accounting records what happened; finance decides what to do with money across time and risk - different questions on overlapping numbers." }
+      ]
+    },
+    {
+      "id": "financial-markets",
+      "title": "Financial markets",
+      "level": 5,
+      "tier": 1,
+      "prerequisites": ["money"],
+      "related": ["opportunity-cost"],
+      "misconceptions": [
+        { "statement": "Companies receive money every time their shares trade.", "correction": "Only primary-market issuance funds the company; secondary-market trades move money between investors." },
+        { "statement": "The stock market is a casino.", "correction": "Markets trade claims on real businesses and debts; long-run returns come from earnings, not chance." }
+      ]
     }
   ]
 }

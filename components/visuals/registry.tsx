@@ -8,6 +8,13 @@ import {
   InterestTimeline,
   NetWorthBar,
 } from './Level1Visuals';
+import {
+  MarketFlows,
+  NominalRealSplit,
+  OpportunityFork,
+  PurchasingPower,
+  ThreeLenses,
+} from './Batch2Visuals';
 
 const VISUALS: Record<string, ComponentType> = {
   'money-functions': MoneyFunctions,
@@ -16,6 +23,11 @@ const VISUALS: Record<string, ComponentType> = {
   'net-worth-bar': NetWorthBar,
   'interest-timeline': InterestTimeline,
   'compound-curve': CompoundCurve,
+  'purchasing-power': PurchasingPower,
+  'nominal-real-split': NominalRealSplit,
+  'opportunity-fork': OpportunityFork,
+  'three-lenses': ThreeLenses,
+  'market-flows': MarketFlows,
 };
 
 export function getVisual(id: string): ComponentType | undefined {

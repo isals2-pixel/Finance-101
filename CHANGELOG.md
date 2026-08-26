@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-26 - Phase 2, batch 2: lessons 7-11
+
+- Five new lessons: inflation, nominal vs real returns, opportunity cost, economics vs finance vs accounting, what is a financial market. Same structure and style as batch 1; sources verified (ECB, Banque de France, AMF).
+- Concept graph: added economics-finance-accounting (level 2) and financial-markets (level 5), with misconceptions; opportunity-cost misconception filled in.
+- Five new visuals: purchasing-power decay curve, nominal/real split, opportunity fork, three lenses, market flows.
+- Batch 2 exercise answers checked arithmetically in CI.
+
 ## 2026-08-26 - Phase 2, batch 1: lessons 2-6
 
 - Five new lessons in the condensed style (bodies 650-820 words): income/expenses/cash flow, assets and liabilities, net worth, interest, compound interest. Each with prediction, three retrieval items (free recall, classification, short answer with confidence), a calculation exercise, and verified sources (Banque de France, INSEE, ECB).
