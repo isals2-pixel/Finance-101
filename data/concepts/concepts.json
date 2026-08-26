@@ -1,5 +1,5 @@
 {
-  "version": "2026-08-21",
+  "version": "2026-08-26",
   "concepts": [
     {
       "id": "money",
@@ -7,11 +7,22 @@
       "level": 1,
       "tier": 1,
       "prerequisites": [],
-      "related": ["inflation"],
+      "related": [
+        "inflation"
+      ],
       "misconceptions": [
-        { "statement": "The euro is valuable because it is backed by gold.", "correction": "No major currency is redeemable in gold. Fiat money's value rests on shared acceptance, legal-tender status, and central-bank-managed scarcity." },
-        { "statement": "Money and wealth are the same thing.", "correction": "Wealth is everything owned that has value; money is one form of it, and its purchasing power erodes as prices rise." },
-        { "statement": "Keeping cash means taking no risk.", "correction": "Cash is certain in nominal terms only; it carries purchasing-power risk when prices rise." }
+        {
+          "statement": "The euro is valuable because it is backed by gold.",
+          "correction": "No major currency is redeemable in gold. Fiat money's value rests on shared acceptance, legal-tender status, and central-bank-managed scarcity."
+        },
+        {
+          "statement": "Money and wealth are the same thing.",
+          "correction": "Wealth is everything owned that has value; money is one form of it, and its purchasing power erodes as prices rise."
+        },
+        {
+          "statement": "Keeping cash means taking no risk.",
+          "correction": "Cash is certain in nominal terms only; it carries purchasing-power risk when prices rise."
+        }
       ]
     },
     {
@@ -19,8 +30,13 @@
       "title": "Income",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["expenses", "cash-flow"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "expenses",
+        "cash-flow"
+      ],
       "misconceptions": []
     },
     {
@@ -28,8 +44,13 @@
       "title": "Expenses",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["income", "cash-flow"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "income",
+        "cash-flow"
+      ],
       "misconceptions": []
     },
     {
@@ -37,8 +58,13 @@
       "title": "Assets",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["liabilities", "net-worth"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "liabilities",
+        "net-worth"
+      ],
       "misconceptions": []
     },
     {
@@ -46,8 +72,13 @@
       "title": "Liabilities",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["assets", "net-worth"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "assets",
+        "net-worth"
+      ],
       "misconceptions": []
     },
     {
@@ -55,8 +86,13 @@
       "title": "Net worth",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["assets", "liabilities"],
-      "related": ["cash-flow"],
+      "prerequisites": [
+        "assets",
+        "liabilities"
+      ],
+      "related": [
+        "cash-flow"
+      ],
       "misconceptions": []
     },
     {
@@ -64,8 +100,13 @@
       "title": "Cash flow",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["income", "expenses"],
-      "related": ["net-worth"],
+      "prerequisites": [
+        "income",
+        "expenses"
+      ],
+      "related": [
+        "net-worth"
+      ],
       "misconceptions": []
     },
     {
@@ -73,8 +114,12 @@
       "title": "Interest",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["compounding"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "compounding"
+      ],
       "misconceptions": []
     },
     {
@@ -82,8 +127,12 @@
       "title": "Compound interest",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["interest"],
-      "related": ["real-vs-nominal"],
+      "prerequisites": [
+        "interest"
+      ],
+      "related": [
+        "real-vs-nominal"
+      ],
       "misconceptions": []
     },
     {
@@ -91,8 +140,12 @@
       "title": "Inflation",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["real-vs-nominal"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "real-vs-nominal"
+      ],
       "misconceptions": []
     },
     {
@@ -100,8 +153,13 @@
       "title": "Real vs nominal returns",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["inflation", "interest"],
-      "related": ["compounding"],
+      "prerequisites": [
+        "inflation",
+        "interest"
+      ],
+      "related": [
+        "compounding"
+      ],
       "misconceptions": []
     },
     {
@@ -109,10 +167,17 @@
       "title": "Opportunity cost",
       "level": 1,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["compounding"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "compounding"
+      ],
       "misconceptions": [
-        { "statement": "Keeping cash costs nothing.", "correction": "Idle cash forgoes the best alternative's return and loses purchasing power to inflation; zero fees is not zero cost." }
+        {
+          "statement": "Keeping cash costs nothing.",
+          "correction": "Idle cash forgoes the best alternative's return and loses purchasing power to inflation; zero fees is not zero cost."
+        }
       ]
     },
     {
@@ -120,10 +185,17 @@
       "title": "Economics vs finance vs accounting",
       "level": 2,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["opportunity-cost"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "opportunity-cost"
+      ],
       "misconceptions": [
-        { "statement": "Finance is accounting with more mathematics.", "correction": "Accounting records what happened; finance decides what to do with money across time and risk - different questions on overlapping numbers." }
+        {
+          "statement": "Finance is accounting with more mathematics.",
+          "correction": "Accounting records what happened; finance decides what to do with money across time and risk - different questions on overlapping numbers."
+        }
       ]
     },
     {
@@ -131,11 +203,21 @@
       "title": "Financial markets",
       "level": 5,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["opportunity-cost"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "opportunity-cost"
+      ],
       "misconceptions": [
-        { "statement": "Companies receive money every time their shares trade.", "correction": "Only primary-market issuance funds the company; secondary-market trades move money between investors." },
-        { "statement": "The stock market is a casino.", "correction": "Markets trade claims on real businesses and debts; long-run returns come from earnings, not chance." }
+        {
+          "statement": "Companies receive money every time their shares trade.",
+          "correction": "Only primary-market issuance funds the company; secondary-market trades move money between investors."
+        },
+        {
+          "statement": "The stock market is a casino.",
+          "correction": "Markets trade claims on real businesses and debts; long-run returns come from earnings, not chance."
+        }
       ]
     },
     {
@@ -143,10 +225,18 @@
       "title": "Stocks",
       "level": 6,
       "tier": 1,
-      "prerequisites": ["financial-markets"],
-      "related": ["bonds", "risk"],
+      "prerequisites": [
+        "financial-markets"
+      ],
+      "related": [
+        "bonds",
+        "risk"
+      ],
       "misconceptions": [
-        { "statement": "A low share price means a cheap company.", "correction": "Price per share means nothing without the share count and the business behind it; value is the whole company against its earnings." }
+        {
+          "statement": "A low share price means a cheap company.",
+          "correction": "Price per share means nothing without the share count and the business behind it; value is the whole company against its earnings."
+        }
       ]
     },
     {
@@ -154,10 +244,19 @@
       "title": "Bonds",
       "level": 7,
       "tier": 1,
-      "prerequisites": ["financial-markets", "interest"],
-      "related": ["stocks", "risk"],
+      "prerequisites": [
+        "financial-markets",
+        "interest"
+      ],
+      "related": [
+        "stocks",
+        "risk"
+      ],
       "misconceptions": [
-        { "statement": "Bonds are safe.", "correction": "Bonds carry credit risk, interest-rate risk, and inflation risk; 'safer than stocks on average' is not 'safe'." }
+        {
+          "statement": "Bonds are safe.",
+          "correction": "Bonds carry credit risk, interest-rate risk, and inflation risk; 'safer than stocks on average' is not 'safe'."
+        }
       ]
     },
     {
@@ -165,10 +264,18 @@
       "title": "Market indexes",
       "level": 8,
       "tier": 1,
-      "prerequisites": ["stocks"],
-      "related": ["etf", "diversification"],
+      "prerequisites": [
+        "stocks"
+      ],
+      "related": [
+        "etf",
+        "diversification"
+      ],
       "misconceptions": [
-        { "statement": "An index is something you can buy directly.", "correction": "An index is a calculation, a weighted average of prices; funds that replicate it are what you buy." }
+        {
+          "statement": "An index is something you can buy directly.",
+          "correction": "An index is a calculation, a weighted average of prices; funds that replicate it are what you buy."
+        }
       ]
     },
     {
@@ -176,10 +283,20 @@
       "title": "ETFs",
       "level": 8,
       "tier": 1,
-      "prerequisites": ["stocks", "financial-markets"],
-      "related": ["index", "fees", "diversification"],
+      "prerequisites": [
+        "stocks",
+        "financial-markets"
+      ],
+      "related": [
+        "index",
+        "fees",
+        "diversification"
+      ],
       "misconceptions": [
-        { "statement": "Any ETF is diversified by definition.", "correction": "An ETF is a wrapper; its diversification is exactly that of the index it tracks, which can be one narrow sector or country." }
+        {
+          "statement": "Any ETF is diversified by definition.",
+          "correction": "An ETF is a wrapper; its diversification is exactly that of the index it tracks, which can be one narrow sector or country."
+        }
       ]
     },
     {
@@ -187,11 +304,22 @@
       "title": "Investment risk",
       "level": 9,
       "tier": 1,
-      "prerequisites": ["money"],
-      "related": ["diversification", "long-term-investing"],
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "diversification",
+        "long-term-investing"
+      ],
       "misconceptions": [
-        { "statement": "Cash is the no-risk option.", "correction": "Cash swaps price fluctuation for certain purchasing-power erosion; every option carries some risk, only its kind differs." },
-        { "statement": "Volatility and permanent loss are the same thing.", "correction": "Fluctuation reverses; losses become permanent through selling, concentration, or failing businesses." }
+        {
+          "statement": "Cash is the no-risk option.",
+          "correction": "Cash swaps price fluctuation for certain purchasing-power erosion; every option carries some risk, only its kind differs."
+        },
+        {
+          "statement": "Volatility and permanent loss are the same thing.",
+          "correction": "Fluctuation reverses; losses become permanent through selling, concentration, or failing businesses."
+        }
       ]
     },
     {
@@ -199,10 +327,19 @@
       "title": "Diversification",
       "level": 9,
       "tier": 1,
-      "prerequisites": ["stocks", "risk"],
-      "related": ["etf", "index"],
+      "prerequisites": [
+        "stocks",
+        "risk"
+      ],
+      "related": [
+        "etf",
+        "index"
+      ],
       "misconceptions": [
-        { "statement": "Owning several funds means being diversified.", "correction": "Three funds tracking the same market overlap almost completely; diversification is about underlying exposures, not the number of lines." }
+        {
+          "statement": "Owning several funds means being diversified.",
+          "correction": "Three funds tracking the same market overlap almost completely; diversification is about underlying exposures, not the number of lines."
+        }
       ]
     },
     {
@@ -210,10 +347,18 @@
       "title": "Investment fees",
       "level": 8,
       "tier": 1,
-      "prerequisites": ["compounding"],
-      "related": ["etf", "real-vs-nominal"],
+      "prerequisites": [
+        "compounding"
+      ],
+      "related": [
+        "etf",
+        "real-vs-nominal"
+      ],
       "misconceptions": [
-        { "statement": "One or two percent in fees is negligible.", "correction": "Fees compound against the portfolio every year; over decades one point of annual fees consumes a large share of the final wealth." }
+        {
+          "statement": "One or two percent in fees is negligible.",
+          "correction": "Fees compound against the portfolio every year; over decades one point of annual fees consumes a large share of the final wealth."
+        }
       ]
     },
     {
@@ -221,10 +366,19 @@
       "title": "Long-term investing",
       "level": 10,
       "tier": 1,
-      "prerequisites": ["compounding", "risk"],
-      "related": ["diversification", "opportunity-cost"],
+      "prerequisites": [
+        "compounding",
+        "risk"
+      ],
+      "related": [
+        "diversification",
+        "opportunity-cost"
+      ],
       "misconceptions": [
-        { "statement": "Long-term investing means picking winners and waiting.", "correction": "It means staying broadly invested through cycles so compounding works; concentration plus patience is still concentration." }
+        {
+          "statement": "Long-term investing means picking winners and waiting.",
+          "correction": "It means staying broadly invested through cycles so compounding works; concentration plus patience is still concentration."
+        }
       ]
     },
     {
@@ -232,10 +386,133 @@
       "title": "Investment decision-making",
       "level": 10,
       "tier": 1,
-      "prerequisites": ["opportunity-cost", "risk", "fees"],
-      "related": ["long-term-investing", "diversification"],
+      "prerequisites": [
+        "opportunity-cost",
+        "risk",
+        "fees"
+      ],
+      "related": [
+        "long-term-investing",
+        "diversification"
+      ],
       "misconceptions": [
-        { "statement": "A good investment is one that went up recently.", "correction": "Past returns are not evidence about future ones; the decision rests on goal, horizon, cost, risk, and the best alternative." }
+        {
+          "statement": "A good investment is one that went up recently.",
+          "correction": "Past returns are not evidence about future ones; the decision rests on goal, horizon, cost, risk, and the best alternative."
+        }
+      ]
+    },
+    {
+      "id": "supply-demand",
+      "title": "Supply and demand",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "financial-markets"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Prices are set by sellers alone.",
+          "correction": "A market price balances what sellers offer against what buyers will pay; neither side dictates it for long."
+        }
+      ]
+    },
+    {
+      "id": "gdp",
+      "title": "GDP",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "money"
+      ],
+      "related": [
+        "business-cycles"
+      ],
+      "misconceptions": [
+        {
+          "statement": "GDP growth means everyone is better off.",
+          "correction": "GDP measures total production, not its distribution or the wellbeing it buys; averages hide much."
+        }
+      ]
+    },
+    {
+      "id": "monetary-policy",
+      "title": "Monetary policy",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "interest",
+        "inflation"
+      ],
+      "related": [
+        "fiscal-policy",
+        "bonds"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Rate changes act on the economy immediately.",
+          "correction": "Transmission through borrowing, spending and prices takes quarters to years; policy steers with long lags."
+        }
+      ]
+    },
+    {
+      "id": "fiscal-policy",
+      "title": "Fiscal policy",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "gdp"
+      ],
+      "related": [
+        "monetary-policy",
+        "bonds"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A state budget works like a household budget.",
+          "correction": "States borrow across generations, issue debt in their own bond market, and their spending feeds back into their own tax base."
+        }
+      ]
+    },
+    {
+      "id": "business-cycles",
+      "title": "Business cycles",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "gdp"
+      ],
+      "related": [
+        "monetary-policy",
+        "long-term-investing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Recessions can be predicted and traded around.",
+          "correction": "Turning points are identified with certainty only in hindsight; cycle-timing strategies reliably lag the data."
+        }
+      ]
+    },
+    {
+      "id": "exchange-rates",
+      "title": "Exchange rates",
+      "level": 2,
+      "tier": 1,
+      "prerequisites": [
+        "money",
+        "supply-demand"
+      ],
+      "related": [
+        "gdp"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A strong currency is always good for the country.",
+          "correction": "A stronger currency cheapens imports but burdens exporters; the effect depends on which side you are on."
+        }
       ]
     }
   ]

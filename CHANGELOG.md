@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 1: Level 2 economics (lessons 21-26)
+
+- Six lessons: supply and demand, GDP, monetary policy, fiscal policy, business cycles, exchange rates - the complete reduced Level 2 of SPEC_V2 §39 (inflation and interest were covered in Level 1).
+- Six concepts added to the graph with misconceptions; six new visuals (supply-demand cross, GDP components, policy transmission chain, fiscal flows, cycle wave, FX seesaw).
+- Sources verified: INSEE (PIB), Banque de France (taux directeurs, ABC de l'économie), ECB.
+- Exercise arithmetic checked in CI.
+
 ## 2026-08-26 - MVP complete: lessons 12-20, labs, dashboard, baseline
 
 - Lessons 12-20 (stocks, bonds, ETFs, indexes, diversification, risk, fees, long-term investing, the decision framework): the §80 first-20 curriculum is complete, each lesson with prediction, retrieval, exercise, visual, and sources.

@@ -45,7 +45,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |
 | 37 | Personal finance laboratory | Planned P5 | Tier 1 |
 | 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
-| 39 | Curriculum structure | Done (v2) | Two tiers; Tier 1 ≈109 concepts |
+| 39 | Curriculum structure | In progress P4 | First 20 + Level 2 economics done (26 lessons); Levels 5-12 remainder in coming tranches |
 | 40 | Final competency level | Planned P4-P5 | Thresholds are configuration |
 | 41 | Final exam | Planned P5 | Held-out hand-authored pool |
 | 42 | Personal progress measurement | Done P2 | Baseline stored permanently; dashboard computes composite, retention, calculation accuracy, calibration, abandonment; transfer/decision pools pending |

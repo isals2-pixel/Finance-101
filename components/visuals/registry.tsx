@@ -26,6 +26,14 @@ import {
   StockClaim,
   TimeHorizon,
 } from './Batch3Visuals';
+import {
+  CycleWave,
+  FiscalFlows,
+  FxSeesaw,
+  GdpComponents,
+  PolicyTransmission,
+  SupplyDemandCross,
+} from './Batch4Visuals';
 
 const VISUALS: Record<string, ComponentType> = {
   'money-functions': MoneyFunctions,
@@ -48,6 +56,12 @@ const VISUALS: Record<string, ComponentType> = {
   'fee-drag': FeeDrag,
   'time-horizon': TimeHorizon,
   'decision-checklist': DecisionChecklist,
+  'supply-demand-cross': SupplyDemandCross,
+  'gdp-components': GdpComponents,
+  'policy-transmission': PolicyTransmission,
+  'fiscal-flows': FiscalFlows,
+  'cycle-wave': CycleWave,
+  'fx-seesaw': FxSeesaw,
 };
 
 export function getVisual(id: string): ComponentType | undefined {
