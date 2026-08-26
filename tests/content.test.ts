@@ -83,6 +83,16 @@ describe('content validation', () => {
     expect(bySlug.get('exchange-rates')!.exercise.answer).toBeCloseTo(220 / 1.1, 10);
   });
 
+  it('level 9 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('measuring-risk-and-return')!.exercise.answer).toBeCloseTo(10000 * 1.2 * 0.9, 6);
+    expect(bySlug.get('correlation')!.exercise.answer).toBeCloseTo(
+      Math.sqrt(0.5 ** 2 * 16 ** 2 + 0.5 ** 2 * 16 ** 2),
+      1,
+    );
+    expect(bySlug.get('risk-adjusted-return')!.exercise.answer).toBeCloseTo((6 - 2) / 16, 6);
+  });
+
   it('batch 2 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);

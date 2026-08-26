@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 4: portfolio theory (lessons 38-40)
+
+- Level 9 completed: measuring risk and return (volatility, volatility drag), correlation and portfolio risk (offsetting mechanism, crisis correlations, two-layer diversification), risk-adjusted return (Sharpe ratio, efficient frontier, beta/CAPM).
+- Three concepts with misconceptions, three visuals (volatility-drag paths, correlation-mix curve, efficient frontier), exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 3: fixed income depth and ETF structure (lessons 32-37)
 
 - Level 7 completed: yield and bond pricing, duration, credit risk and ratings.

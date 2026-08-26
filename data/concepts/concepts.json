@@ -744,6 +744,63 @@
           "correction": "The portfolio is identical; the only difference is whether dividends are paid out or reinvested inside - the choice is about cash needs and taxation, not performance."
         }
       ]
+    },
+    {
+      "id": "volatility",
+      "title": "Volatility",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "risk"
+      ],
+      "related": [
+        "correlation",
+        "duration"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Average return tells you how an investment did.",
+          "correction": "Volatility drags realized growth below the arithmetic average - a +20/-10 sequence averages +5 but compounds to under +4; the money follows the compound path."
+        }
+      ]
+    },
+    {
+      "id": "correlation",
+      "title": "Correlation",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "volatility",
+        "diversification"
+      ],
+      "related": [
+        "risk"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Adding a risky asset always makes a portfolio riskier.",
+          "correction": "An imperfectly correlated risky asset can lower total portfolio volatility - offsetting swings partially cancel; correlation, not the asset's own risk, decides."
+        }
+      ]
+    },
+    {
+      "id": "risk-adjusted-return",
+      "title": "Risk-adjusted return",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "volatility"
+      ],
+      "related": [
+        "correlation",
+        "long-term-investing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The portfolio with the highest return is the best portfolio.",
+          "correction": "Return per unit of risk is the comparison that matters; a higher return bought with disproportionate volatility is a worse deal, which the Sharpe ratio makes visible."
+        }
+      ]
     }
   ]
 }

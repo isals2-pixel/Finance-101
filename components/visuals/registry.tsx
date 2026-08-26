@@ -42,6 +42,11 @@ import {
   TrackingGap,
 } from './Batch6Visuals';
 import {
+  CorrelationMix,
+  EfficientFrontier,
+  VolatilityDrag,
+} from './Batch7Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -88,6 +93,9 @@ const VISUALS: Record<string, ComponentType> = {
   'replication-paths': ReplicationPaths,
   'tracking-gap': TrackingGap,
   'fund-labels': FundLabels,
+  'volatility-drag': VolatilityDrag,
+  'correlation-mix': CorrelationMix,
+  'efficient-frontier': EfficientFrontier,
 };
 
 export function getVisual(id: string): ComponentType | undefined {
