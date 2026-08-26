@@ -1,6 +1,7 @@
 // The mechanical part of the SPEC_V2 §84 content checklist, run in CI.
 import { describe, expect, it } from 'vitest';
 import { bodyWordCount, loadConcepts, loadLessons, validateContent } from '@/lib/content';
+import { getVisual } from '@/components/visuals/registry';
 
 describe('content validation', () => {
   const lessons = loadLessons();
@@ -28,6 +29,29 @@ describe('content validation', () => {
   it('the exercise answer is arithmetically consistent (12 goods -> 66 pairs)', () => {
     const l1 = lessons.find((l) => l.lesson === 1)!;
     expect(l1.exercise.answer).toBe((12 * 11) / 2);
+  });
+
+  it('every lesson body is inside the 500-1100 word CI band', () => {
+    for (const l of lessons) {
+      const words = bodyWordCount(l.body);
+      expect(words, `${l.slug}: ${words} words`).toBeGreaterThanOrEqual(500);
+      expect(words, `${l.slug}: ${words} words`).toBeLessThanOrEqual(1100);
+    }
+  });
+
+  it('every lesson visual id resolves to a built component', () => {
+    for (const l of lessons) {
+      expect(getVisual(l.visual.id), `${l.slug}: visual ${l.visual.id}`).toBeDefined();
+    }
+  });
+
+  it('batch 1 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('income-expenses-cash-flow')!.exercise.answer).toBe(((2600 - 2210) / 2600) * 100);
+    expect(bySlug.get('assets-and-liabilities')!.exercise.answer).toBe(4500 + 1200);
+    expect(bySlug.get('net-worth')!.exercise.answer).toBe(8000 + 220000 + 15000 - (168000 + 2500));
+    expect(bySlug.get('interest')!.exercise.answer).toBe(2500 * 0.04);
+    expect(bySlug.get('compound-interest')!.exercise.answer).toBe(1000 * 1.1 * 1.1);
   });
 
   it('detects a graph cycle', () => {
