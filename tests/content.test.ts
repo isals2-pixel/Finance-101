@@ -21,8 +21,8 @@ describe('content validation', () => {
     expect(l1!.sources.length).toBeGreaterThanOrEqual(1);
     expect(l1!.prediction.prompt.length).toBeGreaterThan(10);
     const words = bodyWordCount(l1!.body);
-    expect(words).toBeGreaterThanOrEqual(1000);
-    expect(words).toBeLessThanOrEqual(2200);
+    expect(words).toBeGreaterThanOrEqual(500);
+    expect(words).toBeLessThanOrEqual(1100);
   });
 
   it('the exercise answer is arithmetically consistent (12 goods -> 66 pairs)', () => {

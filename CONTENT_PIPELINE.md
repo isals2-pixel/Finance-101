@@ -5,12 +5,12 @@ Living document. How a lesson goes from idea to published text. Since v2.1 there
 ## 1. Drafting a source pack
 
 1. Copy `/data/curriculum/lessons/_template.md` to `NN-slug.md`.
-2. Write the body to the section structure and word budgets in CONTENT_SCHEMA.md: short sentences, every jargon term defined at first use, one worked example with the arithmetic written step by step in EUR. The 1,400-1,800 word band keeps a lesson at roughly 7-9 minutes of reading.
+2. Write the body to the section structure and word budgets in CONTENT_SCHEMA.md. The leading principle is the owner's: short, concise, concrete, simple. Short sentences, every jargon term defined at first use, one worked example with the arithmetic written step by step in EUR, nothing that pads or restates. The 600-900 word band keeps a lesson at a 3-5 minute read.
 3. Fill the frontmatter: prediction, retrieval items with model answers and error maps, exercise, sources with publication and verification dates, mastery criteria.
 
 If a language model drafts the body, use this prompt and then edit by hand:
 
-> Draft the body of a lesson source pack for a private finance course, following the attached template structure and word budgets exactly. Topic: <topic>. The learner is an analytical adult beginner. Use EUR in all numbers. Write every arithmetic step of the worked example out in words and digits. Define each technical term in one sentence the first time it appears. Do not add exercises, recaps, or questions - those live in the frontmatter. State two or three common misconceptions about the topic and correct them.
+> Draft the body of a lesson source pack for a private finance course, following the attached template structure and word budgets exactly. Topic: <topic>. The learner is an analytical adult beginner. Keep it short, concise, concrete, and simple: get to the point in the first sentence of every section, and cut any sentence that does not carry a fact, definition, number, or reasoning step. Use EUR in all numbers. Write every arithmetic step of the worked example out in words and digits. Define each technical term in one sentence the first time it appears. Do not add exercises, recaps, or questions - those live in the frontmatter. State two or three common misconceptions and correct them.
 
 The owner verifies every claim against the cited sources before acceptance. A model draft is never accepted unedited.
 
@@ -27,7 +27,7 @@ Before a source pack is accepted, confirm by hand:
 - [ ] At least one item with transfer potential exists or is planned in a pool
 - [ ] Every substantive claim has a source with publication date; verification date set to today
 - [ ] Visual explains a relationship (not decoration); requirement flag set honestly
-- [ ] Word count within the band
+- [ ] Word count within 600-900; no paragraph that only restates or pads
 
 CI enforces the mechanical parts (schema, references, DAG, word-count bounds). This checklist covers what CI cannot.
 

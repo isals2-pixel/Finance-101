@@ -56,24 +56,24 @@ One sentence to hold on to: <the oneSentence, restated>.
 
 ## The problem
 
-100-150 words. A concrete situation with a non-obvious answer. No solution yet.
+40-80 words. A concrete situation with a non-obvious answer. No solution yet.
 
 ## The idea
 
-400-600 words. Plain language, one idea per paragraph, no term used before it is defined.
+200-350 words. Plain language, one idea per paragraph, no term used before it is defined. Short, concise, concrete, simple - cut anything that pads.
 
 ## The terms
 
-100-200 words. Each technical term defined in one sentence.
+50-100 words. Each technical term defined in one sentence.
 
 ## Worked example
 
-300-400 words. Real EUR numbers. Every arithmetic step written out in words and digits. The result interpreted in a sentence.
+120-200 words. Real EUR numbers. Every arithmetic step written out in words and digits. The result interpreted in a sentence.
 
 ## Connections
 
-150-250 words. How this relates to named earlier concepts, or, in the first lessons, to what comes next.
+40-80 words. How this relates to named earlier concepts, or, in the first lessons, to what comes next.
 
 ## Common misconceptions
 
-100-200 words. Two or three, each stated plainly and then corrected.
+60-120 words. Two or three, each stated plainly and then corrected.
