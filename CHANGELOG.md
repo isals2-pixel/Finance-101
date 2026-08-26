@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 3: fixed income depth and ETF structure (lessons 32-37)
+
+- Level 7 completed: yield and bond pricing, duration, credit risk and ratings.
+- Level 8 completed: passive vs active with replication methods, tracking difference, fund structure (UCITS, domicile, Acc/Dist).
+- Six concepts with misconceptions, six visuals, exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 2: market mechanics and equities (lessons 27-31)
 
 - Five lessons completing the reduced Levels 5 and 6: exchanges and brokers, liquidity and the bid-ask spread, market and limit orders, earnings, growth vs value.

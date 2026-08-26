@@ -34,6 +34,14 @@ import {
   OrderFill,
 } from './Batch5Visuals';
 import {
+  CreditSpectrum,
+  DurationLever,
+  FundLabels,
+  PriceYieldSeesaw,
+  ReplicationPaths,
+  TrackingGap,
+} from './Batch6Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -74,6 +82,12 @@ const VISUALS: Record<string, ComponentType> = {
   'order-fill': OrderFill,
   'earnings-waterfall': EarningsWaterfall,
   'growth-value-compare': GrowthValueCompare,
+  'price-yield-seesaw': PriceYieldSeesaw,
+  'duration-lever': DurationLever,
+  'credit-spectrum': CreditSpectrum,
+  'replication-paths': ReplicationPaths,
+  'tracking-gap': TrackingGap,
+  'fund-labels': FundLabels,
 };
 
 export function getVisual(id: string): ComponentType | undefined {

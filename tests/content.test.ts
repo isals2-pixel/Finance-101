@@ -54,6 +54,16 @@ describe('content validation', () => {
     expect(bySlug.get('compound-interest')!.exercise.answer).toBe(1000 * 1.1 * 1.1);
   });
 
+  it('level 7-8 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('yield-and-bond-pricing')!.exercise.answer).toBe((40 / 800) * 100);
+    expect(bySlug.get('duration')!.exercise.answer).toBeCloseTo(10000 * 0.07, 6);
+    expect(bySlug.get('credit-risk-and-ratings')!.exercise.answer).toBeCloseTo(5.1 - 3.0, 10);
+    expect(bySlug.get('passive-active-and-replication')!.exercise.answer).toBeCloseTo(6.0 - 0.2, 10);
+    expect(bySlug.get('tracking-difference')!.exercise.answer).toBeCloseTo(6.0 - 5.72, 3);
+    expect(bySlug.get('fund-structure')!.exercise.answer).toBe(10000 * 0.02);
+  });
+
   it('level 5-6 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('exchanges-and-brokers')!.exercise.answer).toBe(5000 * 0.001);
