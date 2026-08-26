@@ -58,7 +58,7 @@ masteryCriteria: >             # human-readable acceptance bar for the concept
   ...
 ```
 
-Body structure (SPEC_V2 §10): title header, opening problem (100-150 words), intuitive explanation (400-600), formal definitions (100-200), worked example (300-400, EUR, arithmetic written out), connections (150-250), common misconceptions (100-200). Target total 1,400-1,800 words, roughly 7-9 minutes of reading.
+Body structure (SPEC_V2 §10): title header, opening problem (40-80 words), intuitive explanation (200-350), formal definitions (50-100), worked example (120-200, EUR, arithmetic written out), connections (40-80), common misconceptions (60-120). Target total 600-900 words, a 3-5 minute read. Style: short, concise, concrete, simple - every sentence carries a fact, definition, number, or reasoning step.
 
 Question types across the system: freeRecall, shortAnswer, explanation, prediction (self-scored); classification, comparisonChoice, numeric, calculation, multipleChoice (auto-scored, never the majority); decisionScenario, portfolioConstruction (Phase 3+).
 

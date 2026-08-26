@@ -69,7 +69,7 @@ Lessons are short written texts read in the application. The v1.0 audio-first ra
 
 ## 8. Lesson length
 
-Default 7-10 minutes of reading and retrieval, allowed 5-12. Never a mandatory 30-60 minute lesson; complex topics are decomposed into lesson series (bonds become eight short lessons, not one long one). The 1,400-1,800 word body targets roughly 7-9 minutes at 200 words per minute.
+Default 7-10 minutes for the whole lesson (reading plus retrieval), allowed 5-12. Never a mandatory 30-60 minute lesson; complex topics are decomposed into lesson series (bonds become eight short lessons, not one long one). The 600-900 word body targets a 3-5 minute read at 200 words per minute.
 
 ## 9. Lesson structure
 
@@ -97,18 +97,20 @@ Replaces v1.0 section 10 (audio script design). The source pack is the lesson: i
 
 ### Source pack format
 
-Markdown at `/data/curriculum/lessons/NN-slug.md`. Footer data in frontmatter (parsed by the application, never shown as lesson text); body in markdown (rendered as the reading stage). Target 1,400-1,800 words.
+Markdown at `/data/curriculum/lessons/NN-slug.md`. Footer data in frontmatter (parsed by the application, never shown as lesson text); body in markdown (rendered as the reading stage). Target 600-900 words.
+
+Leading style principle (owner directive, 2026-08-26): short, concise, concrete, simple. Get to the point in the first sentence of every section; no paragraph that only restates or pads; every retained sentence earns its place with a fact, a definition, a number, or a step of reasoning.
 
 Header: lesson number and title, the one sentence a learner should be able to say afterwards, prerequisite concepts by name, concepts introduced by name.
 
 Body, in order:
 
-1. Opening problem - 100-150 words, concrete situation with a non-obvious answer
-2. Intuitive explanation - 400-600 words, plain language, one idea per paragraph
-3. Formal definitions - 100-200 words, one sentence per term
-4. Worked example - 300-400 words, real EUR numbers, every arithmetic step written out, result interpreted in words
-5. Connections - 150-250 words, relation to named earlier concepts
-6. Common misconceptions - 100-200 words, two or three, stated then corrected
+1. Opening problem - 40-80 words, concrete situation with a non-obvious answer
+2. Intuitive explanation - 200-350 words, plain language, one idea per paragraph
+3. Formal definitions - 50-100 words, one sentence per term
+4. Worked example - 120-200 words, real EUR numbers, every arithmetic step written out, result interpreted in words
+5. Connections - 40-80 words, relation to named earlier concepts
+6. Common misconceptions - 60-120 words, two or three, stated then corrected
 
 Frontmatter footer: retrieval questions with model answers, the prediction question, the practical exercise, sources with publication dates, mastery criteria.
 

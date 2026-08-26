@@ -19,37 +19,31 @@ visual:
 prediction:
   prompt: >
     Suppose everyone in France woke up tomorrow doubting that shops would still
-    accept euros next month. Nothing official has changed - no law, no
-    announcement. What happens to how well the euro works as money, and why?
-    Answer in one or two sentences before reading on.
+    accept euros next month. Nothing official has changed. What happens to how
+    well the euro works as money, and why? One or two sentences.
   modelAnswer: >
-    The euro would immediately work worse as money, even though nothing
-    official changed. Acceptance is self-fulfilling: people take euros today
-    because they expect others to take them tomorrow. If that expectation
-    weakens, sellers start demanding something else or raising prices, which
-    confirms the doubt and weakens acceptance further. Money's usefulness
-    rests on shared expectations, not only on rules.
+    It immediately works worse, because acceptance is self-fulfilling: people
+    take euros today only because they expect others to take them tomorrow.
+    Doubt makes sellers demand something else or raise prices, which confirms
+    the doubt. Money runs on shared expectations, not only on rules.
 retrieval:
   - id: q1
     conceptId: money
     type: freeRecall
     prompt: >
-      Name the three functions of money and explain each one in your own
-      words, with one everyday example per function.
+      Name the three functions of money and explain each in your own words,
+      with one everyday example per function.
     modelAnswer: >
-      Medium of exchange: money is what you hand over to get goods and
-      services, so you never need to find someone who wants exactly what you
-      have - paying for bread with euros instead of offering hours of your
-      work to the baker. Unit of account: money is the common measuring stick
-      for value, so everything has one price - a laptop is 900 euros, not
-      "three months of groceries". Store of value: money lets you move
-      purchasing power into the future - keeping 2,000 euros for next year
-      instead of spending them now, accepting that inflation can erode what
-      they will buy.
+      Medium of exchange: what you hand over in trades, so you never need to
+      find someone who wants exactly what you have (paying the baker in euros,
+      not in hours of work). Unit of account: the common measuring stick, so
+      everything has one price (a laptop is 900 euros). Store of value: money
+      carries purchasing power into the future (keeping 2,000 euros for next
+      year), though inflation erodes it.
     rubricNote: >
-      A 5 names all three functions correctly, explains each causally (what
-      problem it solves), and gives a concrete example for each. A 3 names
-      and defines them without examples or without the problem each solves.
+      A 5 names all three, explains the problem each solves, and gives an
+      example for each. A 3 defines them without examples or without the
+      problem each solves.
     askConfidence: false
   - id: q2
     conceptId: money
@@ -78,20 +72,18 @@ retrieval:
     conceptId: money
     type: shortAnswer
     prompt: >
-      A 50 euro note costs only a few cents to produce and has almost no use
-      as paper. Why does a baker hand over real bread for it?
+      A 50 euro note costs a few cents to produce and is worthless as paper.
+      Why does a baker hand over real bread for it?
     modelAnswer: >
-      Because the note's value does not come from the paper but from shared
-      acceptance and managed scarcity. The baker takes it because she is
-      confident everyone she deals with - suppliers, the landlord, the tax
-      office - will take it too, at a stable value. That confidence rests on
-      the euro being legal tender and on the central bank keeping its supply
-      scarce enough that prices stay roughly stable. Fiat money is a claim on
-      the economy's goods that works as long as that trust holds.
+      Because its value comes from shared acceptance and managed scarcity, not
+      the paper. The baker takes it because everyone she deals with will take
+      it too, at a stable value - backed by legal-tender status and by the
+      central bank keeping euros scarce enough that prices stay roughly
+      stable. That is what fiat money means.
     rubricNote: >
       A 5 explains acceptance as self-fulfilling AND names managed scarcity or
-      the central bank's role, with the fiat idea stated. A 3 says "because
-      everyone accepts it" without explaining what sustains the acceptance.
+      the central bank. A 3 says "everyone accepts it" without what sustains
+      the acceptance.
     askConfidence: true
 exercise:
   id: ex1
@@ -99,16 +91,14 @@ exercise:
   type: calculation
   prompt: >
     A barter economy trades 12 distinct goods with no money. Every pair of
-    goods needs its own exchange rate (bread for fish, bread for cloth, and
-    so on). How many distinct exchange rates does this economy need? Use the
-    pairs formula from the worked example: n times (n minus 1), divided by 2.
+    goods needs its own exchange rate. Using the pairs formula from the worked
+    example - n times (n minus 1), divided by 2 - how many exchange rates does
+    it need?
   answer: 66
   tolerance: 0
   explanation: >
-    With n = 12 goods, the number of pairs is 12 x 11 / 2. 12 x 11 = 132.
-    132 / 2 = 66 exchange rates. With money as the unit of account the same
-    economy needs just 12 prices, one per good. That collapse - 66 to 12 -
-    is the practical reason a common measuring unit emerges.
+    12 x 11 = 132. 132 / 2 = 66 exchange rates. With money as the unit of
+    account the same economy needs just 12 prices, one per good.
 sources:
   - title: "What is money?"
     publisher: European Central Bank
@@ -133,38 +123,32 @@ One sentence to hold on to: money is whatever a society broadly accepts as a med
 
 ## The problem
 
-A 50 euro note costs the central bank a few cents to print. As paper, it is nearly worthless: you cannot eat it, wear it, or build with it. Yet hand it to a baker in Lyon and she gives you real bread without hesitation. Hand her a different piece of paper, the same size, beautifully printed, and she gives you nothing. Both papers are almost identical objects. One commands real goods, the other does not. Whatever makes the first one "money" clearly is not in the paper itself. So where is it? Answering that question precisely is the foundation for everything else in this course, because saving, investing, inflation and returns are all statements about money.
+A 50 euro note costs a few cents to print and is useless as paper. Yet a baker hands you real bread for it, while an equally well-printed piece of paper gets you nothing. Whatever makes the first one money is not in the paper. So where is it?
 
 ## The idea
 
-Start by imagining the world without money. You are a baker and you need shoes. Under barter, you must find a shoemaker who, at this exact moment, wants bread. Economists call this the double coincidence of wants: both sides must want precisely what the other offers, at the same time, in matching amounts. Most of the time that coincidence does not exist. You would spend your days searching for trading partners instead of baking.
+Without money, trade is barter, and barter has a built-in blocker: the double coincidence of wants. You, the baker, need shoes - but the deal only happens if the shoemaker wants bread, right now, in the right amount. Usually he does not, so you spend your day hunting for trading partners instead of baking.
 
-Now notice what happens if everyone in town agrees to accept one particular thing - silver pieces, sea shells, printed notes - in every trade. You sell bread to anyone who is hungry and receive that thing. You take it to any shoemaker, whether or not he cares about bread. The search problem disappears. That agreed-upon thing is a medium of exchange, and this is money's first and defining job: it is the thing you trade so that you never need the double coincidence of wants.
+Now let everyone agree to accept one thing - silver, shells, printed notes - in every trade. You sell bread to anyone and take that thing; you hand it to any shoemaker, whether or not he cares about bread. The search problem disappears. That thing is a medium of exchange: money's first and defining job.
 
-A second job follows almost automatically. Once one thing is used in every trade, it becomes natural to quote all values in it. Instead of remembering how much bread a pair of shoes costs, and how much fish a shirt costs, and so on for every pair of goods, every good gets one price in the common unit. Money becomes the measuring stick of value - the unit of account. This is why you can compare a job offer, a rent, and a laptop at a glance: they are all expressed in the same unit.
+Two more jobs follow. Once one thing is used in every trade, all prices get quoted in it, so every good has one price instead of a tangle of barter ratios. Money becomes the measuring stick of value: the unit of account. And because others will still accept it next month, you can earn now and spend later. Money carries purchasing power through time: a store of value. Not a perfect one - when prices rise, the same notes buy less.
 
-The third job comes from a simple observation: you do not have to spend money the moment you earn it. Because others will still accept it next month, money lets you carry purchasing power through time. It is a store of value. It is not a perfect store - if prices rise, the same notes buy less - but over short periods it works well enough that everyone uses it this way.
-
-That leaves the baker's puzzle: why do people accept nearly worthless paper in the first place? Historically, money was often a commodity with value of its own, such as gold or silver coins. Modern money is different. The euro is fiat money: it is not backed by gold or by any physical commodity, and it cannot be redeemed at the central bank for anything but other euros. Its value rests on two supports. The first is shared acceptance, which is self-fulfilling: the baker takes euros because she is confident her suppliers, her landlord and the tax office will take them too. Law reinforces this by making the euro legal tender, and taxes must be paid in it. The second support is managed scarcity: the European Central Bank controls how many euros exist, precisely so that they remain scarce relative to the goods they buy and prices stay roughly stable. Take away either support - the expectation of acceptance, or the scarcity - and the paper's grip on real goods weakens. That is not a theoretical remark: episodes of very high inflation are exactly what it looks like when scarcity fails, and people abandoning a currency for another one is what it looks like when acceptance fails.
+That leaves the baker's puzzle. The euro is fiat money: not backed by gold, not redeemable for anything but other euros. Its value stands on two supports. First, shared acceptance, which is self-fulfilling: the baker takes euros because everyone she deals with - suppliers, landlord, the tax office - takes them too, and the law reinforces this by making the euro legal tender. Second, managed scarcity: the European Central Bank controls how many euros exist so they stay scarce relative to the goods they buy. Remove either support and the paper loses its grip. Hyperinflation is scarcity failing; a population abandoning its currency is acceptance failing.
 
 ## The terms
 
-Money is any asset that is generally accepted as payment for goods and services and for settling debts. A medium of exchange is the thing handed over in trades, eliminating the double coincidence of wants. A unit of account is the common unit in which prices and values are quoted. A store of value is an asset that carries purchasing power from the present into the future. Fiat money is money whose value comes from general acceptance and legal status rather than from the material it is made of or a promise of redemption in a commodity. Legal tender is money that law recognises as valid payment for debts.
+Money is any asset generally accepted as payment for goods, services and debts. A medium of exchange is the thing handed over in trades. A unit of account is the common unit in which prices are quoted. A store of value carries purchasing power into the future. Fiat money gets its value from acceptance and legal status, not from the material it is made of. Legal tender is money that law recognises as valid payment.
 
 ## Worked example
 
-Let us measure exactly what the unit-of-account job saves. Take a small barter economy that trades just four goods: bread, fish, cloth and firewood. With no common unit, every pair of goods needs its own exchange rate. Count the pairs. Bread pairs with fish, with cloth, and with firewood: three pairs. Fish, already paired with bread, still needs cloth and firewood: two more, five so far. Cloth, already paired with bread and fish, still needs firewood: one more. Six exchange rates in total for four goods.
+How much does the unit-of-account job save? Take a barter market with four goods: bread, fish, cloth, firewood. Every pair needs its own exchange rate. Count them: bread pairs with fish, cloth and firewood - three. Fish still needs cloth and firewood - two more. Cloth still needs firewood - one more. Six rates.
 
-There is a formula behind that count. With n goods, each of the n goods can pair with the n minus 1 others, giving n times n minus 1 ordered pairs; since bread-for-fish and fish-for-bread are the same rate, divide by two. For four goods: 4 times 3 is 12, divided by 2 is 6. It matches the count.
-
-Now scale up to something closer to a real market: 100 distinct goods. Apply the formula: 100 times 99 is 9,900. Divide by 2: 4,950 exchange rates. A trader would need to know nearly five thousand rates to navigate the market, and every rate could drift on its own.
-
-Introduce money as the unit of account and price every good in euros instead. One hundred goods now need exactly 100 prices - one each. The information the economy must carry falls from 4,950 numbers to 100, a reduction of 98 percent. That collapse in complexity is why a common unit emerges again and again in history, even in prisons and camps where official money is absent and something else - famously, cigarettes - takes over the three jobs.
+The general formula: with n goods there are n times (n minus 1), divided by 2, pairs. Check it: 4 x 3 = 12, and 12 / 2 = 6. Now scale to 100 goods: 100 x 99 = 9,900, and 9,900 / 2 = 4,950 exchange rates to keep track of. Price everything in euros instead, and 100 goods need exactly 100 prices. From 4,950 numbers to 100: a 98 percent collapse in what the market must know. That is why a common unit keeps emerging - even in prisons, where cigarettes have taken over all three jobs.
 
 ## Connections
 
-This is the first lesson, so the connections point forward. Income and expenses, the subject of the next lesson, are flows of money in and out of your life, measured with money's unit-of-account job. Net worth, two lessons ahead, is a snapshot of what you own minus what you owe, again only possible because everything can be valued in one unit. The store-of-value job is the door to the rest of the course: it is imperfect, because prices rise over time, and the lesson on inflation measures exactly how imperfect. Once you see money as a claim on real goods whose strength can erode, the reason for investing follows naturally: investing is choosing better stores of value than the notes themselves. Keep the baker's puzzle in mind throughout - the question "what is this claim actually worth, and what maintains that worth?" returns for every asset in this course, from bonds to ETF shares.
+This is the first lesson, so the connections point forward. Income and expenses, next lesson, are money flows measured with the unit-of-account job. Net worth needs everything valued in one unit. And because the store-of-value job is imperfect, the inflation lesson measures exactly how imperfect - which is the reason investing exists: choosing better stores of value than the notes themselves.
 
 ## Common misconceptions
 
-First: "the euro is valuable because it is backed by gold." It is not, and it has never been. No major currency today is redeemable in gold. The euro's value rests on shared acceptance, legal-tender status, and the central bank keeping it scarce. Second: "money and wealth are the same thing." Wealth is everything you own that has value - money, but also a flat, a pension claim, shares. Money is just one form of wealth, and usually the form that grows least, because its purchasing power slowly erodes as prices rise. Third: "keeping cash means taking no risk." Holding cash is a decision like any other, and it carries a specific risk: the risk that prices rise while your notes stand still. What is certain about cash is its number, not what that number will buy.
+"The euro is backed by gold." It is not, and never was; no major currency today is redeemable in gold. Its value rests on acceptance, legal-tender status and managed scarcity. "Money and wealth are the same." Wealth is everything you own with value; money is one form of it, and the form inflation erodes. "Holding cash is risk-free." Cash is certain only in its number, not in what that number will buy.

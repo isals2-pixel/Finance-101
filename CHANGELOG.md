@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-26 - Lesson style: half the length
+
+- Owner directive: lessons were too verbose. Leading principle from now on: short, concise, concrete, simple.
+- Word budgets halved everywhere they are defined: body target 600-900 words (was 1,400-1,800), per-section budgets halved in SPEC_V2 §10, CONTENT_SCHEMA.md, CONTENT_PIPELINE.md, the template, and the CI bounds (500-1100).
+- Lesson 1 rewritten from 1,390 to 773 words with all concepts, definitions, the worked example, and misconceptions kept; frontmatter model answers tightened.
+
 ## 2026-08-26 - Specification v2.1: audio removed
 
 - Owner decision (docs/revisions/2026-08-26-audio-removal.md): the NotebookLM audio workflow is dropped; lessons are read-only text in the app.

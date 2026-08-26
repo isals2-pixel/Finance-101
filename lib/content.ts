@@ -169,8 +169,8 @@ export function validateContent(lessons: Lesson[], concepts: Concept[]): void {
     if (!conceptIds.has(l.exercise.conceptId))
       problems.push(`lesson ${l.slug} exercise: unknown concept ${l.exercise.conceptId}`);
     const words = bodyWordCount(l.body);
-    if (words < 1000 || words > 2200)
-      problems.push(`lesson ${l.slug}: body is ${words} words, outside 1000-2200 (target band 1400-1800)`);
+    if (words < 500 || words > 1100)
+      problems.push(`lesson ${l.slug}: body is ${words} words, outside 500-1100 (target band 600-900)`);
   }
 
   if (problems.length) throw new Error(`Content validation failed:\n- ${problems.join('\n- ')}`);
