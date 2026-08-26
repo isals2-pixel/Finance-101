@@ -47,6 +47,11 @@ import {
   VolatilityDrag,
 } from './Batch7Visuals';
 import {
+  AllocationDials,
+  PortfolioBlueprint,
+  RebalancingCycle,
+} from './Batch8Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -96,6 +101,9 @@ const VISUALS: Record<string, ComponentType> = {
   'volatility-drag': VolatilityDrag,
   'correlation-mix': CorrelationMix,
   'efficient-frontier': EfficientFrontier,
+  'allocation-dials': AllocationDials,
+  'rebalancing-cycle': RebalancingCycle,
+  'portfolio-blueprint': PortfolioBlueprint,
 };
 
 export function getVisual(id: string): ComponentType | undefined {

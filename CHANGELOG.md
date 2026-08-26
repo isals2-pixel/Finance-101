@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 5: asset allocation (lessons 41-43)
+
+- Level 10 completed: asset allocation (strategic vs tactical, risk tolerance vs capacity, horizon, the lowest-cap rule), rebalancing and sequence of returns (drift, bands, withdrawal-phase order risk), building the portfolio (liquidity-allocation-funds-rules construction order, the two-fund implementation).
+- Three concepts with misconceptions, three visuals (allocation dials, rebalancing cycle, construction blueprint), exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 4: portfolio theory (lessons 38-40)
 
 - Level 9 completed: measuring risk and return (volatility, volatility drag), correlation and portfolio risk (offsetting mechanism, crisis correlations, two-layer diversification), risk-adjusted return (Sharpe ratio, efficient frontier, beta/CAPM).

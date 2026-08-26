@@ -801,6 +801,89 @@
           "correction": "Return per unit of risk is the comparison that matters; a higher return bought with disproportionate volatility is a worse deal, which the Sharpe ratio makes visible."
         }
       ]
+    },
+    {
+      "id": "asset-allocation",
+      "title": "Asset allocation",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "risk-adjusted-return",
+        "long-term-investing"
+      ],
+      "related": [
+        "diversification",
+        "rebalancing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The right allocation is the one with the highest expected return.",
+          "correction": "The right allocation is the riskiest mix the investor can hold through a crash without selling - both capacity and tolerance bound it, and an abandoned allocation returns less than a held one."
+        },
+        {
+          "statement": "Risk tolerance and risk capacity are the same thing.",
+          "correction": "Tolerance is psychological (what swings you can sleep through); capacity is financial (what losses your situation can absorb given horizon, income and reserves). The allocation must fit the lower of the two."
+        },
+        {
+          "statement": "Tactical shifts to catch market turns add return for skilled amateurs.",
+          "correction": "Tactical allocation is market timing by another name; the evidence on lessons 25 and 29 applies - mistimed moves cost more than they gain, and the strategic mix does the heavy lifting."
+        }
+      ]
+    },
+    {
+      "id": "rebalancing",
+      "title": "Rebalancing",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "asset-allocation"
+      ],
+      "related": [
+        "volatility",
+        "long-term-investing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Rebalancing means selling your winners, which lowers returns.",
+          "correction": "Rebalancing controls risk, not return: it restores the chosen risk level after drift. Its discipline - selling what rose, buying what fell - also removes emotion from the decision."
+        },
+        {
+          "statement": "Portfolios should be rebalanced constantly.",
+          "correction": "Once a year, or when weights drift past a band such as five points, captures most of the benefit; more frequent trading adds costs and, outside tax wrappers, taxes."
+        },
+        {
+          "statement": "Sequence of returns doesn't matter if the average return is good.",
+          "correction": "Once money is being withdrawn, early losses are locked in by the withdrawals and cannot be recovered by later gains - the order of returns changes the outcome even at the same average."
+        }
+      ]
+    },
+    {
+      "id": "portfolio-construction",
+      "title": "Portfolio construction",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "asset-allocation",
+        "rebalancing"
+      ],
+      "related": [
+        "etf",
+        "diversification"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A proper portfolio needs many funds.",
+          "correction": "One broad world-equity ETF plus one high-grade bond fund spans thousands of securities across the main drivers; added funds mostly add overlap, cost and maintenance."
+        },
+        {
+          "statement": "Construction starts with picking good funds.",
+          "correction": "It starts with the allocation; fund selection is the last step and mostly a cost-and-tracking comparison among near-identical broad products."
+        },
+        {
+          "statement": "Money you might need next year belongs in the portfolio, working.",
+          "correction": "Near-term money held in volatile assets risks forced selling in a dip - the one scenario that makes losses permanent. Liquidity needs are carved out first, in cash."
+        }
+      ]
     }
   ]
 }

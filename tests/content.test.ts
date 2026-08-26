@@ -93,6 +93,13 @@ describe('content validation', () => {
     expect(bySlug.get('risk-adjusted-return')!.exercise.answer).toBeCloseTo((6 - 2) / 16, 6);
   });
 
+  it('level 10 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('asset-allocation')!.exercise.answer).toBeCloseTo(0.6 * 6 + 0.4 * 3, 6);
+    expect(bySlug.get('rebalancing')!.exercise.answer).toBe(60000 * 1.5 - 0.6 * (60000 * 1.5 + 40000));
+    expect(bySlug.get('portfolio-construction')!.exercise.answer).toBeCloseTo(5.4 - 2 * 13, 6);
+  });
+
   it('batch 2 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);
