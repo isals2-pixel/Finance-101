@@ -1,5 +1,5 @@
 'use client';
-// Step 7: the visual mental model, shown after the audio (SPEC_V2 §9, §18).
+// Step 7: the visual mental model, shown after the reading (SPEC_V2 §9, §18).
 import type { Lesson } from '@/lib/types';
 import { getVisual } from '@/components/visuals/registry';
 

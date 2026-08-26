@@ -9,10 +9,6 @@ oneSentence: >
 level: 1
 prerequisites: []
 concepts: [money]
-audio:
-  file: ""
-  durationSec: 0
-  generatedAt: ""
 visual:
   id: money-functions
   kind: diagram

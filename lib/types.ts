@@ -54,7 +54,6 @@ export interface Lesson {
   level: number;
   prerequisites: string[];
   concepts: string[];
-  audio: { file: string; durationSec: number; generatedAt: string };
   visual: {
     id: string;
     kind: string;
@@ -104,9 +103,7 @@ export interface Attempt {
 export interface LessonState {
   slug: string;
   startedAt?: number;
-  audioCompletedAt?: number;
-  audioSkipped?: boolean;
-  audioPositionSec?: number;
+  readAt?: number;
   predictionAt?: number;
   visualAt?: number;
   retrievalAt?: number;

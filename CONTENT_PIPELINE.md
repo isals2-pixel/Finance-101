@@ -1,16 +1,16 @@
 # Content Production Pipeline
 
-Living document. How a lesson goes from idea to playable audio. Content correctness is the owner's responsibility before a lesson is accepted; nothing in this pipeline verifies financial accuracy automatically.
+Living document. How a lesson goes from idea to published text. Since v2.1 there is no audio step: the source pack body IS the lesson, read in the application. Content correctness is the owner's responsibility before a lesson is accepted; nothing in this pipeline verifies financial accuracy automatically.
 
 ## 1. Drafting a source pack
 
 1. Copy `/data/curriculum/lessons/_template.md` to `NN-slug.md`.
-2. Write the body to the section structure and word budgets in CONTENT_SCHEMA.md. Write for the ear: short sentences, no lists the hosts would read out, every jargon term defined at first use, one worked example with the arithmetic written step by step in EUR.
+2. Write the body to the section structure and word budgets in CONTENT_SCHEMA.md: short sentences, every jargon term defined at first use, one worked example with the arithmetic written step by step in EUR. The 1,400-1,800 word band keeps a lesson at roughly 7-9 minutes of reading.
 3. Fill the frontmatter: prediction, retrieval items with model answers and error maps, exercise, sources with publication and verification dates, mastery criteria.
 
 If a language model drafts the body, use this prompt and then edit by hand:
 
-> Draft the body of a lesson source pack for a private finance course, following the attached template structure and word budgets exactly. Topic: <topic>. The learner is an analytical adult beginner. Use EUR in all numbers. Write every arithmetic step of the worked example out in words and digits. Define each technical term in one sentence the first time it appears. Do not address the listener directly, do not add exercises, recaps, or questions - those live outside the audio. State two or three common misconceptions about the topic and correct them.
+> Draft the body of a lesson source pack for a private finance course, following the attached template structure and word budgets exactly. Topic: <topic>. The learner is an analytical adult beginner. Use EUR in all numbers. Write every arithmetic step of the worked example out in words and digits. Define each technical term in one sentence the first time it appears. Do not add exercises, recaps, or questions - those live in the frontmatter. State two or three common misconceptions about the topic and correct them.
 
 The owner verifies every claim against the cited sources before acceptance. A model draft is never accepted unedited.
 
@@ -27,36 +27,23 @@ Before a source pack is accepted, confirm by hand:
 - [ ] At least one item with transfer potential exists or is planned in a pool
 - [ ] Every substantive claim has a source with publication date; verification date set to today
 - [ ] Visual explains a relationship (not decoration); requirement flag set honestly
-- [ ] Word count within the calibrated band
+- [ ] Word count within the band
 
 CI enforces the mechanical parts (schema, references, DAG, word-count bounds). This checklist covers what CI cannot.
 
-## 3. Producing the audio
+## 3. Publishing
 
-1. `npm run export:pack -- NN` writes `exports/NN-slug.txt` (body only).
-2. New NotebookLM notebook, that single file as the only source.
-3. Audio Overview -> customize -> paste `/data/curriculum/audio-instruction.md` -> generate.
-4. Listen to the whole episode. Reject and regenerate if it introduces outside material, skips the worked example's arithmetic, or misstates a definition. Note rejections below.
-5. Download (.wav), convert: `ffmpeg -i in.wav -ac 1 -b:a 64k public/audio/NN-slug.mp3` (mono, ~64 kbps keeps 10 minutes near 5 MB).
-6. Fill `audio.file`, `audio.durationSec`, `audio.generatedAt` in the lesson frontmatter. Commit both together.
+Commit the lesson file to `main` - directly on github.com works, including from a phone. The workflow validates (an invalid lesson fails CI and does not deploy), builds, and publishes. The lesson appears on the site a few minutes later.
 
-Free-tier generation limits are per day; batch accordingly. Verify current NotebookLM/Gemini Notebook behavior before each batch - the product changes frequently.
+## 4. Versioning and corrections
 
-## 4. Versioning and regeneration
+Content lives in git; the lesson file's history is its version history. Corrections are normal commits with a CHANGELOG.md entry. Because the text is the lesson, a correction is live at the next deploy - there is nothing else to regenerate.
 
-- Content lives in git; the lesson file's history is its version history. Corrections are normal commits with a CHANGELOG.md entry.
-- If a body change alters meaning (not a typo), the audio is stale: regenerate it, replace the mp3 in place (same filename, so URLs and the feed stay valid), and update `generatedAt`.
-- Frontmatter-only changes (questions, sources) never require regeneration.
-- Changing `audio-instruction.md` makes all audio inconsistent in style; batch-regenerate opportunistically, newest lessons first.
+## 5. Timings
 
-## 5. Calibration and timings
-
-Fill in after the first three lessons are produced:
+Fill in after the first three lessons are authored:
 
 | Measure | Value |
 |---|---|
-| Source pack words -> audio minutes (3 samples) | to be measured |
-| Calibrated word-count band | 1,400-1,800 (initial assumption) |
 | Time to draft + review one source pack | to be measured |
-| Time to generate + QA + convert audio | to be measured |
-| Rejected generations (count, reason) | to be recorded |
+| Words per lesson (actual, first three) | to be measured |

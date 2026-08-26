@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-26 - Specification v2.1: audio removed
+
+- Owner decision (docs/revisions/2026-08-26-audio-removal.md): the NotebookLM audio workflow is dropped; lessons are read-only text in the app.
+- Lesson flow is now read -> predict -> visualise -> retrieve; completion gate unchanged.
+- Removed: audio player and audio-only mode, NotebookLM standing instruction and export command, podcast feed, public/audio, audio frontmatter fields, Media Session integration.
+- Updated for congruence: SPEC_V2.md (now v2.1), REQUIREMENTS.md (rows 7, 8, 9, 10, 11, 12, 18; residual conflicts 3 and 8 closed), ARCHITECTURE.md, CONTENT_SCHEMA.md, CONTENT_PIPELINE.md, LEARNING_SCIENCE.md, README.md, lesson template and lesson 1, types, content validation, lesson flow components, home card, CI workflow.
+- FSRS, mastery, self-scoring, confidence capture, Gist backup, and all tests unchanged.
+
 ## 2026-08-21 - Specification v2.0 and Phase 1
 
 - Applied the August 2026 revision (docs/revisions/2026-08-spec-revision.md) to produce docs/SPEC_V2.md. Hard constraints: zero budget, NotebookLM-produced audio, single user, static GitHub-only stack.

@@ -7,10 +7,6 @@ oneSentence: >
 level: 1
 prerequisites: []
 concepts: []
-audio:
-  file: ""
-  durationSec: 0
-  generatedAt: ""
 visual:
   id: template-visual
   kind: diagram
