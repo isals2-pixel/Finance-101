@@ -1,6 +1,6 @@
 # Requirements Traceability
 
-Status of every numbered section of the specification (v1.0 numbering, carried by SPEC_V2.md). Statuses: **Done** (built and tested), **Planned** (in scope, target phase shown), **Deferred** (in scope only if Tier 2 or the tutor budget materialises), **Removed** (deleted by the v2.0 revision). Updated at the end of every phase. Current as of Phase 1.
+Status of every numbered section of the specification (v1.0 numbering, carried by SPEC_V2.md). Statuses: **Done** (built and tested), **Planned** (in scope, target phase shown), **Deferred** (in scope only if Tier 2 or the tutor budget materialises), **Removed** (deleted by the v2.0 revision). Updated at the end of every phase and at each spec revision. Current as of Phase 1 + the v2.1 audio removal (docs/revisions/2026-08-26-audio-removal.md).
 
 | § | Title | Status | Notes |
 |---|---|---|---|
@@ -13,18 +13,18 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 4.3 | Interleaving | Planned P2 | Needs multiple lessons to interleave |
 | 5 | Generative learning | Done P1 (partial) | Prediction, free recall, explanation live; comparison, error-id P3 |
 | 6 | Cognitive load design | Done P1 | Minimal interface by construction |
-| 7 | Auditory-first design | Done P1 | NotebookLM pipeline per C2 |
-| 8 | Lesson length | Done P1 | Word-count calibration in CONTENT_PIPELINE.md |
-| 9 | Lesson structure (split media) | Done P1 | Audio then prediction-visual-retrieval flow; complete only at step 8 |
-| 10 | Source packs and audio production | Done P1 | Template, lesson 1, export command, standing instruction |
-| 11 | Audio player | Done P1 (partial) | Play/pause/speeds/rewind/resume/completion/transcript; bookmark and "review this concept" P2; podcast feed generated |
-| 12 | Audio-only mode | Planned P2 | Lesson flow is already minimal |
+| 7 | Reading-first design (was auditory-first) | Done (v2.1) | Audio removed entirely; lessons are read-only text in the app |
+| 8 | Lesson length | Done P1 | 1,400-1,800 word body = ~7-9 min reading |
+| 9 | Lesson structure | Done P1 | Read then prediction-visual-retrieval flow; complete only at step 8 |
+| 10 | Source packs | Done P1 | Template and lesson 1; the body is the lesson text (v2.1) |
+| 11 | Audio player | Removed (v2.1) | No audio; reading stage resumes via lesson state |
+| 12 | Audio-only mode | Removed (v2.1) | No audio |
 | 13 | ADHD-optimised design | Done P1 (partial) | Clear next action, resumption, short sessions; variety grows with content |
 | 14 | No infinite feed | Done P1 | Home answers the four questions only |
 | 15 | Daily session | Planned P2 | Requires review pool from multiple lessons |
 | 16 | Variable session length | Planned P2 | |
 | 17 | Minimum viable day | Planned P2 | |
-| 18 | Visual design | Done P1 | Visual step after audio; required/reinforcement flag per lesson |
+| 18 | Visual design | Done P1 | Visual step after the reading; required/reinforcement flag per lesson |
 | 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
 | 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
 | 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
@@ -98,9 +98,9 @@ Conflicts the revision does not fully resolve, with the interpretation applied. 
 
 1. **Level 6 tier membership.** The Tier 1 level list omits Level 6, but the Tier 1 reductions define a reduced Level 6 and Tier 2 claims only its valuation ratios. Interpretation: the reduced Level 6 set (stocks, equity ownership, market capitalization, earnings, dividends, growth vs value) is Tier 1; the ratios are Tier 2.
 2. **Level 13 remainder.** Tier 2 names only leverage, options, futures, and short selling from Level 13; the other items (factor investing, REITs, commodities, inflation-linked bonds, international diversification, currency risk) appear in neither tier. Interpretation: all of Level 13 is Tier 2, with the four named instruments last. REITs and commodities still appear as portfolio-lab asset classes in Tier 1 without dedicated lessons.
-3. **"Private" podcast feed.** A feed served by GitHub Pages from a public repository is unlisted, not private: anyone with the URL can subscribe, and the audio files are public regardless. Interpretation: acceptable, because the feed contains only course audio and no learner data. If actual access control is required, the feed must be deferred (C1 leaves no free way to serve authenticated audio to podcast apps).
+3. **Resolved by v2.1 - "private" podcast feed.** The feed no longer exists; the conflict is moot. Original text: A feed served by GitHub Pages from a public repository is unlisted, not private: anyone with the URL can subscribe, and the audio files are public regardless. Interpretation: acceptable, because the feed contains only course audio and no learner data. If actual access control is required, the feed must be deferred (C1 leaves no free way to serve authenticated audio to podcast apps).
 4. **Final exam pool secrecy in a public repository.** The held-out pool is a JSON file the learner can open on github.com. Enforcement is interface-level only (never displayed in the app before the exam) plus self-discipline. Accepted at n=1 per revision §7.
 5. **Gist encryption key.** Q10 requires encryption at rest; the revision's backup section does not name a key. Interpretation: a learner-chosen passphrase, PBKDF2-derived AES-GCM key, passphrase stored on-device only. A forgotten passphrase makes the Gist copy unrecoverable; the unencrypted manual file export is the fallback and its custody is the learner's.
 6. **Abandonment metric.** Revision §4 deletes v1 §60 and §5 re-adds the same measurement as a single usability number. Interpretation: keep it, as one number, computed from lesson state, never displayed as a streak or judgment.
-7. **Public repository requirement.** Free GitHub Pages requires a public repository. The current repository is public: consistent. Course content and audio are therefore public; learner data never enters the repository.
-8. **iOS lock-screen playback in the web app.** Still not guaranteed by any spec change; the podcast feed is the reliable path, the PWA path is best-effort and verified on the owner's device during Phase 1 evaluation.
+7. **Public repository requirement.** Free GitHub Pages requires a public repository. The current repository is public: consistent. Course content is therefore public; learner data never enters the repository.
+8. **Resolved by v2.1 - iOS lock-screen playback.** No audio exists; the concern is moot. Original text: Still not guaranteed by any spec change; the podcast feed is the reliable path, the PWA path is best-effort and verified on the owner's device during Phase 1 evaluation.

@@ -1,32 +1,31 @@
 'use client';
-// The four-stage lesson flow (SPEC_V2 §9): audio, then prediction, visual,
+// The four-stage lesson flow (SPEC_V2 §9): read, then prediction, visual,
 // retrieval as one flow. The lesson is complete only when retrieval is
 // submitted. Stage transitions persist so an interrupted lesson resumes.
 import { useEffect, useState } from 'react';
 import type { Lesson } from '@/lib/types';
 import { getLessonState, putLessonState } from '@/lib/db';
 import { applySessionResults, type SessionItemResult } from '@/lib/learning';
-import { AudioStage } from './AudioStage';
+import { ReadStage } from './ReadStage';
 import { PredictionStage } from './PredictionStage';
 import { VisualStage } from './VisualStage';
 import { RetrievalStage } from './RetrievalStage';
 import { ExerciseStage } from './ExerciseStage';
 
-type Stage = 'audio' | 'prediction' | 'visual' | 'retrieval' | 'done';
+type Stage = 'read' | 'prediction' | 'visual' | 'retrieval' | 'done';
 
-export function LessonFlow({ lesson, audioUrl }: { lesson: Lesson; audioUrl: string }) {
+export function LessonFlow({ lesson }: { lesson: Lesson }) {
   const [stage, setStage] = useState<Stage | null>(null);
 
   useEffect(() => {
     (async () => {
       const state = await getLessonState(lesson.slug);
       if (!state.startedAt) await putLessonState({ ...state, startedAt: Date.now() });
-      if (state.completedAt) setStage('done');
-      else if (state.retrievalAt) setStage('done');
+      if (state.completedAt || state.retrievalAt) setStage('done');
       else if (state.visualAt) setStage('retrieval');
       else if (state.predictionAt) setStage('visual');
-      else if (state.audioCompletedAt) setStage('prediction');
-      else setStage('audio');
+      else if (state.readAt) setStage('prediction');
+      else setStage('read');
     })();
   }, [lesson.slug]);
 
@@ -47,17 +46,8 @@ export function LessonFlow({ lesson, audioUrl }: { lesson: Lesson; audioUrl: str
         <h1 className="mt-1 text-2xl font-semibold">{lesson.title}</h1>
       </div>
 
-      {stage === 'audio' && (
-        <AudioStage
-          lesson={lesson}
-          audioUrl={audioUrl}
-          onComplete={(skipped) =>
-            advance('prediction', {
-              audioCompletedAt: Date.now(),
-              audioSkipped: skipped,
-            })
-          }
-        />
+      {stage === 'read' && (
+        <ReadStage lesson={lesson} onComplete={() => advance('prediction', { readAt: Date.now() })} />
       )}
 
       {stage === 'prediction' && (
@@ -91,8 +81,8 @@ export function LessonFlow({ lesson, audioUrl }: { lesson: Lesson; audioUrl: str
 
 function stageLabel(stage: Stage): string {
   switch (stage) {
-    case 'audio':
-      return 'Listen';
+    case 'read':
+      return 'Read';
     case 'prediction':
       return 'Predict';
     case 'visual':

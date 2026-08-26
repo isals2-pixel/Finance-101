@@ -47,11 +47,6 @@ const lessonFrontmatterSchema = z.object({
   level: z.number().int().positive(),
   prerequisites: z.array(z.string()),
   concepts: z.array(z.string()).min(1),
-  audio: z.object({
-    file: z.string(),
-    durationSec: z.number().nonnegative(),
-    generatedAt: z.string(),
-  }),
   visual: z.object({
     id: z.string().min(1),
     kind: z.enum(['diagram', 'chart', 'timeline', 'statement', 'flow']),
@@ -175,9 +170,7 @@ export function validateContent(lessons: Lesson[], concepts: Concept[]): void {
       problems.push(`lesson ${l.slug} exercise: unknown concept ${l.exercise.conceptId}`);
     const words = bodyWordCount(l.body);
     if (words < 1000 || words > 2200)
-      problems.push(`lesson ${l.slug}: body is ${words} words, outside 1000-2200 (calibrated band 1400-1800)`);
-    if (l.audio.file && !fs.existsSync(path.join(ROOT, 'public', 'audio', l.audio.file)))
-      problems.push(`lesson ${l.slug}: audio file ${l.audio.file} not found in public/audio`);
+      problems.push(`lesson ${l.slug}: body is ${words} words, outside 1000-2200 (target band 1400-1800)`);
   }
 
   if (problems.length) throw new Error(`Content validation failed:\n- ${problems.join('\n- ')}`);

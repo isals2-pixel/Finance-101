@@ -52,7 +52,7 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
             </p>
             <p className="text-sm text-[var(--muted)]">
               {resume ? 'In progress - continue where you left off.' : 'Your next lesson.'} About{' '}
-              {target.minutes} minutes of audio, then a short retrieval.
+              {target.minutes} minutes: a short read, then retrieval.
             </p>
             <Link
               href={`/learn/${target.slug}/`}

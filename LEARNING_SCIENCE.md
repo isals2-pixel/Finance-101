@@ -42,13 +42,13 @@ Defined in `lib/mastery.ts`. Components are recency-weighted accuracies in [0,1]
 
 Missing components renormalise the remaining weights (a concept with no transfer items yet is not penalised for it). From the weighted sum a calibration penalty is subtracted: 10 x mean(|stated confidence - actual correctness|) over confidence-flagged attempts, 0 if none. Result clamped to [0,100] and rounded.
 
-Lesson completion alone yields at most the 10-point learning component: mastery cannot be reached by listening.
+Lesson completion alone yields at most the 10-point learning component: mastery cannot be reached by reading alone.
 
 Self-scored answers enter components at face value but carry the self-reported flag; the dashboard reports the share of a score resting on self-assessment.
 
 ## Retrieval and generative design
 
-- The lesson flow (audio -> prediction -> visual -> retrieval) forces generation before explanation: the prediction answer locks before its model answer shows, and retrieval happens without notes (the transcript is unavailable inside the retrieval stage).
+- The lesson flow (read -> prediction -> visual -> retrieval) forces generation before explanation: the prediction answer locks before its model answer shows, and retrieval happens without notes (the lesson text is unavailable inside the retrieval stage).
 - Recognition-style items (multiple choice) are never the majority format; lesson retrieval uses free recall, short answer, and classification.
 - Interleaving (Phase 2): review sessions draw due concepts across at least three curriculum levels once more than one level is in progress.
 

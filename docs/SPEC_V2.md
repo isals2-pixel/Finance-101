@@ -1,15 +1,15 @@
-# Finance Academy - Specification v2.0
+# Finance Academy - Specification v2.1
 
-Date: 2026-08-21. Supersedes v1.0 and docs/phase-0/OPEN_QUESTIONS.md. Produced by applying docs/revisions/2026-08-spec-revision.md to v1.0 in full. Section numbers follow v1.0 so cross-references remain valid. Removed sections keep their number with a removal note. REQUIREMENTS.md tracks the status of every section.
+Date: 2026-08-26. Supersedes v1.0 and docs/phase-0/OPEN_QUESTIONS.md. Produced by applying docs/revisions/2026-08-spec-revision.md (v2.0) and docs/revisions/2026-08-26-audio-removal.md (v2.1: no audio - lessons are read-only text) to v1.0 in full. Section numbers follow v1.0 so cross-references remain valid. Removed sections keep their number with a removal note. REQUIREMENTS.md tracks the status of every section.
 
 ## 0. Hard constraints
 
 These override any conflicting requirement below.
 
 - **C1 - Zero budget.** No paid API, hosting, text-to-speech, or database. Everything runs on a free tier or on the owner's machine. Features that cannot fit this limit are deferred, not approximated.
-- **C2 - Audio produced outside the application.** Lesson audio is generated manually in Google NotebookLM (renamed Gemini Notebook, July 2026) from source packs written for that purpose. The application stores and plays uploaded audio files. It never synthesizes speech.
+- **C2 - No audio (v2.1).** The product contains no audio. Lessons are read-only text in the application. The former NotebookLM production workflow is removed entirely.
 - **C3 - One user, no accounts.** No sign-up, password, session management, or consent flows.
-- **C4 - Static, GitHub only.** A static site with no server and no server-side database, hosted on GitHub Pages from the same repository that holds code, content, and audio. Every part of the toolchain is a GitHub feature.
+- **C4 - Static, GitHub only.** A static site with no server and no server-side database, hosted on GitHub Pages from the same repository that holds code and content. Every part of the toolchain is a GitHub feature.
 
 ## 1. Purpose
 
@@ -39,7 +39,7 @@ Do not optimise for lessons completed, definitions memorised, time in the applic
 
 ## 3. Target user
 
-The owner: adult, highly analytical, beginner in formal finance, capable of advanced concepts when scaffolded, approximately EUR 1,000/month disposable investment capacity, long-term horizon, primarily interested in diversified ETF investing. Prefers learning by listening while doing other activities, benefits from short units, frequent activity changes, and immediate application, and disengages during long passive screen sessions. The application must not infantilise the learner: intellectually rigorous, minimal cognitive friction.
+The owner: adult, highly analytical, beginner in formal finance, capable of advanced concepts when scaffolded, approximately EUR 1,000/month disposable investment capacity, long-term horizon, primarily interested in diversified ETF investing. Benefits from short units, frequent activity changes, and immediate application, and disengages during long passive screen sessions. (A preference for learning by listening was noted in v1.0; serving it was dropped in v2.1 in favor of a sustainable text-only workflow, so short sessions matter all the more.) The application must not infantilise the learner: intellectually rigorous, minimal cognitive friction.
 
 ## 4. Learning science foundation
 
@@ -61,21 +61,21 @@ The learner frequently generates knowledge: explain in own words, predict before
 
 ## 6. Cognitive load design
 
-Minimise decorative animation, unnecessary text, irrelevant images, excess navigation, competing instructions, long text blocks, interface complexity. Manage intrinsic complexity through segmentation, prerequisites, progressive difficulty, worked examples, pre-training. Promote generative processing through prediction, explanation, retrieval, application. Mayer's Cognitive Theory of Multimedia Learning guides the combination of narration and visuals.
+Minimise decorative animation, unnecessary text, irrelevant images, excess navigation, competing instructions, long text blocks, interface complexity. Manage intrinsic complexity through segmentation, prerequisites, progressive difficulty, worked examples, pre-training. Promote generative processing through prediction, explanation, retrieval, application. Mayer's Cognitive Theory of Multimedia Learning guides the combination of prose and visuals.
 
-## 7. Auditory-first design
+## 7. Reading-first design (v2.1)
 
-Audio is the primary learning medium, based on the owner's strong demonstrated preference and adherence advantage for audio-based learning (not a claim about a fixed "learning style"). Audio is the lowest-friction way to consume new material. Under C2, all audio is produced in NotebookLM per section 10.
+Lessons are short written texts read in the application. The v1.0 audio-first rationale is consciously traded away for a sustainable zero-effort content workflow (docs/revisions/2026-08-26-audio-removal.md); short lessons, the daily session shape, and retrieval-first design carry the adherence load instead. Lesson prose is still written to be plain, concrete, and sequential - the qualities that made it work for the ear make it fast to read.
 
 ## 8. Lesson length
 
-Default 7-10 minutes, allowed 5-12. Never a mandatory 30-60 minute lesson; complex topics are decomposed into lesson series (bonds become eight short lessons, not one long one). NotebookLM runtime is steered by source pack word count, calibrated empirically (section 10).
+Default 7-10 minutes of reading and retrieval, allowed 5-12. Never a mandatory 30-60 minute lesson; complex topics are decomposed into lesson series (bonds become eight short lessons, not one long one). The 1,400-1,800 word body targets roughly 7-9 minutes at 200 words per minute.
 
 ## 9. Lesson structure
 
-Eight steps split across two media, because NotebookLM produces a steered conversation, not a controlled script. In-audio pauses and exercises cannot be relied on.
+Eight steps in one flow, all in the application (v2.1).
 
-In the audio, driven by the source pack:
+In the lesson text (the source pack body):
 
 1. Hook - a concrete problem or paradox
 2. Concept - explained intuitively
@@ -83,31 +83,21 @@ In the audio, driven by the source pack:
 4. Worked example with numbers
 5. Connection to previously learned concepts
 
-In the application, as a single flow beginning automatically when the audio ends:
+After reading, as a single flow:
 
 6. Prediction - one question answered before any explanation is shown
 7. Visual mental model
-8. Retrieval - recall or explanation without notes
+8. Retrieval - recall or explanation without notes (the lesson text is not visible)
 
-The lesson is not marked complete until step 8 is submitted. No audio file carries timestamp markers. Each lesson records whether its visual is required for comprehension or optional reinforcement.
+The lesson is not marked complete until step 8 is submitted. Each lesson records whether its visual is required for comprehension or optional reinforcement.
 
-## 10. Source packs and audio production
+## 10. Source packs
 
-Replaces v1.0 section 10 (audio script design). The source pack is the document that produces the audio and is the single most important content asset. One per lesson.
-
-### Production workflow
-
-1. Export the lesson source pack body as a standalone text file (`npm run export:pack -- <lesson>`).
-2. Create a new NotebookLM notebook containing that single source (one source per notebook, deliberately - extra sources lengthen and dilute the audio).
-3. Select Audio Overview, apply the standing custom instruction stored at `/data/curriculum/audio-instruction.md` (kept under 1,500 characters), generate.
-4. Download (.wav), convert to mono .mp3 under 8 MB, add to the repository, register on the lesson.
-5. The application stores the file reference, duration, and generation date.
-
-The free tier limits generations per day: plan batches. Length is calibrated empirically: produce three lessons, measure runtimes, adjust source pack word count, record the calibrated count in CONTENT_PIPELINE.md. Verify current NotebookLM behavior before each batch.
+Replaces v1.0 section 10 (audio script design). The source pack is the lesson: its body is the text the learner reads in the application (v2.1), and it is the single most important content asset. One per lesson.
 
 ### Source pack format
 
-Markdown at `/data/curriculum/lessons/NN-slug.md`. Footer data in frontmatter (parsed by the application, excluded from export); body in markdown (exported for NotebookLM). Target 1,400-1,800 words, subject to calibration.
+Markdown at `/data/curriculum/lessons/NN-slug.md`. Footer data in frontmatter (parsed by the application, never shown as lesson text); body in markdown (rendered as the reading stage). Target 1,400-1,800 words.
 
 Header: lesson number and title, the one sentence a learner should be able to say afterwards, prerequisite concepts by name, concepts introduced by name.
 
@@ -122,15 +112,15 @@ Body, in order:
 
 Frontmatter footer: retrieval questions with model answers, the prediction question, the practical exercise, sources with publication dates, mastery criteria.
 
-Scripts sound natural when spoken: short sentences, no dense lists, jargon defined immediately, concrete examples. (Pauses and in-audio prediction prompts are excluded - they live in the application flow.)
+Bodies read fast: short sentences, no dense lists, jargon defined immediately, concrete examples. Prediction prompts are excluded from the body - they live in the application flow.
 
-## 11. Audio player
+## 11. Removed (v2.1)
 
-Supports play, pause, speeds 0.75/1.0/1.25/1.5/1.75/2.0, 15- and 30-second rewind, resume position, completion tracking, transcript (the source pack body), bookmark, and "review this concept". Media Session integration for lock-screen controls where the platform supports them. In parallel, a podcast RSS feed generated from the repository (section 72) provides offline download, lock-screen playback, speed control, and resume in any podcast application; retrieval is then done afterwards in the web application.
+The audio player is removed with audio itself. The reading stage keeps resume-where-you-left-off through persisted lesson state.
 
-## 12. Audio-only mode
+## 12. Removed (v2.1)
 
-A dedicated mode showing only lesson title, progress bar, audio controls, minimal context, optional transcript. No dashboard elements. Start a lesson and put the phone away.
+Audio-only mode is removed with audio itself. The lesson flow already shows nothing but the lesson.
 
 ## 13. ADHD-optimised design
 
@@ -142,7 +132,7 @@ No infinite scrolling, social feed, recommendation feed, or endless library. The
 
 ## 15. Daily session
 
-Default: TODAY'S 10 MINUTES. Learn (8-minute audio), Retrieve (2-minute recall), optional Apply (3-5 minute exercise).
+Default: TODAY'S 10 MINUTES. Learn (about 8 minutes of reading), Retrieve (2-minute recall), optional Apply (3-5 minute exercise).
 
 ## 16. Variable session length
 
@@ -154,11 +144,11 @@ Default: TODAY'S 10 MINUTES. Learn (8-minute audio), Retrieve (2-minute recall),
 
 ## 18. Visual design
 
-Every lesson has at least one meaningful visual (diagram, chart, flowchart, timeline, financial statement, portfolio diagram, causal model, simulation). No decorative stock photography. The visual must explain something. Per section 9, the visual follows the audio as step 7; each lesson marks it required or reinforcement.
+Every lesson has at least one meaningful visual (diagram, chart, flowchart, timeline, financial statement, portfolio diagram, causal model, simulation). No decorative stock photography. The visual must explain something. Per section 9, the visual follows the reading as step 7; each lesson marks it required or reinforcement.
 
 ## 19. Multimedia principles
 
-Never display a paragraph while narrating the same paragraph. Visuals use diagrams, labels, keywords, arrows, progressive highlighting. Narration explains, visuals represent relationships, text provides labels and essential terminology. Follows coherence, signalling, segmenting, modality, and contiguity principles.
+Visuals are never a restatement of the lesson text. Visuals use diagrams, labels, keywords, arrows, progressive highlighting. Prose explains, visuals represent relationships, labels carry essential terminology. Follows coherence, signalling, segmenting, modality, and contiguity principles.
 
 ## 20. Concrete application requirement
 
@@ -306,7 +296,7 @@ Replaced by section 42. The KPI 6 explanation rubric anchors from v1.0 section 4
 
 ## 62. Onboarding
 
-No long profile. Baseline finance assessment, investment experience, preferred learning duration, audio preference, financial objectives, approximate horizon; then immediately the first lesson.
+No long profile. Baseline finance assessment, investment experience, preferred learning duration, financial objectives, approximate horizon; then immediately the first lesson.
 
 ## 63. Baseline assessment
 
@@ -322,7 +312,7 @@ Concepts carry beginner, intermediate, advanced, expert versions. Difficulty inc
 
 ## 66. Memory crystallisation loop
 
-Every important concept follows: exposure (audio) -> encoding (visual) -> retrieval (recall without notes) -> application (concrete problem) -> spacing -> interleaving -> transfer -> explanation (teach back). Encoded in the curriculum engine.
+Every important concept follows: exposure (reading) -> encoding (visual) -> retrieval (recall without notes) -> application (concrete problem) -> spacing -> interleaving -> transfer -> explanation (teach back). Encoded in the curriculum engine.
 
 ## 67. Teach-back mode
 
@@ -346,23 +336,20 @@ Deferred under C1. The tutor interface exists in the codebase behind a feature f
 
 ## 72. Technology stack
 
-Framework, language, and styling from v1.0 stand: Next.js (static export mode), TypeScript, React, Tailwind CSS, shadcn/ui, Zod, Recharts, Vitest, Playwright, HTML5 audio. PostgreSQL, Prisma, and all server-side architecture are removed under C4.
+Framework, language, and styling from v1.0 stand: Next.js (static export mode), TypeScript, React, Tailwind CSS, shadcn/ui, Zod, Recharts, Vitest, Playwright. PostgreSQL, Prisma, and all server-side architecture are removed under C4.
 
-**Hosting.** One public GitHub repository holds code, content, and audio. GitHub Pages serves the static export; a GitHub Actions workflow builds and publishes on every push to main. No API routes, no runtime server components, no SSR. Any feature that cannot be static must be flagged, not worked around with a server. Pages limits (verified 2026-08, see ARCHITECTURE.md): 1 GB recommended site size, 100 GB/month soft bandwidth, 10 builds/hour soft limit.
+**Hosting.** One public GitHub repository holds code and content. GitHub Pages serves the static export; a GitHub Actions workflow builds and publishes on every push to main. No API routes, no runtime server components, no SSR. Any feature that cannot be static must be flagged, not worked around with a server. Pages limits (verified 2026-08, see ARCHITECTURE.md): 1 GB recommended site size, 100 GB/month soft bandwidth, 10 builds/hour soft limit.
 
 **Content.** Source packs as markdown with frontmatter; questions and the concept graph as JSON; all in the repository, fetched as static assets, correctable directly on github.com.
 
-**Audio.** Mono .mp3, each under 8 MB, committed and served by Pages. Every audio reference is a URL so files can move to Release assets without a code change. A workflow generates a podcast RSS feed from the audio directory, published alongside the site (note: the feed URL is unlisted, not access-controlled - see REQUIREMENTS.md, residual conflicts).
-
 **Learner data.** All learner state lives in IndexedDB on the device (never localStorage for state), schema defined in one place. Backup and sync via a single private GitHub Gist: fine-grained PAT scoped to Gists only, pasted once, stored on-device, never committed; complete state written after every session and on demand, encrypted at rest with a learner passphrase; restore offered on first load; manual export/import of the same JSON as the token-free fallback. Deletable in one action, locally and in the Gist.
 
-**iPhone.** Home-screen web app with manifest and icon; a service worker caches the shell and question content for offline use, never the audio. The podcast feed is the reliable path for lock-screen listening.
+**iPhone.** Home-screen web app with manifest and icon; a service worker caches the shell and lesson/question content for offline reading (Phase 2).
 
 ## 73. Application structure
 
 ```
 /app                      routes (static export)
-/components/audio         player, audio mode
 /components/charts        Recharts wrappers
 /components/learning      lesson flow, transcript
 /components/exercises     exercise type renderers
@@ -371,10 +358,9 @@ Framework, language, and styling from v1.0 stand: Next.js (static export mode), 
 /components/dashboard     progress dashboard
 /components/visuals       lesson visual components
 /lib/learning /lib/mastery /lib/spaced-repetition /lib/simulation
-/lib/portfolio /lib/finance /lib/tax /lib/market-data /lib/audio
+/lib/portfolio /lib/finance /lib/tax /lib/market-data
 /lib/assessment /lib/analytics
 /data/curriculum /data/concepts /data/questions /data/scenarios /data/sources
-/public/audio             lesson mp3 files
 /scripts                  export, feed, content checks
 /tests
 ```
@@ -383,19 +369,19 @@ Framework, language, and styling from v1.0 stand: Next.js (static export mode), 
 
 Replaces the v1.0 entity list. Two homes:
 
-**Repository content files** (read-only at runtime): courses/modules/lessons (markdown source packs with frontmatter: objectives, audio reference, visual spec, retrieval questions, prediction, exercise, sources, mastery criteria), concept graph with prerequisites and misconceptions (JSON), question pools including the held-out exam pool (JSON), scenarios (JSON), tax rules with validity windows (JSON), sources registry, market data snapshots.
+**Repository content files** (read-only at runtime): courses/modules/lessons (markdown source packs with frontmatter: objectives, visual spec, retrieval questions, prediction, exercise, sources, mastery criteria), concept graph with prerequisites and misconceptions (JSON), question pools including the held-out exam pool (JSON), scenarios (JSON), tax rules with validity windows (JSON), sources registry, market data snapshots.
 
-**IndexedDB stores** (single learner, no user ids): learner (one record: settings, onboarding, gist config), mastery (per concept), schedule (FSRS card per concept), attempts (questions, exercises, scenarios, assessments; with confidence, self-score flags, error class), lessonState (per lesson: started, audio completed, stage reached, completed, audio position), portfolios and lab entries, IPS versions, assessment attempts.
+**IndexedDB stores** (single learner, no user ids): learner (one record: settings, onboarding, gist config), mastery (per concept), schedule (FSRS card per concept), attempts (questions, exercises, scenarios, assessments; with confidence, self-score flags, error class), lessonState (per lesson: started, read, stage reached, completed), portfolios and lab entries, IPS versions, assessment attempts.
 
 Entities that served only deleted metrics are removed. AnalyticsEvent is replaced by the attempt and lessonState records themselves (section 75).
 
 ## 75. Recorded events
 
-Only events consumed by the mastery model, the review scheduler, and the progress dashboard are stored: lesson started, audio completed, stage transitions (prediction, visual, retrieval), question/exercise/scenario answered (with correctness, score, confidence, error class, self-reported flag), review completed, assessment started/completed, portfolio created/modified, teach-back submitted. No funnel analytics. No unnecessary personal information.
+Only events consumed by the mastery model, the review scheduler, and the progress dashboard are stored: lesson started, stage transitions (read, prediction, visual, retrieval), question/exercise/scenario answered (with correctness, score, confidence, error class, self-reported flag), review completed, assessment started/completed, portfolio created/modified, teach-back submitted. No funnel analytics. No unnecessary personal information.
 
 ## 76. Accessibility
 
-Captions/transcripts, keyboard navigation, screen readers, adjustable text, sufficient contrast, reduced motion, audio speed control.
+Keyboard navigation, screen readers, adjustable text, sufficient contrast, reduced motion.
 
 ## 77. Design language
 
@@ -407,19 +393,19 @@ Functional only: progress, mastery, milestones, competency levels, completed mod
 
 ## 79. MVP
 
-Onboarding, baseline assessment, home/today screen, curriculum engine, first 20 lessons, audio player, visual companion, retrieval system, exercise system, mastery system, spaced review, compound-interest simulator, inflation simulator, fee simulator, basic portfolio simulator, glossary, progress measurement (section 42), AI tutor interface (flag off, not functional). Static data. Mocked functionality is always labelled as mocked.
+Onboarding, baseline assessment, home/today screen, curriculum engine, first 20 lessons, reading view, visual companion, retrieval system, exercise system, mastery system, spaced review, compound-interest simulator, inflation simulator, fee simulator, basic portfolio simulator, glossary, progress measurement (section 42), AI tutor interface (flag off, not functional). Static data. Mocked functionality is always labelled as mocked.
 
 ## 80. First 20 lessons
 
 1. What is money? 2. Income, expenses and cash flow 3. Assets and liabilities 4. Net worth 5. Interest 6. Compound interest 7. Inflation 8. Nominal vs real returns 9. Opportunity cost 10. Economics vs finance vs accounting 11. What is a financial market? 12. What is a stock? 13. What is a bond? 14. What is an ETF? 15. What is an index? 16. What does diversification mean? 17. What is risk? 18. Why do fees matter? 19. What does long-term investing actually mean? 20. How to think about an investment decision.
 
-Each has a source pack (audio script source), visual, retrieval questions, practical exercise, prerequisite mapping, source list, and mastery criteria.
+Each has a source pack (the lesson text), visual, retrieval questions, practical exercise, prerequisite mapping, source list, and mastery criteria.
 
 ## 81. Build sequence
 
 - **Phase 0 - Analysis.** Architecture, schema, stack decisions, risks, unresolved conflicts. No code. (Complete.)
-- **Phase 1 - Backbone and vertical slice.** Repository, static build, Actions workflow, Pages deployment, content file formats, IndexedDB schema, and one complete lesson end to end on the phone: audio plays, prediction and retrieval run, an answer is scored, mastery is written, the next review is scheduled. Gist backup included here. Minimum viable interface. Stop and evaluate.
-- **Phase 2 - Learning loop.** First 20 lessons, full audio player, source pack export command, FSRS scheduling, interleaved review, progress dashboard.
+- **Phase 1 - Backbone and vertical slice.** Repository, static build, Actions workflow, Pages deployment, content file formats, IndexedDB schema, and one complete lesson end to end on the phone: the lesson is read, prediction and retrieval run, an answer is scored, mastery is written, the next review is scheduled. Gist backup included here. Minimum viable interface. Stop and evaluate.
+- **Phase 2 - Learning loop.** First 20 lessons, polished reading view, FSRS scheduling, interleaved review, progress dashboard.
 - **Phase 3 - Application.** Section 21 exercise types; compound interest, inflation, and fee simulators; portfolio laboratory.
 - **Phase 4 - Remaining Tier 1 curriculum.** Levels 2 and 5 through 12.
 - **Phase 5 - Decision tools.** Behavioural finance simulator, investment decision laboratory, personal finance laboratory, tax module, IPS.
@@ -429,7 +415,7 @@ Each phase ends with the application usable. No phase begins before the previous
 
 ## 82. Testing requirements
 
-Unit: financial calculations, compound interest, inflation, portfolio weights and returns, fee calculations, bond calculations, mastery scoring, spaced repetition, content validation. Integration: lesson completion, answer submission, mastery updates, review scheduling, portfolio creation (against the IndexedDB layer). End to end: onboarding, first lesson, audio flow, exercise, review, dashboard update.
+Unit: financial calculations, compound interest, inflation, portfolio weights and returns, fee calculations, bond calculations, mastery scoring, spaced repetition, content validation. Integration: lesson completion, answer submission, mastery updates, review scheduling, portfolio creation (against the IndexedDB layer). End to end: onboarding, first lesson, reading flow, exercise, review, dashboard update.
 
 ## 83. Financial calculation accuracy
 
@@ -445,7 +431,7 @@ The separate product success test is deleted. Learner thresholds live in section
 
 ## 86. Final product principle
 
-Less "Duolingo for finance", more a well-designed private finance curriculum that fits into the learner's life: listen while walking, cooking, or commuting, then a few minutes of active application. Consumption is never confused with learning. Core loop: listen -> visualise -> retrieve -> apply -> space -> interleave -> transfer -> master. The outcome is not "I completed a course" but "I can reason about financial decisions without being told what to think."
+Less "Duolingo for finance", more a well-designed private finance curriculum that fits into the learner's life: a short focused read, then a few minutes of active application. Consumption is never confused with learning. Core loop: read -> visualise -> retrieve -> apply -> space -> interleave -> transfer -> master. The outcome is not "I completed a course" but "I can reason about financial decisions without being told what to think."
 
 ## 87. Execution instruction
 

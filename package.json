@@ -4,10 +4,9 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/build-feed.mjs",
+    "build": "next build",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "export:pack": "node scripts/export-source-pack.mjs"
+    "test": "vitest run"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
