@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-26 - Phase 4, batch 7: personal finance and French tax (lessons 47-50) - Tier 1 curriculum complete
+
+- Level 12 completed: the personal finance base (emergency fund via regulated livrets, debt ordering, insurance), pensions and the retirement gap (répartition, Agirc-Arrco, PER trade-offs), taxation of investments (PFU at 31.4 % since January 2026 - 12.8 % + 18.6 % after the CSG rise - realized-vs-unrealized timing, Acc-fund efficiency), and the wrappers (PEA, CTO, assurance-vie with their clocks and 2026 rates).
+- French tax content is hand-written, source-linked to official pages (Service-Public, impots.gouv.fr, economie.gouv.fr) and dated: a new `taxRulesVerifiedAt` frontmatter field renders an education-not-advice notice with the verification date on tax lessons (SPEC §39), enforced by a CI test.
+- Four concepts with misconceptions, four visuals, exercise arithmetic checked in CI.
+- **All twelve Tier 1 curriculum levels are now complete: 50 lessons.**
+
 ## 2026-08-26 - Phase 4, batch 6: behavioural finance (lessons 44-46)
 
 - Level 11 completed, covering the eleven specified biases in three lessons: loss aversion / panic selling / disposition effect; overconfidence / confirmation bias / anchoring / narrative fallacy (with calibration as the counter-programme); herding / FOMO / recency bias / performance chasing (with the investor-return gap).

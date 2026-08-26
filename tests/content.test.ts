@@ -107,6 +107,20 @@ describe('content validation', () => {
     expect(bySlug.get('herding')!.exercise.answer).toBeCloseTo(15000 * 0.8 * 1.1, 6);
   });
 
+  it('level 12 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('financial-foundation')!.exercise.answer).toBe(2200 * 4);
+    expect(bySlug.get('pensions')!.exercise.answer).toBeCloseTo(2500 - 2500 * 0.7, 6);
+    expect(bySlug.get('investment-taxation')!.exercise.answer).toBeCloseTo(3000 * 0.314, 2);
+    expect(bySlug.get('french-wrappers')!.exercise.answer).toBeCloseTo(10000 * (0.314 - 0.186), 2);
+  });
+
+  it('French tax lessons carry a verification date', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('investment-taxation')!.taxRulesVerifiedAt).toBeDefined();
+    expect(bySlug.get('french-wrappers')!.taxRulesVerifiedAt).toBeDefined();
+  });
+
   it('batch 2 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);

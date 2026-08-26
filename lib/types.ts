@@ -65,6 +65,8 @@ export interface Lesson {
   exercise: LessonExercise;
   sources: LessonSource[];
   masteryCriteria: string;
+  /** Present on French tax lessons: date the rules were last verified (SPEC_V2 §39). */
+  taxRulesVerifiedAt?: string;
   body: string;
 }
 

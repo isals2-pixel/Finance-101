@@ -967,6 +967,118 @@
           "correction": "FOMO prices regret, not risk: a missed gain leaves the plan intact, while a late-entry loss compounds against you. The asymmetry favours the plan."
         }
       ]
+    },
+    {
+      "id": "financial-foundation",
+      "title": "The personal finance base",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "net-worth",
+        "cash-flow"
+      ],
+      "related": [
+        "portfolio-construction",
+        "opportunity-cost"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Investing should start as soon as any money is spare.",
+          "correction": "Without an emergency reserve, the first surprise forces selling investments at whatever the market then offers; the reserve is what makes long-horizon investing actually long-horizon."
+        },
+        {
+          "statement": "All debt should be cleared before investing anything.",
+          "correction": "Compare rates: expensive consumer debt beats any expected market return and is repaid first; low-rate mortgage debt can rationally coexist with investing."
+        },
+        {
+          "statement": "Insurance is a savings substitute.",
+          "correction": "Insurance transfers catastrophic risks that no reasonable reserve could absorb; savings handle the absorbable ones. Insuring small risks or skipping large ones both misprice protection."
+        }
+      ]
+    },
+    {
+      "id": "pensions",
+      "title": "Pensions and retirement saving",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "compounding",
+        "long-term-investing"
+      ],
+      "related": [
+        "financial-foundation",
+        "french-wrappers"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The State pension will replace my salary.",
+          "correction": "French pensions replace only part of net income - typically well under three quarters, less for higher earners and interrupted careers; the gap is what personal saving must fill."
+        },
+        {
+          "statement": "Retirement saving is a concern for one's fifties.",
+          "correction": "The compounding arithmetic of lesson 5 makes early euros the cheapest: money saved at 25 has twice the compounding runway of money saved at 45."
+        },
+        {
+          "statement": "The PER's tax deduction makes it automatically the best vehicle.",
+          "correction": "The deduction is deferral, not exemption - exit is taxed and funds are locked until retirement; its value depends on tax rates now versus then, and liquidity has a price."
+        }
+      ]
+    },
+    {
+      "id": "investment-taxation",
+      "title": "Taxation of investments in France",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "etf",
+        "long-term-investing"
+      ],
+      "related": [
+        "fees",
+        "french-wrappers"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Taxes on investments are unavoidable, so planning changes little.",
+          "correction": "Wrapper choice, accumulating funds and low turnover legally change the rate and the timing; over decades the difference compounds like a fee."
+        },
+        {
+          "statement": "Paper gains are taxed each year.",
+          "correction": "In a CTO, tax falls on realized gains and on distributed dividends; unrealized appreciation compounds untaxed - one reason buy-and-hold and accumulating share classes are tax-efficient."
+        },
+        {
+          "statement": "The flat tax is always 30 percent.",
+          "correction": "Since January 2026 the PFU is 31.4 percent (12.8 income tax + 18.6 social contributions after the CSG increase), and the progressive scale remains an option worth checking at low marginal rates."
+        }
+      ]
+    },
+    {
+      "id": "french-wrappers",
+      "title": "French investment wrappers",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "investment-taxation",
+        "portfolio-construction"
+      ],
+      "related": [
+        "pensions",
+        "etf"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A PEA is an investment; choosing it is choosing what I own.",
+          "correction": "PEA, CTO and assurance-vie are containers with tax rules; the same world-ETF strategy can live in several of them. Choose holdings first, wrapper by tax and flexibility."
+        },
+        {
+          "statement": "PEA gains become entirely tax-free after five years.",
+          "correction": "After five years withdrawals are exempt from income tax only; social contributions (18.6 percent since January 2026) remain due on gains."
+        },
+        {
+          "statement": "Assurance-vie is mainly a life insurance policy.",
+          "correction": "In practice it is a savings wrapper with its own tax clock (advantages from year 8) and succession rules; the insurance element is thin."
+        }
+      ]
     }
   ]
 }

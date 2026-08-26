@@ -76,6 +76,7 @@ const lessonFrontmatterSchema = z.object({
     )
     .min(1),
   masteryCriteria: z.string().min(10),
+  taxRulesVerifiedAt: z.string().min(4).optional(),
 });
 
 const conceptsFileSchema = z.object({

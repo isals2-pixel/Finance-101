@@ -57,6 +57,12 @@ import {
   OverconfidenceCost,
 } from './Batch9Visuals';
 import {
+  FoundationPyramid,
+  PensionPillars,
+  TaxBite,
+  WrapperMap,
+} from './Batch10Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -112,6 +118,10 @@ const VISUALS: Record<string, ComponentType> = {
   'loss-asymmetry': LossAsymmetry,
   'overconfidence-cost': OverconfidenceCost,
   'chase-cycle': ChaseCycle,
+  'foundation-pyramid': FoundationPyramid,
+  'pension-pillars': PensionPillars,
+  'tax-bite': TaxBite,
+  'wrapper-map': WrapperMap,
 };
 
 export function getVisual(id: string): ComponentType | undefined {
