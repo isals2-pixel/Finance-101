@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-26 - Phase 2, batch 1: lessons 2-6
+
+- Five new lessons in the condensed style (bodies 650-820 words): income/expenses/cash flow, assets and liabilities, net worth, interest, compound interest. Each with prediction, three retrieval items (free recall, classification, short answer with confidence), a calculation exercise, and verified sources (Banque de France, INSEE, ECB).
+- Five new visuals: cash-flow diagram, assets/liabilities columns, net-worth bar, simple-interest timeline, compound-vs-simple curve.
+- Content tests extended: every lesson body inside the word band, every visual id resolves, batch exercise answers checked arithmetically.
+
 ## 2026-08-26 - Lesson style: half the length
 
 - Owner directive: lessons were too verbose. Leading principle from now on: short, concise, concrete, simple.

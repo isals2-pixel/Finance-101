@@ -83,7 +83,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 77 | Design language | Planned P2 | P1 is deliberately minimal per revision §13 |
 | 78 | Gamification limits | Done P1 | Nothing beyond progress and mastery exists |
 | 79 | MVP scope | Planned P2-P3 | P1 is the vertical slice |
-| 80 | First 20 lessons | Done P1 (1 of 20) | Lesson 1 complete as the format sample; 2-20 in P2 |
+| 80 | First 20 lessons | In progress P2 (6 of 20) | Lessons 1-6 complete in the condensed style; 7-20 in coming batches |
 | 81 | Build sequence | Done (v2) | Revised phases |
 | 82 | Testing requirements | Done P1 (partial) | Unit tests green; integration/e2e grow P2 |
 | 83 | Calculation accuracy | Done P1 | Reference values for mastery/FSRS math; finance calc suites arrive with P3 simulators |
