@@ -54,6 +54,15 @@ describe('content validation', () => {
     expect(bySlug.get('compound-interest')!.exercise.answer).toBe(1000 * 1.1 * 1.1);
   });
 
+  it('batch 2 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('inflation')!.exercise.answer).toBeCloseTo(100 * 1.02 * 1.02, 2);
+    expect(bySlug.get('nominal-vs-real-returns')!.exercise.answer).toBe(5 - 2);
+    expect(bySlug.get('opportunity-cost')!.exercise.answer).toBe(5000 * 0.04);
+    expect(bySlug.get('economics-finance-accounting')!.exercise.answer).toBe(500000 - (450000 + 40000 * 0.2));
+    expect(bySlug.get('what-is-a-financial-market')!.exercise.answer).toBe(2000000 * 8);
+  });
+
   it('detects a graph cycle', () => {
     const cyclic = [
       { id: 'a', title: 'A', level: 1, tier: 1 as const, prerequisites: ['b'], related: [], misconceptions: [] },
