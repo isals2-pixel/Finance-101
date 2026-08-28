@@ -8,10 +8,10 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 1 | Purpose | Done (v2) | Single-owner objective |
 | 2 | Core product principle | Done (v2) | |
 | 3 | Target user | Done (v2) | |
-| 4.1 | Retrieval practice | Done P1 (partial) | Lesson flow forces recall; formats broaden P2-P3 |
+| 4.1 | Retrieval practice | Done | Lesson flow forces recall; review, transfer, teach-back and exam broaden the formats |
 | 4.2 | Spaced practice | Done P1 | FSRS via ts-fsrs |
 | 4.3 | Interleaving | Done P2 | Review sessions round-robin across curriculum levels |
-| 5 | Generative learning | Done P1 (partial) | Prediction, free recall, explanation live; comparison, error-id P3 |
+| 5 | Generative learning | Done | Prediction, free recall, explanation, teach-back, error identification (argument lab) all live |
 | 6 | Cognitive load design | Done P1 | Minimal interface by construction |
 | 7 | Reading-first design (was auditory-first) | Done (v2.1) | Audio removed entirely; lessons are read-only text in the app |
 | 8 | Lesson length | Done P1 | 1,400-1,800 word body = ~7-9 min reading |
@@ -27,7 +27,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 18 | Visual design | Done P1 | Visual step after the reading; required/reinforcement flag per lesson |
 | 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
 | 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
-| 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
+| 21 | Eight exercise types | Done P5 | Prediction, free recall, short answer, classification, calculation, transfer scenarios, decision/argument scenarios, teach-back |
 | 22 | Transfer exercises (30%) | Done P5 (pool) | 24-item auto-scored transfer pool (/practice); attempts feed the mastery and §42 transfer components |
 | 23 | Error analysis + self-scoring | Done P1 | Locked-answer self-assessment; error classes on both paths |
 | 24 | Misconception database | Done P4-P5 | All 54 concepts carry authored misconceptions with corrections; lessons close on them; surfaced per concept in the glossary |
