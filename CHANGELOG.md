@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 3: personal finance lab and IPS builder
+
+- Personal finance laboratory (§37) at /labs/personal: savings rate and reserve target, repay-vs-invest with the guaranteed-return comparison, and a retirement-gap projector (capital needed, required monthly saving now versus a 15-year-later start) - all over lib/finance, including a new reference-tested `requiredMonthlyContribution` inverse.
+- Investment Policy Statement builder (§38) at /ips: objective, horizon, allocation, rebalancing band, automated contribution, change conditions; self-scored against a six-item rubric; stored only on-device in the learner record (included in Gist backup like all learner data), copyable as text.
+
 ## 2026-08-28 - Phase 5, batch 2: behavioural simulator and decision lab
 
 - Behavioural finance simulator (§32) at /labs/behaviour: one scripted market cycle, six bias-triggering decisions against the written plan (herding at the top, panic in the crash, the band-rule trade, dead-cat-bounce narratives, ranking chasing, the inherited loser). Deviations are priced in euros relative to the plan and named by bias; a run report lists which biases got a vote.

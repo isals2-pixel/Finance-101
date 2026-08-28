@@ -149,4 +149,18 @@ export interface LearnerRecord {
   /** Final exam (§41): last sitting's percent correct. Answers never revealed. */
   examScore?: number;
   examAt?: number;
+  /** Investment Policy Statement (§38), written and self-scored by the learner. */
+  ips?: InvestmentPolicyStatement;
+}
+
+export interface InvestmentPolicyStatement {
+  objective: string;
+  horizonYears: number;
+  equityPercent: number;
+  rebalanceBandPoints: number;
+  monthlyContribution: number;
+  changeConditions: string;
+  /** Rubric criteria the learner has self-checked (§38). */
+  rubricChecked: string[];
+  updatedAt: number;
 }

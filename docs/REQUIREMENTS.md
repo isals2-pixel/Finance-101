@@ -43,8 +43,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 34 | Financial statement laboratory | Deferred | Tier 2 (P6) |
 | 35 | Corporate finance laboratory | Deferred | Tier 2 (P6) |
 | 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |
-| 37 | Personal finance laboratory | Planned P5 | Tier 1 |
-| 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
+| 37 | Personal finance laboratory | Done P5 | Savings rate/reserve, debt-vs-invest, retirement-gap projector with early/late start comparison (/labs/personal), over reference-tested finance math |
+| 38 | Investment Policy Statement | Done P5 | Builder at /ips: objective, allocation, band, contributions, change conditions; six-item self-scored rubric; stored on-device, copyable as text |
 | 39 | Curriculum structure | Done P4 (Tier 1) | 50 lessons; all Tier 1 levels (1, 2, 5-12) complete. French tax lessons dated + source-linked with an in-app education-not-advice notice. Tier 2 levels deferred per revision |
 | 40 | Final competency level | Done P5 | Pass threshold (80%) is configuration in final-exam.json; domain breakdown shown per sitting |
 | 41 | Final exam | Done P5 | 30-item held-out hand-authored pool (/exam); one sitting, answers never revealed, domain scores only |
