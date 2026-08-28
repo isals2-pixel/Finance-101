@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 6: e2e tests and accessibility baseline
+
+- Playwright e2e smoke suite (§82) over the real static export: home and session modes, the lesson flow's enforced stage order (prediction locks before the model answer), every top-level page, and the dated tax notice. Runs locally against the pre-installed browser and as a new CI job gating the Pages deploy.
+- Accessibility baseline (§76): skip-to-content link, main/nav landmarks, a visible focus ring on every focusable element, reduced-motion support. §77 closed as minimal-by-design per revision §13.
+
 ## 2026-08-28 - Phase 5, batch 5: argument analysis, misconception surfacing, adaptive practice
 
 - Financial argument analysis (§68) at /labs/arguments: five real-world-shaped pitches (the hot-fund newsletter, the 100-percent-stocks forum post, the "fees are noise" adviser, the concentration brag, the never-sell tax phobia) where the learner must name the central flaw - each built on true premises and one broken inference. Scored into §42 decision quality.

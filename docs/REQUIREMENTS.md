@@ -79,13 +79,13 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 73 | Application structure | Done P1 | |
 | 74 | Data structures | Done P1 | Content files + IndexedDB schema in lib/db.ts |
 | 75 | Recorded events | Done P1 | Attempts and lesson state only; no funnel analytics |
-| 76 | Accessibility | Planned P2 | Keyboard/contrast baseline in P1; full pass with design system |
-| 77 | Design language | Planned P2 | P1 is deliberately minimal per revision §13 |
+| 76 | Accessibility | Done (baseline) | Skip link, main/nav landmarks, visible :focus-visible ring, reduced-motion support, SVGs with role=img + aria-label, semantic buttons/links throughout |
+| 77 | Design language | Done (minimal by design) | Deliberately minimal per revision §13: one palette, card idiom, system fonts; complexity budget spent on content |
 | 78 | Gamification limits | Done P1 | Nothing beyond progress and mastery exists |
 | 79 | MVP scope | Done | All §79 items live; tutor is interface-only behind an off flag, as specified |
 | 80 | First 20 lessons | Done P2 (20 of 20) | Full first-20 curriculum live in the condensed style |
 | 81 | Build sequence | Done (v2) | Revised phases |
-| 82 | Testing requirements | Done P1 (partial) | Unit tests green; integration/e2e grow P2 |
+| 82 | Testing requirements | Done | 70 unit/content tests + Playwright e2e smoke over the built static site (lesson-flow ordering, tax notice, every page), gating deploys in CI |
 | 83 | Calculation accuracy | Done P1 | Reference values for mastery/FSRS math; finance calc suites arrive with P3 simulators |
 | 84 | Content quality control | Done P1 | Mechanical checks in CI; correctness is the owner's sign-off |
 | 85 | Product success test | Removed | Learner thresholds remain in §40/§42 |
