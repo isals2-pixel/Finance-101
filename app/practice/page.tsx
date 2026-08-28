@@ -3,8 +3,9 @@
 // the lessons never used. Auto-scored with rationale after each answer;
 // attempts record as stage 'transfer' and feed the mastery transfer component.
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import pool from '@/data/questions/transfer.json';
+import { allMastery } from '@/lib/db';
 import { applySessionResults, type SessionItemResult } from '@/lib/learning';
 
 interface TransferItem {
@@ -31,15 +32,27 @@ function shuffled<T>(xs: T[]): T[] {
 }
 
 export default function PracticePage() {
-  const items = useMemo(
-    () => shuffled(pool.items as TransferItem[]).slice(0, SESSION_SIZE),
-    [],
-  );
+  // Adaptive selection (SPEC_V2 §65): tracked-and-weak concepts first, then
+  // the rest - shuffled within each group so sessions vary.
+  const [items, setItems] = useState<TransferItem[] | null>(null);
+  useEffect(() => {
+    allMastery().then((mastery) => {
+      const scores = new Map(mastery.map((m) => [m.conceptId, m.score]));
+      const all = shuffled(pool.items as TransferItem[]);
+      const tracked = all
+        .filter((i) => scores.has(i.conceptId))
+        .sort((a, b) => scores.get(a.conceptId)! - scores.get(b.conceptId)!);
+      const untracked = all.filter((i) => !scores.has(i.conceptId));
+      setItems([...tracked, ...untracked].slice(0, SESSION_SIZE));
+    });
+  }, []);
   const [index, setIndex] = useState(0);
   const [input, setInput] = useState('');
   const [revealed, setRevealed] = useState(false);
   const [results, setResults] = useState<SessionItemResult[]>([]);
   const [saved, setSaved] = useState(false);
+
+  if (!items) return <p className="text-sm text-[var(--muted)]">Loading…</p>;
 
   const item = items[index];
   const done = index >= items.length;
@@ -79,7 +92,7 @@ export default function PracticePage() {
     setInput('');
     const nextIndex = index + 1;
     setIndex(nextIndex);
-    if (nextIndex >= items.length && !saved) {
+    if (nextIndex >= items!.length && !saved) {
       await applySessionResults(results);
       setSaved(true);
     }

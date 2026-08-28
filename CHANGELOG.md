@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 5: argument analysis, misconception surfacing, adaptive practice
+
+- Financial argument analysis (§68) at /labs/arguments: five real-world-shaped pitches (the hot-fund newsletter, the 100-percent-stocks forum post, the "fees are noise" adviser, the concentration brag, the never-sell tax phobia) where the learner must name the central flaw - each built on true premises and one broken inference. Scored into §42 decision quality.
+- Misconception database surfaced (§24): every glossary entry now discloses its concept's authored misconceptions with corrections.
+- Adaptive practice (§65, light): transfer sessions order items weakest-tracked-concept first, shuffled within groups.
+
 ## 2026-08-28 - Phase 5, batch 4: session modes and teach-back
 
 - Variable session length (§16) and the minimum viable day (§17): the home screen offers quick / session / deep modes. Quick shows exactly one action - a due review, else one transfer item - with explicit permission to stop after it; deep adds practice, labs and the exam. The choice persists on-device.

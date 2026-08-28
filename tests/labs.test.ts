@@ -1,6 +1,7 @@
 // Decision-lab data integrity (SPEC_V2 §32, §33) and the §42 decision /
 // transfer metric wiring.
 import { describe, expect, it } from 'vitest';
+import args from '@/data/labs/argument-scenarios.json';
 import sim from '@/data/labs/behaviour-sim.json';
 import lab from '@/data/labs/decision-scenarios.json';
 import { loadConcepts } from '@/lib/content';
@@ -49,6 +50,19 @@ describe('decision lab data', () => {
       expect(s.debrief.length, s.id).toBeGreaterThan(20);
     }
     expect(lab.checklist.length).toBe(5);
+  });
+});
+
+describe('argument analysis data', () => {
+  it('every claim has exactly one central flaw and references real concepts', () => {
+    const conceptIds = new Set(loadConcepts().map((c) => c.id));
+    expect(args.arguments.length).toBeGreaterThanOrEqual(5);
+    for (const a of args.arguments) {
+      expect(conceptIds.has(a.conceptId), `${a.id}: ${a.conceptId}`).toBe(true);
+      expect(a.options.filter((o) => o.correct).length, a.id).toBe(1);
+      expect(a.claim.length, a.id).toBeGreaterThan(40);
+      expect(a.debrief.length, a.id).toBeGreaterThan(20);
+    }
   });
 });
 

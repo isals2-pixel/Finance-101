@@ -33,6 +33,23 @@ export default function GlossaryPage() {
                 </Link>
               </div>
               <p className="mt-1 text-sm text-[var(--muted)]">{l.oneSentence}</p>
+              {c.misconceptions.length > 0 && (
+                <details className="mt-2">
+                  <summary className="cursor-pointer text-xs text-[var(--accent)]">
+                    Common misconceptions ({c.misconceptions.length})
+                  </summary>
+                  <ul className="mt-2 space-y-2 text-xs">
+                    {c.misconceptions.map((m) => (
+                      <li key={m.statement}>
+                        <span className="text-red-800 line-through decoration-red-300">
+                          {m.statement}
+                        </span>{' '}
+                        <span className="text-[var(--muted)]">{m.correction}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
             </li>
           );
         })}

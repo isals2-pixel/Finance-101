@@ -114,6 +114,9 @@ export default function LabsPage() {
         <Link href="/labs/decisions/" className="text-[var(--accent)] underline">
           Investment decision lab → <span className="text-[var(--muted)]">the checklist against real choices</span>
         </Link>
+        <Link href="/labs/arguments/" className="text-[var(--accent)] underline">
+          Argument analysis → <span className="text-[var(--muted)]">find the flaw in the pitch</span>
+        </Link>
         <Link href="/labs/personal/" className="text-[var(--accent)] underline">
           Personal finance lab → <span className="text-[var(--muted)]">reserve, debt, retirement gap on your numbers</span>
         </Link>

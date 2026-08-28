@@ -1,0 +1,61 @@
+{
+  "version": "2026-08-28",
+  "note": "Financial argument analysis (SPEC_V2 §68): real-world-shaped claims whose central flaw the learner must identify. Auto-scored; attempts record as stage 'decision' on the concept the flaw abuses.",
+  "arguments": [
+    {
+      "id": "arg1",
+      "conceptId": "herding",
+      "claim": "Newsletter: \"Our AI-innovation fund has returned 31 percent a year for three years. The AI revolution is only beginning - early subscribers who joined in 2023 have nearly doubled their money. Don't be the last one in.\"",
+      "options": [
+        { "id": "a", "text": "The past returns are probably fabricated.", "correct": false },
+        { "id": "b", "text": "Past short-run returns don't persist, the story is already priced, and 'don't be last in' is a FOMO trigger, not evidence.", "correct": true },
+        { "id": "c", "text": "AI is not a real technology trend.", "correct": false }
+      ],
+      "debrief": "The numbers can be perfectly real - that is what makes the pitch work. The flaw is inferential: three hot years predict little (lesson 46), the priced-in story can't be your edge (lesson 29), and the urgency line is aimed at the bias, not the analysis."
+    },
+    {
+      "id": "arg2",
+      "conceptId": "risk",
+      "claim": "Forum post: \"Bonds are for losers - stocks always win over the long run. Even 2008 recovered. So there is literally no reason anyone with 10+ years should hold anything but 100 percent stocks.\"",
+      "options": [
+        { "id": "a", "text": "Stocks don't actually beat bonds historically.", "correct": false },
+        { "id": "b", "text": "\"Always recovered so far\" is not \"guaranteed\", and the argument ignores whether the holder can behaviourally and financially survive the drawdowns on the way.", "correct": true },
+        { "id": "c", "text": "10 years is much too long a horizon to plan for.", "correct": false }
+      ],
+      "debrief": "The premise (long-run equity outperformance) is historically true; the leap to 'no reason for bonds' fails twice: past recovery is evidence, not certainty (lesson 19's honest phrasing), and lesson 41's capacity/tolerance caps exist precisely because an abandoned 100/0 loses to a held 60/40."
+    },
+    {
+      "id": "arg3",
+      "conceptId": "fees",
+      "claim": "Bank adviser: \"Our managed fund costs 1.9 percent, but you get professional management. A 1.7 point difference versus an index fund is tiny - who cares about 1.7 percent when markets move that much in a day?\"",
+      "options": [
+        { "id": "a", "text": "Daily volatility and a recurring annual fee are different objects: the fee compounds against you every year with certainty, and 1.7 points over decades is a five-figure difference.", "correct": true },
+        { "id": "b", "text": "Professional management is always worthless.", "correct": false },
+        { "id": "c", "text": "Index funds are risk-free, unlike managed funds.", "correct": false }
+      ],
+      "debrief": "The comparison to daily noise is the trick: noise averages out, fees never do. Lesson 18's arithmetic - a certain, recurring −1.7 percent compounds into a massive gap - and lesson 29 adds that the paid-for outperformance rarely materialises after costs."
+    },
+    {
+      "id": "arg4",
+      "conceptId": "diversification",
+      "claim": "Colleague: \"Diversification is for people who don't know what they're doing. Concentrating in the two or three companies you've studied deeply is how the great investors got rich.\"",
+      "options": [
+        { "id": "a", "text": "Survivorship: the visible concentrated winners hide the concentrated losers, and forgoing free specific-risk removal needs an information edge lesson 29 says private investors don't have.", "correct": true },
+        { "id": "b", "text": "No investor has ever succeeded while concentrated.", "correct": false },
+        { "id": "c", "text": "Studying companies deeply is a waste of time.", "correct": false }
+      ],
+      "debrief": "The famous concentrated successes are a survivorship sample - the equally concentrated failures write no books. Diversification's deletion of specific risk is free (lesson 16); declining it is only rational with a genuine, repeatable edge over the market's price."
+    },
+    {
+      "id": "arg5",
+      "conceptId": "investment-taxation",
+      "claim": "Friend: \"Never sell winners - taxes eat 31.4 percent of the gain. I've held a fund I hate for years just to avoid the tax bill.\"",
+      "options": [
+        { "id": "a", "text": "Correct - realizing gains is always a mistake.", "correct": false },
+        { "id": "b", "text": "Tax deferral is a real advantage, but only on the gain - paying 31.4 percent of the profit to escape a fund with a real ongoing flaw (cost, concentration) can be cheap; the tax tail shouldn't wag the portfolio dog.", "correct": true },
+        { "id": "c", "text": "Taxes on funds don't exist inside a CTO.", "correct": false }
+      ],
+      "debrief": "Deferral genuinely compounds (lesson 49) - the grain of truth. But the tax falls on the gain, not the balance, and holding a structurally bad position to avoid it costs more via lesson 18's recurring drag. Wrappers (lesson 50) and honest arithmetic, not tax phobia, make the call."
+    }
+  ]
+}

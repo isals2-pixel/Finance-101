@@ -30,7 +30,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
 | 22 | Transfer exercises (30%) | Done P5 (pool) | 24-item auto-scored transfer pool (/practice); attempts feed the mastery and §42 transfer components |
 | 23 | Error analysis + self-scoring | Done P1 | Locked-answer self-assessment; error classes on both paths |
-| 24 | Misconception database | Planned P2 | Schema exists in concept JSON; lesson 1 misconceptions authored |
+| 24 | Misconception database | Done P4-P5 | All 54 concepts carry authored misconceptions with corrections; lessons close on them; surfaced per concept in the glossary |
 | 25 | Knowledge graph | Done P1 | Level 1 seeded; DAG validated in CI; grows with content |
 | 26 | Mastery model | Done P1 | Explicit weights in lib/mastery.ts, documented in LEARNING_SCIENCE.md |
 | 27 | Confidence calibration | Done P1 | Five bands, captured before reveal |
@@ -68,10 +68,10 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 62 | Onboarding | Done P2 (minimal) | Baseline-first card on home; preference questions omitted (single learner) |
 | 63 | Baseline assessment | Done P2 | 12 auto-scored items across domains; answers never revealed |
 | 64 | Personalized curriculum | Done P1 | Prerequisite gating in curriculum engine |
-| 65 | Adaptive difficulty | Planned P4 | Difficulty tiers in concept schema |
+| 65 | Adaptive difficulty | Done P5 (light) | Transfer practice orders items weakest-tracked-concept first; review interleaves by level; deeper item-level tiers only if wanted |
 | 66 | Crystallisation loop | Done P1 (partial) | Exposure-encoding-retrieval-application-spacing live; interleave/transfer/teach-back P2+ |
 | 67 | Teach-back mode | Done P5 | /teachback: weakest learned concept first, explanation locked before the model sentence, 0-5 self-score feeds FSRS and mastery as self-reported |
-| 68 | Financial argument analysis | Planned P4 | |
+| 68 | Financial argument analysis | Done P5 | Five real-world-shaped claims at /labs/arguments; the central flaw must be identified; scored into decision quality |
 | 69 | Source system | Done P1 | Sources with dates in lesson frontmatter, validated in CI |
 | 70 | Data policy | Done P1 | Static datasets only; abstraction in lib/market-data (P3) |
 | 71 | AI tutor | Deferred | Interface behind an off feature flag; no calls, per C1 |
