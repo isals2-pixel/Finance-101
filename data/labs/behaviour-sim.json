@@ -1,0 +1,70 @@
+{
+  "version": "2026-08-28",
+  "note": "Behavioural finance simulator (SPEC_V2 §32): one scripted market cycle, six bias-triggering decisions. Values are illustrative arithmetic, not forecasts. The 'planDelta' of each option is the approximate end-value effect in euros, relative to following the written plan, on the stated 100,000 euro portfolio - computed from the scripted path, shown after the run.",
+  "setup": "You hold a 100,000 euro 60/40 two-fund portfolio. Your written plan: monthly contribution 500 euros, rebalancing band ±5 points, changes only on changed life circumstances.",
+  "steps": [
+    {
+      "id": "s1",
+      "conceptId": "herding",
+      "situation": "Year one: markets rally 18 percent. A technology theme fund has tripled; colleagues own it, every feed praises it, inflows are at records.",
+      "options": [
+        { "id": "a", "text": "Switch 30 percent of the portfolio into the theme fund.", "correct": false, "planDelta": -9000, "bias": "herding and FOMO - buying near the top of a chase cycle" },
+        { "id": "b", "text": "Stay the plan; contributions continue as written.", "correct": true, "planDelta": 0, "bias": null },
+        { "id": "c", "text": "Stop contributions to wait for a dip to buy the theme cheaper.", "correct": false, "planDelta": -1800, "bias": "market timing - the plan already buys every month" }
+      ],
+      "debrief": "The theme peaked shortly after saturation. Lesson 46: saturated attention and record inflows mark late-cycle herding; the plan's monthly buying needs no opinion."
+    },
+    {
+      "id": "s2",
+      "conceptId": "loss-aversion",
+      "situation": "Months later, a crash: your portfolio falls 25 percent in one quarter. Headlines say 'worst crisis in a generation'. Every login shows red.",
+      "options": [
+        { "id": "a", "text": "Sell everything; re-enter when things calm down.", "correct": false, "planDelta": -14000, "bias": "panic selling - the felt loss made permanent at the bottom, plus a late re-entry" },
+        { "id": "b", "text": "Hold; contributions continue buying at low prices.", "correct": true, "planDelta": 0, "bias": null },
+        { "id": "c", "text": "Hold, but stop contributions until recovery is confirmed.", "correct": false, "planDelta": -2600, "bias": "loss aversion - 'confirmed' recovery means prices already recovered" }
+      ],
+      "debrief": "Lesson 44: the sale converts a temporary decline into a permanent loss, and panic sellers re-enter after the easy part of the recovery. The plan's automatic buying is the only reliable 'buy low'."
+    },
+    {
+      "id": "s3",
+      "conceptId": "rebalancing",
+      "situation": "The crash left your 60/40 at 52/48 - outside the ±5 band. Buying stocks now feels like walking into the fire.",
+      "options": [
+        { "id": "a", "text": "Rebalance per the band: move bonds into stocks to restore 60/40.", "correct": true, "planDelta": 0, "bias": null },
+        { "id": "b", "text": "Wait for calm before rebalancing into stocks.", "correct": false, "planDelta": -1900, "bias": "loss aversion vetoing the pre-written trade exactly when it is most valuable" },
+        { "id": "c", "text": "Rebalance the other way - more bonds until the storm passes.", "correct": false, "planDelta": -4300, "bias": "panic wearing a discipline costume - it locks the crash allocation in" }
+      ],
+      "debrief": "Lesson 42: the band rule was written in calm precisely so this trade is compliance, not courage. Executed, it buys the crash on schedule."
+    },
+    {
+      "id": "s4",
+      "conceptId": "herding",
+      "situation": "Recovery: markets are up 10 percent from the bottom. Commentators call it 'a dead-cat bounce before the real collapse'.",
+      "options": [
+        { "id": "a", "text": "Sell into strength before the 'real collapse'.", "correct": false, "planDelta": -7600, "bias": "recency and narrative - a story about the recent past dressed as a forecast" },
+        { "id": "b", "text": "Hold the plan; forecasts are not part of it.", "correct": true, "planDelta": 0, "bias": null }
+      ],
+      "debrief": "Lesson 46: recency bias extrapolates whatever just happened; lesson 25's evidence - the best days cluster near the worst - makes exit-and-re-enter a systematically losing trade."
+    },
+    {
+      "id": "s5",
+      "conceptId": "overconfidence",
+      "situation": "Your broker's homepage ranks funds: last year's winner returned +42 percent. Your boring world ETF did +9. Switching takes two clicks.",
+      "options": [
+        { "id": "a", "text": "Switch the equity sleeve into the ranked winner.", "correct": false, "planDelta": -5200, "bias": "performance chasing - buying after the rise, paying for someone else's returns" },
+        { "id": "b", "text": "Stay: short-run rankings barely persist, and the switch costs spread and tax.", "correct": true, "planDelta": 0, "bias": null }
+      ],
+      "debrief": "Lessons 29 and 46: short-run fund performance barely persists, and the investor-return gap is the measured cost of chasing rankings."
+    },
+    {
+      "id": "s6",
+      "conceptId": "loss-aversion",
+      "situation": "An inherited single stock sits beside your portfolio, down 40 percent since you received it. You would not buy it today.",
+      "options": [
+        { "id": "a", "text": "Keep it until it recovers to its old value, then sell.", "correct": false, "planDelta": -3100, "bias": "disposition effect anchored on a price the market has never seen" },
+        { "id": "b", "text": "Sell and fold the proceeds into the two-fund plan.", "correct": true, "planDelta": 0, "bias": null }
+      ],
+      "debrief": "Lesson 44: the loss already exists at market price; 'would I buy it today?' is the only question, and you answered it. Prospects, not purchase prices, allocate money."
+    }
+  ]
+}

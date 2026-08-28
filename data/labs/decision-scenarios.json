@@ -1,0 +1,67 @@
+{
+  "version": "2026-08-28",
+  "note": "Investment decision laboratory (SPEC_V2 §33): goal-first scenarios decided with the lesson 20 checklist (goal fit, horizon fit, cost, diversification, understanding). Auto-scored; attempts record as stage 'decision' and feed the §42 decision-quality component.",
+  "checklist": ["Does it fit the goal?", "Does it fit the horizon?", "What does it cost, all-in?", "Is it diversified?", "Do I understand what I own?"],
+  "scenarios": [
+    {
+      "id": "d1",
+      "goal": "Save 15,000 euros for a home deposit needed in 2 years.",
+      "options": [
+        { "id": "a", "text": "World-equity ETF - highest expected return.", "correct": false },
+        { "id": "b", "text": "Livret A / LDDS and a term deposit - capital certain at the date.", "correct": true },
+        { "id": "c", "text": "A balanced 50/50 fund - a compromise.", "correct": false }
+      ],
+      "debrief": "Horizon fit decides: at 2 years, equities' spread of outcomes includes deep losses at exactly the wrong date (lesson 19). Deposit money is not investment money - certainty is the goal, so the guaranteed products win despite their low rate."
+    },
+    {
+      "id": "d2",
+      "goal": "Invest 200 euros monthly for retirement, 35 years away. Candidates on the broker's list:",
+      "options": [
+        { "id": "a", "text": "World UCITS ETF (Acc), TER 0.20, replicates 1,500+ stocks.", "correct": true },
+        { "id": "b", "text": "Actively managed global fund, TER 1.80, star manager, +21 percent last year.", "correct": false },
+        { "id": "c", "text": "Tech-theme ETF (Acc), TER 0.45, +35 percent last year.", "correct": false }
+      ],
+      "debrief": "Cost and diversification decide: 1.6 points of yearly fees compound into a five-figure gap over 35 years (lesson 18), active persistence is rare (lesson 29), and last year's return is the weakest fact on the page (lesson 46). Broad, cheap, accumulating fits the goal."
+    },
+    {
+      "id": "d3",
+      "goal": "A friend pitches a 'guaranteed 12 percent yearly' private investment; documents are 'coming'. Your spare 5,000 euros:",
+      "options": [
+        { "id": "a", "text": "Invest - 12 percent guaranteed beats everything else you hold.", "correct": false },
+        { "id": "b", "text": "Decline: guaranteed-plus-double-digit violates the risk-return link; verify AMF registration regardless.", "correct": true },
+        { "id": "c", "text": "Invest half to limit the risk.", "correct": false }
+      ],
+      "debrief": "Understanding decides - and lesson 17's law: return above the safe rate is payment for risk, so 'guaranteed 12 percent' describes something that does not exist. Halving a scam halves, not fixes, the mistake. The AMF's register is where products verify."
+    },
+    {
+      "id": "d4",
+      "goal": "Your 60/40 portfolio is set. A newsletter argues convincingly that a crash is due within a year.",
+      "options": [
+        { "id": "a", "text": "Shift to 30/70 until the danger passes.", "correct": false },
+        { "id": "b", "text": "No change: forecasts are not in the plan; the allocation already prices bad years.", "correct": true },
+        { "id": "c", "text": "Shift to 80/20 - contrarian courage.", "correct": false }
+      ],
+      "debrief": "Goal fit decides: the allocation was chosen to survive bad years, so acting on the forecast just adds lesson 41's tactical timing - right-twice pricing against lesson 25's evidence. Neither direction of conviction is in the written plan."
+    },
+    {
+      "id": "d5",
+      "goal": "You hold a world ETF in a CTO. Your PEA, opened six years ago, sits empty. New savings of 500 euros monthly:",
+      "options": [
+        { "id": "a", "text": "Continue into the CTO - it already works.", "correct": false },
+        { "id": "b", "text": "Direct new savings to a PEA-eligible world ETF inside the PEA.", "correct": true },
+        { "id": "c", "text": "Split between both for diversification.", "correct": false }
+      ],
+      "debrief": "Cost decides: the PEA's matured clock exempts future gains from income tax (lesson 50) - a recurring saving with the same holdings. 'Wrapper diversification' is not diversification (lesson 39): the assets, not the containers, set the risk."
+    },
+    {
+      "id": "d6",
+      "goal": "Two ETFs on the same world index: A - TER 0.12, tracking difference −0.30, small and new; B - TER 0.22, tracking difference −0.18, large and seasoned.",
+      "options": [
+        { "id": "a", "text": "A - the lowest TER wins.", "correct": false },
+        { "id": "b", "text": "B - the smaller realized gap is the true cost.", "correct": true },
+        { "id": "c", "text": "Neither - wait for a cheaper fund.", "correct": false }
+      ],
+      "debrief": "Cost decides, measured correctly: lesson 36 - tracking difference is the all-in realized cost; B delivers more of the index despite the higher sticker. Waiting has its own price: time out of the market."
+    }
+  ]
+}

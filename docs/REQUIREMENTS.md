@@ -38,8 +38,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 29 | Interleaved review | Done P2 | interleaveByLevel in lib/metrics.ts, tested |
 | 30 | Portfolio laboratory | Done P3 (basic) | Allocation, expected return, volatility with correlations, bad-year estimate; assumptions labelled |
 | 31 | Market simulator | Deferred | Tier 2 (P6) |
-| 32 | Behavioural finance simulator | Planned P5 | Tier 1 |
-| 33 | Investment decision laboratory | Planned P5 | Tier 1 |
+| 32 | Behavioural finance simulator | Done P5 | One scripted market cycle, six bias-triggering decisions against the written plan (/labs/behaviour); deviations priced and named |
+| 33 | Investment decision laboratory | Done P5 | Six checklist-scored goal-first scenarios (/labs/decisions); feeds §42 decision quality |
 | 34 | Financial statement laboratory | Deferred | Tier 2 (P6) |
 | 35 | Corporate finance laboratory | Deferred | Tier 2 (P6) |
 | 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |

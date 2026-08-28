@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 2: behavioural simulator and decision lab
+
+- Behavioural finance simulator (§32) at /labs/behaviour: one scripted market cycle, six bias-triggering decisions against the written plan (herding at the top, panic in the crash, the band-rule trade, dead-cat-bounce narratives, ranking chasing, the inherited loser). Deviations are priced in euros relative to the plan and named by bias; a run report lists which biases got a vote.
+- Investment decision laboratory (§33) at /labs/decisions: six goal-first scenarios decided with the lesson 20 checklist (deposit-in-2-years, retirement fund pick, the guaranteed-12-percent pitch, crash forecast, PEA vs CTO, TER vs tracking difference).
+- Both record as stage `decision`, bringing the §42 composite's decision-quality component (weight .15) live - the last placeholder component.
+- Data integrity and metric wiring covered in CI (tests/labs.test.ts).
+
 ## 2026-08-28 - Phase 5, batch 1: transfer practice and the final exam
 
 - Transfer pool (§22): 24 auto-scored novel-scenario items tagged by concept, served six at a time at /practice with rationale after each answer. Attempts record as stage `transfer` and now feed both the per-concept mastery transfer component (weight .15) and the §42 composite's transfer component (weight .20) - both previously renormalised away for lack of evidence.

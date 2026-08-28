@@ -87,7 +87,7 @@ export interface Attempt {
   questionId: string;
   conceptId: string;
   /** Which stage produced it. */
-  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment' | 'transfer' | 'exam';
+  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment' | 'transfer' | 'exam' | 'decision';
   kind: RetrievalQuestion['type'] | 'prediction' | 'calculation';
   answer: string;
   /** Auto-scored items only. */
