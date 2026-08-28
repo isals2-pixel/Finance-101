@@ -629,6 +629,456 @@
           "correction": "Growth names expected expansion already priced richly; value names low prices on present earnings; each style has led for long stretches, which is why broad indexes hold both."
         }
       ]
+    },
+    {
+      "id": "bond-yield",
+      "title": "Bond yield",
+      "level": 7,
+      "tier": 1,
+      "prerequisites": [
+        "bonds"
+      ],
+      "related": [
+        "duration",
+        "monetary-policy"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The coupon rate is the return you get on a bond.",
+          "correction": "The coupon is fixed to face value; the return depends on the price paid - the yield to maturity captures coupons plus the pull to par on the actual price."
+        }
+      ]
+    },
+    {
+      "id": "duration",
+      "title": "Duration",
+      "level": 7,
+      "tier": 1,
+      "prerequisites": [
+        "bond-yield"
+      ],
+      "related": [
+        "monetary-policy",
+        "risk"
+      ],
+      "misconceptions": [
+        {
+          "statement": "All bonds react equally to rate moves.",
+          "correction": "Price sensitivity scales with duration: long-maturity, low-coupon bonds move several times more than short ones for the same yield change."
+        }
+      ]
+    },
+    {
+      "id": "credit-risk",
+      "title": "Credit risk and ratings",
+      "level": 7,
+      "tier": 1,
+      "prerequisites": [
+        "bonds",
+        "risk"
+      ],
+      "related": [
+        "fiscal-policy",
+        "diversification"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A higher-yielding bond is a better bond.",
+          "correction": "The extra yield is the priced probability of not being paid; high yield is compensation for credit risk, not free income."
+        }
+      ]
+    },
+    {
+      "id": "replication",
+      "title": "Passive replication",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": [
+        "etf",
+        "index"
+      ],
+      "related": [
+        "tracking",
+        "fees"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Synthetic ETFs don't really own anything.",
+          "correction": "A synthetic ETF holds a collateral basket plus a swap contract delivering the index return; the structure differs from physical holding, the exposure and UCITS safeguards remain."
+        }
+      ]
+    },
+    {
+      "id": "tracking",
+      "title": "Tracking difference",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": [
+        "replication"
+      ],
+      "related": [
+        "fees"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The TER tells you a tracker's full cost.",
+          "correction": "The realized tracking difference - fund return minus index return - is the true all-in cost; it includes the TER plus trading costs, taxes and lending income, and sometimes beats the TER."
+        }
+      ]
+    },
+    {
+      "id": "fund-structure",
+      "title": "Fund structure (UCITS, domicile, distribution)",
+      "level": 8,
+      "tier": 1,
+      "prerequisites": [
+        "etf"
+      ],
+      "related": [
+        "tracking",
+        "fees"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Accumulating and distributing versions of a fund perform differently.",
+          "correction": "The portfolio is identical; the only difference is whether dividends are paid out or reinvested inside - the choice is about cash needs and taxation, not performance."
+        }
+      ]
+    },
+    {
+      "id": "volatility",
+      "title": "Volatility",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "risk"
+      ],
+      "related": [
+        "correlation",
+        "duration"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Average return tells you how an investment did.",
+          "correction": "Volatility drags realized growth below the arithmetic average - a +20/-10 sequence averages +5 but compounds to under +4; the money follows the compound path."
+        }
+      ]
+    },
+    {
+      "id": "correlation",
+      "title": "Correlation",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "volatility",
+        "diversification"
+      ],
+      "related": [
+        "risk"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Adding a risky asset always makes a portfolio riskier.",
+          "correction": "An imperfectly correlated risky asset can lower total portfolio volatility - offsetting swings partially cancel; correlation, not the asset's own risk, decides."
+        }
+      ]
+    },
+    {
+      "id": "risk-adjusted-return",
+      "title": "Risk-adjusted return",
+      "level": 9,
+      "tier": 1,
+      "prerequisites": [
+        "volatility"
+      ],
+      "related": [
+        "correlation",
+        "long-term-investing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The portfolio with the highest return is the best portfolio.",
+          "correction": "Return per unit of risk is the comparison that matters; a higher return bought with disproportionate volatility is a worse deal, which the Sharpe ratio makes visible."
+        }
+      ]
+    },
+    {
+      "id": "asset-allocation",
+      "title": "Asset allocation",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "risk-adjusted-return",
+        "long-term-investing"
+      ],
+      "related": [
+        "diversification",
+        "rebalancing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The right allocation is the one with the highest expected return.",
+          "correction": "The right allocation is the riskiest mix the investor can hold through a crash without selling - both capacity and tolerance bound it, and an abandoned allocation returns less than a held one."
+        },
+        {
+          "statement": "Risk tolerance and risk capacity are the same thing.",
+          "correction": "Tolerance is psychological (what swings you can sleep through); capacity is financial (what losses your situation can absorb given horizon, income and reserves). The allocation must fit the lower of the two."
+        },
+        {
+          "statement": "Tactical shifts to catch market turns add return for skilled amateurs.",
+          "correction": "Tactical allocation is market timing by another name; the evidence on lessons 25 and 29 applies - mistimed moves cost more than they gain, and the strategic mix does the heavy lifting."
+        }
+      ]
+    },
+    {
+      "id": "rebalancing",
+      "title": "Rebalancing",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "asset-allocation"
+      ],
+      "related": [
+        "volatility",
+        "long-term-investing"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Rebalancing means selling your winners, which lowers returns.",
+          "correction": "Rebalancing controls risk, not return: it restores the chosen risk level after drift. Its discipline - selling what rose, buying what fell - also removes emotion from the decision."
+        },
+        {
+          "statement": "Portfolios should be rebalanced constantly.",
+          "correction": "Once a year, or when weights drift past a band such as five points, captures most of the benefit; more frequent trading adds costs and, outside tax wrappers, taxes."
+        },
+        {
+          "statement": "Sequence of returns doesn't matter if the average return is good.",
+          "correction": "Once money is being withdrawn, early losses are locked in by the withdrawals and cannot be recovered by later gains - the order of returns changes the outcome even at the same average."
+        }
+      ]
+    },
+    {
+      "id": "portfolio-construction",
+      "title": "Portfolio construction",
+      "level": 10,
+      "tier": 1,
+      "prerequisites": [
+        "asset-allocation",
+        "rebalancing"
+      ],
+      "related": [
+        "etf",
+        "diversification"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A proper portfolio needs many funds.",
+          "correction": "One broad world-equity ETF plus one high-grade bond fund spans thousands of securities across the main drivers; added funds mostly add overlap, cost and maintenance."
+        },
+        {
+          "statement": "Construction starts with picking good funds.",
+          "correction": "It starts with the allocation; fund selection is the last step and mostly a cost-and-tracking comparison among near-identical broad products."
+        },
+        {
+          "statement": "Money you might need next year belongs in the portfolio, working.",
+          "correction": "Near-term money held in volatile assets risks forced selling in a dip - the one scenario that makes losses permanent. Liquidity needs are carved out first, in cash."
+        }
+      ]
+    },
+    {
+      "id": "loss-aversion",
+      "title": "Loss aversion",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "risk",
+        "long-term-investing"
+      ],
+      "related": [
+        "volatility",
+        "investment-decision"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Feeling losses strongly is a useful safety instinct for investing.",
+          "correction": "Loss aversion evolved for physical threats, not markets: it triggers selling after crashes and holding losers - the two moves that convert temporary declines into permanent losses."
+        },
+        {
+          "statement": "Panic selling at least stops the bleeding.",
+          "correction": "It locks the loss in and adds a second decision - re-entry - that panic sellers systematically make too late, after recovery."
+        },
+        {
+          "statement": "Refusing to sell a loser avoids taking the loss.",
+          "correction": "The loss already exists at market price; the disposition effect just keeps money in a holding chosen by pride rather than prospects."
+        }
+      ]
+    },
+    {
+      "id": "overconfidence",
+      "title": "Overconfidence and belief biases",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "investment-decision"
+      ],
+      "related": [
+        "fees",
+        "loss-aversion"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Confidence in one's market views is a sign of skill.",
+          "correction": "Measured calibration shows most investors are overconfident; in markets, confidence without calibration produces more trading, more cost, and worse returns."
+        },
+        {
+          "statement": "Researching a stock you like makes the decision more objective.",
+          "correction": "Unstructured research feeds confirmation bias - collecting supporting evidence feels like diligence. Objectivity requires actively seeking the case against."
+        },
+        {
+          "statement": "A good story about a company is good evidence about its stock.",
+          "correction": "Stories are cheap and already priced in; the narrative fallacy sells certainty. Prices move on surprises relative to the story, not on the story itself."
+        }
+      ]
+    },
+    {
+      "id": "herding",
+      "title": "Herding and performance chasing",
+      "level": 11,
+      "tier": 1,
+      "prerequisites": [
+        "financial-markets",
+        "long-term-investing"
+      ],
+      "related": [
+        "loss-aversion",
+        "overconfidence"
+      ],
+      "misconceptions": [
+        {
+          "statement": "If everyone is buying, they probably know something.",
+          "correction": "Herds mostly follow prices, not information; buying because others buy is how bubbles inflate, and the crowd's comfort peaks exactly at the top."
+        },
+        {
+          "statement": "Funds with the best recent returns are the best funds.",
+          "correction": "Past short-run performance barely persists; chasing it means systematically buying after rises - investor returns lag fund returns for exactly this reason."
+        },
+        {
+          "statement": "Missing a boom is as costly as riding a bust.",
+          "correction": "FOMO prices regret, not risk: a missed gain leaves the plan intact, while a late-entry loss compounds against you. The asymmetry favours the plan."
+        }
+      ]
+    },
+    {
+      "id": "financial-foundation",
+      "title": "The personal finance base",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "net-worth",
+        "cash-flow"
+      ],
+      "related": [
+        "portfolio-construction",
+        "opportunity-cost"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Investing should start as soon as any money is spare.",
+          "correction": "Without an emergency reserve, the first surprise forces selling investments at whatever the market then offers; the reserve is what makes long-horizon investing actually long-horizon."
+        },
+        {
+          "statement": "All debt should be cleared before investing anything.",
+          "correction": "Compare rates: expensive consumer debt beats any expected market return and is repaid first; low-rate mortgage debt can rationally coexist with investing."
+        },
+        {
+          "statement": "Insurance is a savings substitute.",
+          "correction": "Insurance transfers catastrophic risks that no reasonable reserve could absorb; savings handle the absorbable ones. Insuring small risks or skipping large ones both misprice protection."
+        }
+      ]
+    },
+    {
+      "id": "pensions",
+      "title": "Pensions and retirement saving",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "compounding",
+        "long-term-investing"
+      ],
+      "related": [
+        "financial-foundation",
+        "french-wrappers"
+      ],
+      "misconceptions": [
+        {
+          "statement": "The State pension will replace my salary.",
+          "correction": "French pensions replace only part of net income - typically well under three quarters, less for higher earners and interrupted careers; the gap is what personal saving must fill."
+        },
+        {
+          "statement": "Retirement saving is a concern for one's fifties.",
+          "correction": "The compounding arithmetic of lesson 5 makes early euros the cheapest: money saved at 25 has twice the compounding runway of money saved at 45."
+        },
+        {
+          "statement": "The PER's tax deduction makes it automatically the best vehicle.",
+          "correction": "The deduction is deferral, not exemption - exit is taxed and funds are locked until retirement; its value depends on tax rates now versus then, and liquidity has a price."
+        }
+      ]
+    },
+    {
+      "id": "investment-taxation",
+      "title": "Taxation of investments in France",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "etf",
+        "long-term-investing"
+      ],
+      "related": [
+        "fees",
+        "french-wrappers"
+      ],
+      "misconceptions": [
+        {
+          "statement": "Taxes on investments are unavoidable, so planning changes little.",
+          "correction": "Wrapper choice, accumulating funds and low turnover legally change the rate and the timing; over decades the difference compounds like a fee."
+        },
+        {
+          "statement": "Paper gains are taxed each year.",
+          "correction": "In a CTO, tax falls on realized gains and on distributed dividends; unrealized appreciation compounds untaxed - one reason buy-and-hold and accumulating share classes are tax-efficient."
+        },
+        {
+          "statement": "The flat tax is always 30 percent.",
+          "correction": "Since January 2026 the PFU is 31.4 percent (12.8 income tax + 18.6 social contributions after the CSG increase), and the progressive scale remains an option worth checking at low marginal rates."
+        }
+      ]
+    },
+    {
+      "id": "french-wrappers",
+      "title": "French investment wrappers",
+      "level": 12,
+      "tier": 1,
+      "prerequisites": [
+        "investment-taxation",
+        "portfolio-construction"
+      ],
+      "related": [
+        "pensions",
+        "etf"
+      ],
+      "misconceptions": [
+        {
+          "statement": "A PEA is an investment; choosing it is choosing what I own.",
+          "correction": "PEA, CTO and assurance-vie are containers with tax rules; the same world-ETF strategy can live in several of them. Choose holdings first, wrapper by tax and flexibility."
+        },
+        {
+          "statement": "PEA gains become entirely tax-free after five years.",
+          "correction": "After five years withdrawals are exempt from income tax only; social contributions (18.6 percent since January 2026) remain due on gains."
+        },
+        {
+          "statement": "Assurance-vie is mainly a life insurance policy.",
+          "correction": "In practice it is a savings wrapper with its own tax clock (advantages from year 8) and succession rules; the insurance element is thin."
+        }
+      ]
     }
   ]
 }

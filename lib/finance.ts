@@ -25,6 +25,22 @@ export function futureValueWithContributions(
   return lumpSum + contributions;
 }
 
+/**
+ * Monthly contribution needed to reach `target` in `years` (no lump sum),
+ * inverse of futureValueWithContributions under the same conventions.
+ */
+export function requiredMonthlyContribution(
+  target: number,
+  annualRate: number,
+  years: number,
+): number {
+  const months = Math.round(years * 12);
+  if (months <= 0) return Number.POSITIVE_INFINITY;
+  const monthlyRate = Math.pow(1 + annualRate, 1 / 12) - 1;
+  if (monthlyRate === 0) return target / months;
+  return (target * monthlyRate) / (Math.pow(1 + monthlyRate, months) - 1);
+}
+
 /** Purchasing power of a nominal amount after `years` of inflation. */
 export function realValue(nominalAmount: number, inflationRate: number, years: number): number {
   return nominalAmount / Math.pow(1 + inflationRate, years);

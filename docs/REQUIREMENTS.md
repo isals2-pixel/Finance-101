@@ -8,10 +8,10 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 1 | Purpose | Done (v2) | Single-owner objective |
 | 2 | Core product principle | Done (v2) | |
 | 3 | Target user | Done (v2) | |
-| 4.1 | Retrieval practice | Done P1 (partial) | Lesson flow forces recall; formats broaden P2-P3 |
+| 4.1 | Retrieval practice | Done | Lesson flow forces recall; review, transfer, teach-back and exam broaden the formats |
 | 4.2 | Spaced practice | Done P1 | FSRS via ts-fsrs |
 | 4.3 | Interleaving | Done P2 | Review sessions round-robin across curriculum levels |
-| 5 | Generative learning | Done P1 (partial) | Prediction, free recall, explanation live; comparison, error-id P3 |
+| 5 | Generative learning | Done | Prediction, free recall, explanation, teach-back, error identification (argument lab) all live |
 | 6 | Cognitive load design | Done P1 | Minimal interface by construction |
 | 7 | Reading-first design (was auditory-first) | Done (v2.1) | Audio removed entirely; lessons are read-only text in the app |
 | 8 | Lesson length | Done P1 | 1,400-1,800 word body = ~7-9 min reading |
@@ -22,15 +22,15 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 13 | ADHD-optimised design | Done P1 (partial) | Clear next action, resumption, short sessions; variety grows with content |
 | 14 | No infinite feed | Done P1 | Home answers the four questions only |
 | 15 | Daily session | Done P2 | Home offers lesson + due reviews + optional apply |
-| 16 | Variable session length | Planned P2 | |
-| 17 | Minimum viable day | Planned P2 | |
+| 16 | Variable session length | Done P5 | Home offers quick / session / deep modes; choice remembered on-device |
+| 17 | Minimum viable day | Done P5 | Quick mode shows exactly one action (a review if due, else one transfer item) with explicit permission to stop |
 | 18 | Visual design | Done P1 | Visual step after the reading; required/reinforcement flag per lesson |
 | 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
 | 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
-| 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
-| 22 | Transfer exercises (30%) | Planned P2-P4 | Question pools tagged by cognition |
+| 21 | Eight exercise types | Done P5 | Prediction, free recall, short answer, classification, calculation, transfer scenarios, decision/argument scenarios, teach-back |
+| 22 | Transfer exercises (30%) | Done P5 (pool) | 24-item auto-scored transfer pool (/practice); attempts feed the mastery and §42 transfer components |
 | 23 | Error analysis + self-scoring | Done P1 | Locked-answer self-assessment; error classes on both paths |
-| 24 | Misconception database | Planned P2 | Schema exists in concept JSON; lesson 1 misconceptions authored |
+| 24 | Misconception database | Done P4-P5 | All 54 concepts carry authored misconceptions with corrections; lessons close on them; surfaced per concept in the glossary |
 | 25 | Knowledge graph | Done P1 | Level 1 seeded; DAG validated in CI; grows with content |
 | 26 | Mastery model | Done P1 | Explicit weights in lib/mastery.ts, documented in LEARNING_SCIENCE.md |
 | 27 | Confidence calibration | Done P1 | Five bands, captured before reveal |
@@ -38,16 +38,16 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 29 | Interleaved review | Done P2 | interleaveByLevel in lib/metrics.ts, tested |
 | 30 | Portfolio laboratory | Done P3 (basic) | Allocation, expected return, volatility with correlations, bad-year estimate; assumptions labelled |
 | 31 | Market simulator | Deferred | Tier 2 (P6) |
-| 32 | Behavioural finance simulator | Planned P5 | Tier 1 |
-| 33 | Investment decision laboratory | Planned P5 | Tier 1 |
+| 32 | Behavioural finance simulator | Done P5 | One scripted market cycle, six bias-triggering decisions against the written plan (/labs/behaviour); deviations priced and named |
+| 33 | Investment decision laboratory | Done P5 | Six checklist-scored goal-first scenarios (/labs/decisions); feeds §42 decision quality |
 | 34 | Financial statement laboratory | Deferred | Tier 2 (P6) |
 | 35 | Corporate finance laboratory | Deferred | Tier 2 (P6) |
 | 36 | Macroeconomic laboratory | Deferred | Tier 2 (P6) |
-| 37 | Personal finance laboratory | Planned P5 | Tier 1 |
-| 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
-| 39 | Curriculum structure | In progress P4 | First 20 + Level 2 economics done (26 lessons); Levels 5-12 remainder in coming tranches |
-| 40 | Final competency level | Planned P4-P5 | Thresholds are configuration |
-| 41 | Final exam | Planned P5 | Held-out hand-authored pool |
+| 37 | Personal finance laboratory | Done P5 | Savings rate/reserve, debt-vs-invest, retirement-gap projector with early/late start comparison (/labs/personal), over reference-tested finance math |
+| 38 | Investment Policy Statement | Done P5 | Builder at /ips: objective, allocation, band, contributions, change conditions; six-item self-scored rubric; stored on-device, copyable as text |
+| 39 | Curriculum structure | Done P4 (Tier 1) | 50 lessons; all Tier 1 levels (1, 2, 5-12) complete. French tax lessons dated + source-linked with an in-app education-not-advice notice. Tier 2 levels deferred per revision |
+| 40 | Final competency level | Done P5 | Pass threshold (80%) is configuration in final-exam.json; domain breakdown shown per sitting |
+| 41 | Final exam | Done P5 | 30-item held-out hand-authored pool (/exam); one sitting, answers never revealed, domain scores only |
 | 42 | Personal progress measurement | Done P2 | Baseline stored permanently; dashboard computes composite, retention, calculation accuracy, calibration, abandonment; transfer/decision pools pending |
 | 43-46 | v1 KPI catalogue | Removed | Subsumed into §42; KPI 6 anchors survive as the self-score scale |
 | 47 | Audio effectiveness experiment | Removed | n=1 |
@@ -68,10 +68,10 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 62 | Onboarding | Done P2 (minimal) | Baseline-first card on home; preference questions omitted (single learner) |
 | 63 | Baseline assessment | Done P2 | 12 auto-scored items across domains; answers never revealed |
 | 64 | Personalized curriculum | Done P1 | Prerequisite gating in curriculum engine |
-| 65 | Adaptive difficulty | Planned P4 | Difficulty tiers in concept schema |
+| 65 | Adaptive difficulty | Done P5 (light) | Transfer practice orders items weakest-tracked-concept first; review interleaves by level; deeper item-level tiers only if wanted |
 | 66 | Crystallisation loop | Done P1 (partial) | Exposure-encoding-retrieval-application-spacing live; interleave/transfer/teach-back P2+ |
-| 67 | Teach-back mode | Planned P2 | Self-scored |
-| 68 | Financial argument analysis | Planned P4 | |
+| 67 | Teach-back mode | Done P5 | /teachback: weakest learned concept first, explanation locked before the model sentence, 0-5 self-score feeds FSRS and mastery as self-reported |
+| 68 | Financial argument analysis | Done P5 | Five real-world-shaped claims at /labs/arguments; the central flaw must be identified; scored into decision quality |
 | 69 | Source system | Done P1 | Sources with dates in lesson frontmatter, validated in CI |
 | 70 | Data policy | Done P1 | Static datasets only; abstraction in lib/market-data (P3) |
 | 71 | AI tutor | Deferred | Interface behind an off feature flag; no calls, per C1 |

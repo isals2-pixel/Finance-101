@@ -57,9 +57,7 @@ export function computeMastery(input: MasteryInput, now: number): MasteryRecord 
   const immediate = retrievalLike.filter((a) => a.at - first <= IMMEDIATE_WINDOW_MS);
   const delayed = retrievalLike.filter((a) => a.at - first > DELAYED_GAP_MS);
   const application = relevant.filter((a) => a.stage === 'exercise');
-  // Transfer items arrive with the question pools (Phase 2+); tagged via kind
-  // 'explanation' in review stage is not transfer. None exist in Phase 1.
-  const transfer: Attempt[] = [];
+  const transfer = relevant.filter((a) => a.stage === 'transfer');
 
   const components: Record<string, number | null> = {
     learning: input.lessonCompleted ? 1 : 0,

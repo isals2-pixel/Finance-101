@@ -5,6 +5,7 @@ import {
   feeImpact,
   futureValue,
   futureValueWithContributions,
+  requiredMonthlyContribution,
   portfolioExpectedReturn,
   portfolioVolatility,
   realReturn,
@@ -42,6 +43,21 @@ describe('futureValueWithContributions', () => {
     expect(v).toBeGreaterThan(24000); // more than the 24,000 deposited
     expect(v).toBeCloseTo(reference, 6);
     expect(v).toBeCloseTo(30872.63, 1);
+  });
+});
+
+describe('requiredMonthlyContribution', () => {
+  it('inverts futureValueWithContributions', () => {
+    const c = requiredMonthlyContribution(100000, 0.04, 20);
+    expect(futureValueWithContributions(0, c, 0.04, 20)).toBeCloseTo(100000, 4);
+  });
+  it('reduces to target/months at zero rate', () => {
+    expect(requiredMonthlyContribution(12000, 0, 10)).toBeCloseTo(100, 6);
+  });
+  it('a later start costs more per month for the same target', () => {
+    const early = requiredMonthlyContribution(200000, 0.03, 30);
+    const late = requiredMonthlyContribution(200000, 0.03, 15);
+    expect(late).toBeGreaterThan(2 * early);
   });
 });
 

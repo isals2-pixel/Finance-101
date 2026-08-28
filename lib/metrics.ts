@@ -28,6 +28,16 @@ export function delayedRetention(attempts: Attempt[], now = Date.now()): number 
 }
 
 /** §42.5 - % correct on quantitative items. */
+/** §42 measure 4: percent correct on transfer-pool attempts. */
+export function transferAccuracy(attempts: Attempt[]): number | null {
+  return percentCorrect(attempts.filter((a) => a.stage === 'transfer'));
+}
+
+/** §42 measure 5: percent of decision-lab scenarios decided per the framework. */
+export function decisionQuality(attempts: Attempt[]): number | null {
+  return percentCorrect(attempts.filter((a) => a.stage === 'decision'));
+}
+
 export function calculationAccuracy(attempts: Attempt[]): number | null {
   return percentCorrect(attempts.filter((a) => a.kind === 'calculation'));
 }
@@ -80,9 +90,9 @@ export function competencyScore(
   const components: CompetencyComponent[] = [
     { key: 'knowledge', label: 'Foundational knowledge (avg mastery)', weight: 0.2, value: avgMastery },
     { key: 'retention', label: 'Delayed retention (30d+)', weight: 0.2, value: delayedRetention(attempts) },
-    { key: 'transfer', label: 'Transfer', weight: 0.2, value: null },
+    { key: 'transfer', label: 'Transfer', weight: 0.2, value: transferAccuracy(attempts) },
     { key: 'quant', label: 'Calculation accuracy', weight: 0.15, value: calculationAccuracy(attempts) },
-    { key: 'decision', label: 'Decision quality', weight: 0.15, value: null },
+    { key: 'decision', label: 'Decision quality', weight: 0.15, value: decisionQuality(attempts) },
     { key: 'calibration', label: 'Confidence calibration', weight: 0.1, value: calib === null ? null : Math.max(0, 100 - Math.abs(calib)) },
   ];
   let weighted = 0;

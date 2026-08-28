@@ -104,9 +104,26 @@ export default function LabsPage() {
         </p>
       </Card>
 
-      <Link href="/labs/portfolio/" className="inline-block text-sm text-[var(--accent)] underline">
-        Portfolio laboratory →
-      </Link>
+      <div className="flex flex-col gap-2 text-sm">
+        <Link href="/labs/portfolio/" className="text-[var(--accent)] underline">
+          Portfolio laboratory →
+        </Link>
+        <Link href="/labs/behaviour/" className="text-[var(--accent)] underline">
+          Behavioural simulator → <span className="text-[var(--muted)] no-underline">one market cycle, six bias traps</span>
+        </Link>
+        <Link href="/labs/decisions/" className="text-[var(--accent)] underline">
+          Investment decision lab → <span className="text-[var(--muted)]">the checklist against real choices</span>
+        </Link>
+        <Link href="/labs/arguments/" className="text-[var(--accent)] underline">
+          Argument analysis → <span className="text-[var(--muted)]">find the flaw in the pitch</span>
+        </Link>
+        <Link href="/labs/personal/" className="text-[var(--accent)] underline">
+          Personal finance lab → <span className="text-[var(--muted)]">reserve, debt, retirement gap on your numbers</span>
+        </Link>
+        <Link href="/ips/" className="text-[var(--accent)] underline">
+          Investment Policy Statement → <span className="text-[var(--muted)]">write the rule, self-score it</span>
+        </Link>
+      </div>
     </div>
   );
 }

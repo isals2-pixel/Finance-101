@@ -34,6 +34,35 @@ import {
   OrderFill,
 } from './Batch5Visuals';
 import {
+  CreditSpectrum,
+  DurationLever,
+  FundLabels,
+  PriceYieldSeesaw,
+  ReplicationPaths,
+  TrackingGap,
+} from './Batch6Visuals';
+import {
+  CorrelationMix,
+  EfficientFrontier,
+  VolatilityDrag,
+} from './Batch7Visuals';
+import {
+  AllocationDials,
+  PortfolioBlueprint,
+  RebalancingCycle,
+} from './Batch8Visuals';
+import {
+  ChaseCycle,
+  LossAsymmetry,
+  OverconfidenceCost,
+} from './Batch9Visuals';
+import {
+  FoundationPyramid,
+  PensionPillars,
+  TaxBite,
+  WrapperMap,
+} from './Batch10Visuals';
+import {
   CycleWave,
   FiscalFlows,
   FxSeesaw,
@@ -74,6 +103,25 @@ const VISUALS: Record<string, ComponentType> = {
   'order-fill': OrderFill,
   'earnings-waterfall': EarningsWaterfall,
   'growth-value-compare': GrowthValueCompare,
+  'price-yield-seesaw': PriceYieldSeesaw,
+  'duration-lever': DurationLever,
+  'credit-spectrum': CreditSpectrum,
+  'replication-paths': ReplicationPaths,
+  'tracking-gap': TrackingGap,
+  'fund-labels': FundLabels,
+  'volatility-drag': VolatilityDrag,
+  'correlation-mix': CorrelationMix,
+  'efficient-frontier': EfficientFrontier,
+  'allocation-dials': AllocationDials,
+  'rebalancing-cycle': RebalancingCycle,
+  'portfolio-blueprint': PortfolioBlueprint,
+  'loss-asymmetry': LossAsymmetry,
+  'overconfidence-cost': OverconfidenceCost,
+  'chase-cycle': ChaseCycle,
+  'foundation-pyramid': FoundationPyramid,
+  'pension-pillars': PensionPillars,
+  'tax-bite': TaxBite,
+  'wrapper-map': WrapperMap,
 };
 
 export function getVisual(id: string): ComponentType | undefined {

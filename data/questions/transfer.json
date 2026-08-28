@@ -1,0 +1,167 @@
+{
+  "version": "2026-08-26",
+  "pool": "transfer",
+  "note": "Transfer pool (SPEC_V2 §22): applying learned concepts to novel scenarios never used in lessons. Auto-scored; rationale shown after answering because practice feedback aids learning. Attempts record as stage 'transfer' and feed the mastery transfer component.",
+  "items": [
+    {
+      "id": "t1", "conceptId": "compounding", "level": 1, "type": "numeric",
+      "prompt": "A city's rents rise 4 percent a year, compounding. A 1,000 euro rent after 2 years, in euros?",
+      "answer": 1081.6, "tolerance": 0.1,
+      "rationale": "1,000 x 1.04 x 1.04 = 1,081.60. Compounding applies to anything growing on its own base - rents, not just savings."
+    },
+    {
+      "id": "t2", "conceptId": "real-vs-nominal", "level": 1, "type": "multipleChoice",
+      "prompt": "Your salary rises 3 percent while inflation runs 5 percent. In purchasing power you are:",
+      "options": ["better off - the salary rose", "worse off by about 2 percent", "unchanged", "unknowable"],
+      "answer": "worse off by about 2 percent",
+      "rationale": "Real change ≈ nominal minus inflation: 3 − 5 = −2 percent. The nominal raise is a real pay cut."
+    },
+    {
+      "id": "t3", "conceptId": "opportunity-cost", "level": 1, "type": "multipleChoice",
+      "prompt": "A company keeps 2 million euros idle in its account 'to stay safe' while similar firms earn 4 percent on short-term deposits. The true yearly cost of the choice is closest to:",
+      "options": ["zero - no money was spent", "80,000 euros", "2 million euros", "4 percent of profit"],
+      "answer": "80,000 euros",
+      "rationale": "Opportunity cost is the forgone alternative: 2,000,000 x 0.04 = 80,000 euros a year, unbilled but real."
+    },
+    {
+      "id": "t4", "conceptId": "supply-demand", "level": 2, "type": "multipleChoice",
+      "prompt": "A harvest failure halves the coffee crop while a health trend raises coffee demand. The price will:",
+      "options": ["rise strongly", "fall", "stay the same", "rise only if regulators allow"],
+      "answer": "rise strongly",
+      "rationale": "Supply shifts left and demand shifts right - both movements push the price the same way: up."
+    },
+    {
+      "id": "t5", "conceptId": "monetary-policy", "level": 2, "type": "multipleChoice",
+      "prompt": "Inflation runs hot and the central bank raises rates sharply. Which is the INTENDED first link of the chain?",
+      "options": ["cheaper mortgages boost demand", "borrowing becomes dearer, cooling spending and investment", "the state collects more tax", "exports become cheaper"],
+      "answer": "borrowing becomes dearer, cooling spending and investment",
+      "rationale": "Policy rates transmit through borrowing costs to demand, and cooler demand slows price rises."
+    },
+    {
+      "id": "t6", "conceptId": "exchange-rates", "level": 2, "type": "numeric",
+      "prompt": "A US subscription costs 30 dollars monthly. The euro moves from 1.00 to 1.20 dollars per euro. The euro price falls by how many euros?",
+      "answer": 5, "tolerance": 0.01,
+      "rationale": "30/1.00 = 30 euros before; 30/1.20 = 25 after. A stronger euro cut the bill by 5 euros."
+    },
+    {
+      "id": "t7", "conceptId": "liquidity", "level": 5, "type": "multipleChoice",
+      "prompt": "An investor must sell a rarely-traded collectible-car fund quickly. Compared with selling a broad ETF, they should expect:",
+      "options": ["the same price either way", "a worse price - illiquidity is paid for at exit", "a better price for rarity", "no buyers at any price"],
+      "answer": "a worse price - illiquidity is paid for at exit",
+      "rationale": "Thin markets mean wide spreads and price impact: haste in an illiquid asset is expensive."
+    },
+    {
+      "id": "t8", "conceptId": "earnings", "level": 6, "type": "numeric",
+      "prompt": "A bakery chain earns 600,000 euros on 12 million of revenue. A supermarket earns the same 600,000 on 60 million. The bakery's net margin is how many times the supermarket's?",
+      "answer": 5, "tolerance": 0.01,
+      "rationale": "5 percent versus 1 percent - same profit, different business models. Margins, not raw profit, compare businesses."
+    },
+    {
+      "id": "t9", "conceptId": "bond-yield", "level": 7, "type": "multipleChoice",
+      "prompt": "News: 'government bond yields jumped today'. For existing holders of those bonds this means:",
+      "options": ["their bonds' prices fell", "their coupons increased", "their bonds' prices rose", "nothing until maturity"],
+      "answer": "their bonds' prices fell",
+      "rationale": "Yield and price are the same object read in opposite directions: yields up = prices down, immediately."
+    },
+    {
+      "id": "t10", "conceptId": "duration", "level": 7, "type": "numeric",
+      "prompt": "A pension fund holds bonds with duration 12. Yields fall 0.5 points. Approximate portfolio gain, in percent?",
+      "answer": 6, "tolerance": 0.1,
+      "rationale": "Δprice ≈ −duration x Δyield = −12 x (−0.5) = +6 percent. The lever works both ways."
+    },
+    {
+      "id": "t11", "conceptId": "tracking", "level": 8, "type": "multipleChoice",
+      "prompt": "Fund A: TER 0.15, tracking difference −0.35. Fund B: TER 0.25, tracking difference −0.22. Same index. The cheaper fund to actually hold was:",
+      "options": ["A - lower TER", "B - smaller realized gap", "identical", "unknowable"],
+      "answer": "B - smaller realized gap",
+      "rationale": "Tracking difference is the all-in realized cost; B delivered more of the index despite the higher sticker."
+    },
+    {
+      "id": "t12", "conceptId": "diversification", "level": 9, "type": "multipleChoice",
+      "prompt": "An engineer holds most savings in their own employer's stock 'because I know the company'. The overlooked risk is:",
+      "options": ["market risk", "job and savings failing together - concentrated specific risk", "inflation", "currency risk"],
+      "answer": "job and savings failing together - concentrated specific risk",
+      "rationale": "Income and portfolio share one company's fate - the exact risk diversification deletes free of charge."
+    },
+    {
+      "id": "t13", "conceptId": "volatility", "level": 9, "type": "numeric",
+      "prompt": "A fund returns +30 percent then −20 percent on 10,000 euros. End value, in euros?",
+      "answer": 10400, "tolerance": 0.01,
+      "rationale": "10,000 x 1.30 x 0.80 = 10,400 - a 2 percent compound rate despite the +5 average: volatility drag in action."
+    },
+    {
+      "id": "t14", "conceptId": "correlation", "level": 9, "type": "multipleChoice",
+      "prompt": "To cushion an equity portfolio against a panic, the most useful addition is an asset whose correlation to stocks:",
+      "options": ["is high in calm and crisis", "is low, especially in crises", "does not matter if its return is high", "is exactly +1"],
+      "answer": "is low, especially in crises",
+      "rationale": "Diversification's value in a panic comes from assets on different drivers - stock-stock correlations converge to 1 exactly then."
+    },
+    {
+      "id": "t15", "conceptId": "risk-adjusted-return", "level": 9, "type": "numeric",
+      "prompt": "Safe rate 1 percent. A portfolio returns 7 percent at 12 volatility. Sharpe ratio, two decimals?",
+      "answer": 0.5, "tolerance": 0.001,
+      "rationale": "(7 − 1) / 12 = 0.50 of return per unit of risk - the comparable number, not the 7 alone."
+    },
+    {
+      "id": "t16", "conceptId": "asset-allocation", "level": 10, "type": "multipleChoice",
+      "prompt": "A 60-year-old with adequate pensions and high calm during past crashes, versus a 30-year-old who sold everything in the last dip. Whose equity share should the QUESTIONNAIRE-perfect '100 minus age' rule most misjudge?",
+      "options": ["both - capacity and tolerance, not age formulas, set the share", "the older investor only", "the younger investor only", "neither - age decides"],
+      "answer": "both - capacity and tolerance, not age formulas, set the share",
+      "rationale": "The older investor's capacity and tolerance are high; the younger's tolerance is demonstrably low. Age proxies fail both directions."
+    },
+    {
+      "id": "t17", "conceptId": "rebalancing", "level": 10, "type": "numeric",
+      "prompt": "Target 70/30. After a crash: stocks 49,000, bonds 31,000. How many euros of bonds must move into stocks?",
+      "answer": 7000, "tolerance": 0.01,
+      "rationale": "Total 80,000; target stocks 56,000; buy 56,000 − 49,000 = 7,000 from bonds - the rule buys the crash on schedule."
+    },
+    {
+      "id": "t18", "conceptId": "portfolio-construction", "level": 10, "type": "multipleChoice",
+      "prompt": "A saver holds 8 funds: 3 world ETFs, 2 S&P 500 ETFs, 2 European ETFs, 1 bond fund. The portfolio is best described as:",
+      "options": ["highly diversified - many funds", "roughly a two-fund portfolio with overlap and extra maintenance", "dangerously concentrated in bonds", "well constructed"],
+      "answer": "roughly a two-fund portfolio with overlap and extra maintenance",
+      "rationale": "The seven equity funds correlate near +1 - breadth lives inside funds, not in their count."
+    },
+    {
+      "id": "t19", "conceptId": "loss-aversion", "level": 11, "type": "multipleChoice",
+      "prompt": "A saver checks their portfolio daily and feels awful, though it is up over the year. The design flaw is:",
+      "options": ["the portfolio is too risky", "daily sampling serves loss aversion a stream of felt losses", "the funds are bad", "the market is broken"],
+      "answer": "daily sampling serves loss aversion a stream of felt losses",
+      "rationale": "Markets zig-zag daily; each dip lands with doubled force. The same portfolio checked yearly feels like what it is: up."
+    },
+    {
+      "id": "t20", "conceptId": "overconfidence", "level": 11, "type": "multipleChoice",
+      "prompt": "An investor 'researches' a stock they already own by reading five bullish theses. The research mainly increased their:",
+      "options": ["accuracy", "conviction, via confirmation bias", "calibration", "diversification"],
+      "answer": "conviction, via confirmation bias",
+      "rationale": "Evidence collected to support a held view raises confidence, not correctness - the search for the case against was skipped."
+    },
+    {
+      "id": "t21", "conceptId": "herding", "level": 11, "type": "multipleChoice",
+      "prompt": "A theme is everywhere: colleagues, feeds, record fund inflows, a tripled price. Historically, entering now most resembles:",
+      "options": ["buying early information", "buying near the top of a chase cycle", "contrarian investing", "rebalancing"],
+      "answer": "buying near the top of a chase cycle",
+      "rationale": "Saturated attention and peak inflows mark late-cycle herding - the crowd's comfort is maximal exactly where entry is worst."
+    },
+    {
+      "id": "t22", "conceptId": "financial-foundation", "level": 12, "type": "multipleChoice",
+      "prompt": "Windfall of 10,000 euros. No reserve; a 4,000 euro credit balance at 16 percent; a funded portfolio. The order that follows the course's logic is:",
+      "options": ["all into the portfolio - highest expected return", "reserve first, clear the 16 percent debt, remainder to the portfolio", "clear the debt, rest to the portfolio, reserve later", "half portfolio, half reserve"],
+      "answer": "reserve first, clear the 16 percent debt, remainder to the portfolio",
+      "rationale": "The reserve protects everything else from forced sales; the 16 percent repayment is a guaranteed return no market matches; investing takes what remains."
+    },
+    {
+      "id": "t23", "conceptId": "investment-taxation", "level": 12, "type": "numeric",
+      "prompt": "In a CTO you realize a 5,000 euro gain under the 31.4 percent flat tax. Euros kept after tax?",
+      "answer": 3430, "tolerance": 0.01,
+      "rationale": "Tax 5,000 x 0.314 = 1,570; kept 3,430. Left unrealized, the full 5,000 would keep compounding."
+    },
+    {
+      "id": "t24", "conceptId": "french-wrappers", "level": 12, "type": "multipleChoice",
+      "prompt": "A 28-year-old starts 200 euros monthly into a world-ETF strategy for retirement. The natural first wrapper is:",
+      "options": ["CTO - simplest", "PEA - the five-year clock and income-tax exemption suit the horizon", "assurance-vie fonds euros", "PER regardless of tax bracket"],
+      "answer": "PEA - the five-year clock and income-tax exemption suit the horizon",
+      "rationale": "Long-horizon equity saving fits the PEA's exemption; the clock argues for opening it now. CTO takes overflow; PER depends on bracket."
+    }
+  ]
+}

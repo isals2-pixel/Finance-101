@@ -54,6 +54,16 @@ describe('content validation', () => {
     expect(bySlug.get('compound-interest')!.exercise.answer).toBe(1000 * 1.1 * 1.1);
   });
 
+  it('level 7-8 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('yield-and-bond-pricing')!.exercise.answer).toBe((40 / 800) * 100);
+    expect(bySlug.get('duration')!.exercise.answer).toBeCloseTo(10000 * 0.07, 6);
+    expect(bySlug.get('credit-risk-and-ratings')!.exercise.answer).toBeCloseTo(5.1 - 3.0, 10);
+    expect(bySlug.get('passive-active-and-replication')!.exercise.answer).toBeCloseTo(6.0 - 0.2, 10);
+    expect(bySlug.get('tracking-difference')!.exercise.answer).toBeCloseTo(6.0 - 5.72, 3);
+    expect(bySlug.get('fund-structure')!.exercise.answer).toBe(10000 * 0.02);
+  });
+
   it('level 5-6 exercise answers are arithmetically consistent', () => {
     const bySlug = new Map(lessons.map((l) => [l.slug, l]));
     expect(bySlug.get('exchanges-and-brokers')!.exercise.answer).toBe(5000 * 0.001);
@@ -71,6 +81,44 @@ describe('content validation', () => {
     expect(bySlug.get('fiscal-policy')!.exercise.answer).toBe(1310 - 1180);
     expect(bySlug.get('business-cycles')!.exercise.answer).toBe(2400 * 0.975);
     expect(bySlug.get('exchange-rates')!.exercise.answer).toBeCloseTo(220 / 1.1, 10);
+  });
+
+  it('level 9 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('measuring-risk-and-return')!.exercise.answer).toBeCloseTo(10000 * 1.2 * 0.9, 6);
+    expect(bySlug.get('correlation')!.exercise.answer).toBeCloseTo(
+      Math.sqrt(0.5 ** 2 * 16 ** 2 + 0.5 ** 2 * 16 ** 2),
+      1,
+    );
+    expect(bySlug.get('risk-adjusted-return')!.exercise.answer).toBeCloseTo((6 - 2) / 16, 6);
+  });
+
+  it('level 10 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('asset-allocation')!.exercise.answer).toBeCloseTo(0.6 * 6 + 0.4 * 3, 6);
+    expect(bySlug.get('rebalancing')!.exercise.answer).toBe(60000 * 1.5 - 0.6 * (60000 * 1.5 + 40000));
+    expect(bySlug.get('portfolio-construction')!.exercise.answer).toBeCloseTo(5.4 - 2 * 13, 6);
+  });
+
+  it('level 11 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('loss-aversion')!.exercise.answer).toBeCloseTo((40000 / 30000 - 1) * 100, 1);
+    expect(bySlug.get('overconfidence')!.exercise.answer).toBeCloseTo(50000 * (0.015 - 0.002), 6);
+    expect(bySlug.get('herding')!.exercise.answer).toBeCloseTo(15000 * 0.8 * 1.1, 6);
+  });
+
+  it('level 12 exercise answers are arithmetically consistent', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('financial-foundation')!.exercise.answer).toBe(2200 * 4);
+    expect(bySlug.get('pensions')!.exercise.answer).toBeCloseTo(2500 - 2500 * 0.7, 6);
+    expect(bySlug.get('investment-taxation')!.exercise.answer).toBeCloseTo(3000 * 0.314, 2);
+    expect(bySlug.get('french-wrappers')!.exercise.answer).toBeCloseTo(10000 * (0.314 - 0.186), 2);
+  });
+
+  it('French tax lessons carry a verification date', () => {
+    const bySlug = new Map(lessons.map((l) => [l.slug, l]));
+    expect(bySlug.get('investment-taxation')!.taxRulesVerifiedAt).toBeDefined();
+    expect(bySlug.get('french-wrappers')!.taxRulesVerifiedAt).toBeDefined();
   });
 
   it('batch 2 exercise answers are arithmetically consistent', () => {

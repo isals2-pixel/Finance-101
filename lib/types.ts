@@ -65,6 +65,8 @@ export interface Lesson {
   exercise: LessonExercise;
   sources: LessonSource[];
   masteryCriteria: string;
+  /** Present on French tax lessons: date the rules were last verified (SPEC_V2 §39). */
+  taxRulesVerifiedAt?: string;
   body: string;
 }
 
@@ -85,7 +87,7 @@ export interface Attempt {
   questionId: string;
   conceptId: string;
   /** Which stage produced it. */
-  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment';
+  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment' | 'transfer' | 'exam' | 'decision';
   kind: RetrievalQuestion['type'] | 'prediction' | 'calculation';
   answer: string;
   /** Auto-scored items only. */
@@ -144,4 +146,21 @@ export interface LearnerRecord {
   /** Baseline assessment (§42.1): percent correct, stored permanently. */
   baselineScore?: number;
   baselineAt?: number;
+  /** Final exam (§41): last sitting's percent correct. Answers never revealed. */
+  examScore?: number;
+  examAt?: number;
+  /** Investment Policy Statement (§38), written and self-scored by the learner. */
+  ips?: InvestmentPolicyStatement;
+}
+
+export interface InvestmentPolicyStatement {
+  objective: string;
+  horizonYears: number;
+  equityPercent: number;
+  rebalanceBandPoints: number;
+  monthlyContribution: number;
+  changeConditions: string;
+  /** Rubric criteria the learner has self-checked (§38). */
+  rubricChecked: string[];
+  updatedAt: number;
 }

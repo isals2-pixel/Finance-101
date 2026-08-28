@@ -20,6 +20,17 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
   const [trackedConcepts, setTrackedConcepts] = useState(0);
   const [needsBaseline, setNeedsBaseline] = useState(false);
   const [ready, setReady] = useState(false);
+  // §16/§17: session length is a daily choice, remembered as a convenience.
+  const [mode, setMode] = useState<'quick' | 'standard' | 'deep'>('standard');
+
+  function setSessionMode(m: 'quick' | 'standard' | 'deep') {
+    setMode(m);
+    try {
+      localStorage.setItem('sessionMode', m);
+    } catch {
+      /* storage unavailable: the choice just doesn't persist */
+    }
+  }
 
   useEffect(() => {
     (async () => {
@@ -34,6 +45,12 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
       const now = Date.now();
       setDueCount((await allSchedules()).filter((s) => s.due <= now).length);
       setTrackedConcepts((await allMastery()).length);
+      try {
+        const stored = localStorage.getItem('sessionMode');
+        if (stored === 'quick' || stored === 'standard' || stored === 'deep') setMode(stored);
+      } catch {
+        /* keep the default */
+      }
       setReady(true);
     })();
   }, [lessons]);
@@ -42,8 +59,57 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
 
   const target = resume ?? nextLesson;
 
+  const minutes = { quick: '2-5', standard: '10-15', deep: '25+' }[mode];
+
   return (
     <div className="space-y-6">
+      <div className="flex items-center gap-2 text-xs">
+        <span className="text-[var(--muted)]">Time today:</span>
+        {(['quick', 'standard', 'deep'] as const).map((m) => (
+          <button
+            key={m}
+            onClick={() => setSessionMode(m)}
+            className={`rounded-full px-3 py-1 ${
+              mode === m
+                ? 'bg-[var(--accent)] text-white'
+                : 'border border-[var(--border)] text-[var(--muted)]'
+            }`}
+          >
+            {m === 'quick' ? 'a few minutes' : m === 'standard' ? 'a session' : 'deep'}
+          </button>
+        ))}
+        <span className="text-[var(--muted)]">≈ {minutes} min</span>
+      </div>
+
+      {mode === 'quick' ? (
+        <section className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5">
+          <h1 className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
+            The minimum viable day
+          </h1>
+          <p className="mt-3 text-sm">
+            {dueCount > 0
+              ? `One review keeps every schedule alive - ${dueCount} concept${dueCount === 1 ? ' is' : 's are'} due.`
+              : 'Nothing is due; one transfer question keeps the thread.'}
+          </p>
+          <Link
+            href={dueCount > 0 ? '/review/' : '/practice/'}
+            className="mt-2 inline-block rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white"
+          >
+            {dueCount > 0 ? 'Do one review' : 'One transfer question'}
+          </Link>
+          <p className="mt-3 text-xs text-[var(--muted)]">
+            Stop after one item with a clear conscience - showing up is the habit being trained.
+          </p>
+        </section>
+      ) : (
+        <HomeBody />
+      )}
+    </div>
+  );
+
+  function HomeBody() {
+    return (
+      <div className="space-y-6">
       {needsBaseline && (
         <section className="rounded-lg border border-[var(--accent)] bg-[var(--card)] p-5">
           <h2 className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
@@ -106,7 +172,33 @@ export function TodayCard({ lessons }: { lessons: LessonSummary[] }) {
             Nothing due. {trackedConcepts > 0 ? `${trackedConcepts} concept${trackedConcepts === 1 ? '' : 's'} on schedule.` : 'Reviews appear after your first lesson.'}
           </p>
         )}
+        {trackedConcepts > 0 && (
+          <p className="mt-3 text-xs text-[var(--muted)]">
+            Or <Link href="/teachback/" className="underline">teach a concept back</Link> - the
+            strongest retrieval there is.
+          </p>
+        )}
       </section>
-    </div>
-  );
+
+      {mode === 'deep' && (
+        <section className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5">
+          <h2 className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
+            Going deep
+          </h2>
+          <div className="mt-3 flex flex-col gap-2 text-sm">
+            <Link href="/practice/" className="text-[var(--accent)] underline">
+              Transfer practice - learned tools on new scenarios
+            </Link>
+            <Link href="/labs/" className="text-[var(--accent)] underline">
+              Labs - your numbers through the course's arithmetic
+            </Link>
+            <Link href="/exam/" className="text-[var(--accent)] underline">
+              The final exam - when the curriculum is done
+            </Link>
+          </div>
+        </section>
+      )}
+      </div>
+    );
+  }
 }

@@ -1,5 +1,62 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 5: argument analysis, misconception surfacing, adaptive practice
+
+- Financial argument analysis (§68) at /labs/arguments: five real-world-shaped pitches (the hot-fund newsletter, the 100-percent-stocks forum post, the "fees are noise" adviser, the concentration brag, the never-sell tax phobia) where the learner must name the central flaw - each built on true premises and one broken inference. Scored into §42 decision quality.
+- Misconception database surfaced (§24): every glossary entry now discloses its concept's authored misconceptions with corrections.
+- Adaptive practice (§65, light): transfer sessions order items weakest-tracked-concept first, shuffled within groups.
+
+## 2026-08-28 - Phase 5, batch 4: session modes and teach-back
+
+- Variable session length (§16) and the minimum viable day (§17): the home screen offers quick / session / deep modes. Quick shows exactly one action - a due review, else one transfer item - with explicit permission to stop after it; deep adds practice, labs and the exam. The choice persists on-device.
+- Teach-back (§67) at /teachback: explain a learned concept as if teaching it (weakest mastery offered first), explanation locked before the lesson's one-sentence model appears, then 0-5 self-score with anchors - recorded as a self-reported review explanation feeding FSRS and mastery.
+
+## 2026-08-28 - Phase 5, batch 3: personal finance lab and IPS builder
+
+- Personal finance laboratory (§37) at /labs/personal: savings rate and reserve target, repay-vs-invest with the guaranteed-return comparison, and a retirement-gap projector (capital needed, required monthly saving now versus a 15-year-later start) - all over lib/finance, including a new reference-tested `requiredMonthlyContribution` inverse.
+- Investment Policy Statement builder (§38) at /ips: objective, horizon, allocation, rebalancing band, automated contribution, change conditions; self-scored against a six-item rubric; stored only on-device in the learner record (included in Gist backup like all learner data), copyable as text.
+
+## 2026-08-28 - Phase 5, batch 2: behavioural simulator and decision lab
+
+- Behavioural finance simulator (§32) at /labs/behaviour: one scripted market cycle, six bias-triggering decisions against the written plan (herding at the top, panic in the crash, the band-rule trade, dead-cat-bounce narratives, ranking chasing, the inherited loser). Deviations are priced in euros relative to the plan and named by bias; a run report lists which biases got a vote.
+- Investment decision laboratory (§33) at /labs/decisions: six goal-first scenarios decided with the lesson 20 checklist (deposit-in-2-years, retirement fund pick, the guaranteed-12-percent pitch, crash forecast, PEA vs CTO, TER vs tracking difference).
+- Both record as stage `decision`, bringing the §42 composite's decision-quality component (weight .15) live - the last placeholder component.
+- Data integrity and metric wiring covered in CI (tests/labs.test.ts).
+
+## 2026-08-28 - Phase 5, batch 1: transfer practice and the final exam
+
+- Transfer pool (§22): 24 auto-scored novel-scenario items tagged by concept, served six at a time at /practice with rationale after each answer. Attempts record as stage `transfer` and now feed both the per-concept mastery transfer component (weight .15) and the §42 composite's transfer component (weight .20) - both previously renormalised away for lack of evidence.
+- Final exam (§40, §41, §55): 30 held-out, hand-authored items across ten domains at /exam; one sitting, pass mark 80% (configuration), answers never revealed, per-domain scores point back to review. Result stored on the learner record.
+- Pool integrity in CI: concept references, option/answer consistency, tolerances, and arithmetic re-derivation of every numeric answer.
+
+## 2026-08-26 - Phase 4, batch 7: personal finance and French tax (lessons 47-50) - Tier 1 curriculum complete
+
+- Level 12 completed: the personal finance base (emergency fund via regulated livrets, debt ordering, insurance), pensions and the retirement gap (répartition, Agirc-Arrco, PER trade-offs), taxation of investments (PFU at 31.4 % since January 2026 - 12.8 % + 18.6 % after the CSG rise - realized-vs-unrealized timing, Acc-fund efficiency), and the wrappers (PEA, CTO, assurance-vie with their clocks and 2026 rates).
+- French tax content is hand-written, source-linked to official pages (Service-Public, impots.gouv.fr, economie.gouv.fr) and dated: a new `taxRulesVerifiedAt` frontmatter field renders an education-not-advice notice with the verification date on tax lessons (SPEC §39), enforced by a CI test.
+- Four concepts with misconceptions, four visuals, exercise arithmetic checked in CI.
+- **All twelve Tier 1 curriculum levels are now complete: 50 lessons.**
+
+## 2026-08-26 - Phase 4, batch 6: behavioural finance (lessons 44-46)
+
+- Level 11 completed, covering the eleven specified biases in three lessons: loss aversion / panic selling / disposition effect; overconfidence / confirmation bias / anchoring / narrative fallacy (with calibration as the counter-programme); herding / FOMO / recency bias / performance chasing (with the investor-return gap).
+- Three concepts with misconceptions, three visuals (loss asymmetry curve, activity-vs-returns bars, chase cycle), exercise arithmetic checked in CI.
+
+## 2026-08-26 - Phase 4, batch 5: asset allocation (lessons 41-43)
+
+- Level 10 completed: asset allocation (strategic vs tactical, risk tolerance vs capacity, horizon, the lowest-cap rule), rebalancing and sequence of returns (drift, bands, withdrawal-phase order risk), building the portfolio (liquidity-allocation-funds-rules construction order, the two-fund implementation).
+- Three concepts with misconceptions, three visuals (allocation dials, rebalancing cycle, construction blueprint), exercise arithmetic checked in CI.
+
+## 2026-08-26 - Phase 4, batch 4: portfolio theory (lessons 38-40)
+
+- Level 9 completed: measuring risk and return (volatility, volatility drag), correlation and portfolio risk (offsetting mechanism, crisis correlations, two-layer diversification), risk-adjusted return (Sharpe ratio, efficient frontier, beta/CAPM).
+- Three concepts with misconceptions, three visuals (volatility-drag paths, correlation-mix curve, efficient frontier), exercise arithmetic checked in CI.
+
+## 2026-08-26 - Phase 4, batch 3: fixed income depth and ETF structure (lessons 32-37)
+
+- Level 7 completed: yield and bond pricing, duration, credit risk and ratings.
+- Level 8 completed: passive vs active with replication methods, tracking difference, fund structure (UCITS, domicile, Acc/Dist).
+- Six concepts with misconceptions, six visuals, exercise arithmetic checked in CI.
+
 ## 2026-08-26 - Phase 4, batch 2: market mechanics and equities (lessons 27-31)
 
 - Five lessons completing the reduced Levels 5 and 6: exchanges and brokers, liquidity and the bid-ask spread, market and limit orders, earnings, growth vs value.
