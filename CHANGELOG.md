@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 1: transfer practice and the final exam
+
+- Transfer pool (§22): 24 auto-scored novel-scenario items tagged by concept, served six at a time at /practice with rationale after each answer. Attempts record as stage `transfer` and now feed both the per-concept mastery transfer component (weight .15) and the §42 composite's transfer component (weight .20) - both previously renormalised away for lack of evidence.
+- Final exam (§40, §41, §55): 30 held-out, hand-authored items across ten domains at /exam; one sitting, pass mark 80% (configuration), answers never revealed, per-domain scores point back to review. Result stored on the learner record.
+- Pool integrity in CI: concept references, option/answer consistency, tolerances, and arithmetic re-derivation of every numeric answer.
+
 ## 2026-08-26 - Phase 4, batch 7: personal finance and French tax (lessons 47-50) - Tier 1 curriculum complete
 
 - Level 12 completed: the personal finance base (emergency fund via regulated livrets, debt ordering, insurance), pensions and the retirement gap (répartition, Agirc-Arrco, PER trade-offs), taxation of investments (PFU at 31.4 % since January 2026 - 12.8 % + 18.6 % after the CSG rise - realized-vs-unrealized timing, Acc-fund efficiency), and the wrappers (PEA, CTO, assurance-vie with their clocks and 2026 rates).

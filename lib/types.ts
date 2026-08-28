@@ -87,7 +87,7 @@ export interface Attempt {
   questionId: string;
   conceptId: string;
   /** Which stage produced it. */
-  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment';
+  stage: 'prediction' | 'retrieval' | 'exercise' | 'review' | 'assessment' | 'transfer' | 'exam';
   kind: RetrievalQuestion['type'] | 'prediction' | 'calculation';
   answer: string;
   /** Auto-scored items only. */
@@ -146,4 +146,7 @@ export interface LearnerRecord {
   /** Baseline assessment (§42.1): percent correct, stored permanently. */
   baselineScore?: number;
   baselineAt?: number;
+  /** Final exam (§41): last sitting's percent correct. Answers never revealed. */
+  examScore?: number;
+  examAt?: number;
 }

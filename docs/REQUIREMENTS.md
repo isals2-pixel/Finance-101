@@ -28,7 +28,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
 | 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
 | 21 | Eight exercise types | Planned P3 | P1 has calculation, prediction, explanation, classification |
-| 22 | Transfer exercises (30%) | Planned P2-P4 | Question pools tagged by cognition |
+| 22 | Transfer exercises (30%) | Done P5 (pool) | 24-item auto-scored transfer pool (/practice); attempts feed the mastery and §42 transfer components |
 | 23 | Error analysis + self-scoring | Done P1 | Locked-answer self-assessment; error classes on both paths |
 | 24 | Misconception database | Planned P2 | Schema exists in concept JSON; lesson 1 misconceptions authored |
 | 25 | Knowledge graph | Done P1 | Level 1 seeded; DAG validated in CI; grows with content |
@@ -46,8 +46,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 37 | Personal finance laboratory | Planned P5 | Tier 1 |
 | 38 | Investment Policy Statement | Planned P5 | Self-scored rubric |
 | 39 | Curriculum structure | Done P4 (Tier 1) | 50 lessons; all Tier 1 levels (1, 2, 5-12) complete. French tax lessons dated + source-linked with an in-app education-not-advice notice. Tier 2 levels deferred per revision |
-| 40 | Final competency level | Planned P4-P5 | Thresholds are configuration |
-| 41 | Final exam | Planned P5 | Held-out hand-authored pool |
+| 40 | Final competency level | Done P5 | Pass threshold (80%) is configuration in final-exam.json; domain breakdown shown per sitting |
+| 41 | Final exam | Done P5 | 30-item held-out hand-authored pool (/exam); one sitting, answers never revealed, domain scores only |
 | 42 | Personal progress measurement | Done P2 | Baseline stored permanently; dashboard computes composite, retention, calculation accuracy, calibration, abandonment; transfer/decision pools pending |
 | 43-46 | v1 KPI catalogue | Removed | Subsumed into §42; KPI 6 anchors survive as the self-score scale |
 | 47 | Audio effectiveness experiment | Removed | n=1 |
