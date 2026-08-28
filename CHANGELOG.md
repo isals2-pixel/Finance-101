@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 - Phase 5, batch 4: session modes and teach-back
+
+- Variable session length (§16) and the minimum viable day (§17): the home screen offers quick / session / deep modes. Quick shows exactly one action - a due review, else one transfer item - with explicit permission to stop after it; deep adds practice, labs and the exam. The choice persists on-device.
+- Teach-back (§67) at /teachback: explain a learned concept as if teaching it (weakest mastery offered first), explanation locked before the lesson's one-sentence model appears, then 0-5 self-score with anchors - recorded as a self-reported review explanation feeding FSRS and mastery.
+
 ## 2026-08-28 - Phase 5, batch 3: personal finance lab and IPS builder
 
 - Personal finance laboratory (§37) at /labs/personal: savings rate and reserve target, repay-vs-invest with the guaranteed-return comparison, and a retirement-gap projector (capital needed, required monthly saving now versus a 15-year-later start) - all over lib/finance, including a new reference-tested `requiredMonthlyContribution` inverse.

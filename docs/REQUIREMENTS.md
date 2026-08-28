@@ -22,8 +22,8 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 13 | ADHD-optimised design | Done P1 (partial) | Clear next action, resumption, short sessions; variety grows with content |
 | 14 | No infinite feed | Done P1 | Home answers the four questions only |
 | 15 | Daily session | Done P2 | Home offers lesson + due reviews + optional apply |
-| 16 | Variable session length | Planned P2 | |
-| 17 | Minimum viable day | Planned P2 | |
+| 16 | Variable session length | Done P5 | Home offers quick / session / deep modes; choice remembered on-device |
+| 17 | Minimum viable day | Done P5 | Quick mode shows exactly one action (a review if due, else one transfer item) with explicit permission to stop |
 | 18 | Visual design | Done P1 | Visual step after the reading; required/reinforcement flag per lesson |
 | 19 | Multimedia principles | Done P1 | Visual is a diagram, not narrated text |
 | 20 | Concrete application requirement | Done P1 (partial) | Lesson 1 exercise; full coverage grows with content |
@@ -70,7 +70,7 @@ Status of every numbered section of the specification (v1.0 numbering, carried b
 | 64 | Personalized curriculum | Done P1 | Prerequisite gating in curriculum engine |
 | 65 | Adaptive difficulty | Planned P4 | Difficulty tiers in concept schema |
 | 66 | Crystallisation loop | Done P1 (partial) | Exposure-encoding-retrieval-application-spacing live; interleave/transfer/teach-back P2+ |
-| 67 | Teach-back mode | Planned P2 | Self-scored |
+| 67 | Teach-back mode | Done P5 | /teachback: weakest learned concept first, explanation locked before the model sentence, 0-5 self-score feeds FSRS and mastery as self-reported |
 | 68 | Financial argument analysis | Planned P4 | |
 | 69 | Source system | Done P1 | Sources with dates in lesson frontmatter, validated in CI |
 | 70 | Data policy | Done P1 | Static datasets only; abstraction in lib/market-data (P3) |
