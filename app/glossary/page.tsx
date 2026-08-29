@@ -12,14 +12,13 @@ export default function GlossaryPage() {
   }
   const rows = concepts
     .filter((c) => lessonFor.has(c.id))
-    .sort((a, b) => a.level - b.level || a.id.localeCompare(b.id));
+    .sort((a, b) => a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }));
 
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-semibold">Glossary</h1>
       <p className="text-sm text-[var(--muted)]">
-        Every taught concept, in one sentence, with its lesson. Concepts without a lesson yet appear
-        as the curriculum grows.
+        Every taught concept, alphabetically, in one sentence, with its lesson.
       </p>
       <ul className="space-y-4">
         {rows.map((c) => {
