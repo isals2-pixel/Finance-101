@@ -19,12 +19,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="min-h-screen">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-10 focus:rounded-md focus:bg-[var(--accent)] focus:px-3 focus:py-2 focus:text-sm focus:text-white"
+        >
+          Skip to content
+        </a>
         <div className="mx-auto max-w-xl px-4 pb-16">
           <header className="flex items-baseline justify-between border-b border-[var(--border)] py-4">
             <Link href="/" className="text-lg font-semibold tracking-tight text-[var(--accent)]">
               Finance Academy
             </Link>
-            <nav className="flex flex-wrap gap-3 text-sm text-[var(--muted)]">
+            <nav aria-label="Main" className="flex flex-wrap gap-3 text-sm text-[var(--muted)]">
               <Link href="/review/">Review</Link>
               <Link href="/practice/">Practice</Link>
               <Link href="/labs/">Labs</Link>
@@ -33,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/settings/">Settings</Link>
             </nav>
           </header>
-          <main className="pt-6">{children}</main>
+          <main id="main" className="pt-6">{children}</main>
           <footer className="mt-16 border-t border-[var(--border)] pt-4 text-xs text-[var(--muted)]">
             Educational only. Not financial advice. No claim about future returns.
           </footer>
